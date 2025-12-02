@@ -72,7 +72,7 @@ pthread_attr_getstackaddr (const pthread_attr_t * attr, void **stackaddr)
       *                      address..
       *
       * RESULTS
-      *              0               successfully retreived stack address,
+      *              0               successfully retrieved stack address,
       *              EINVAL          'attr' is invalid
       *              ENOSYS          function not supported
       *
