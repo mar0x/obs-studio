@@ -278,9 +278,13 @@ static void build_command_line(struct ffmpeg_muxer *stream, os_process_args_t **
 		num_tracks++;
 	}
 
+#ifdef FFMPEG_MUX_FIXED
+	*args = os_process_args_create(FFMPEG_MUX_FIXED);
+#else
 	char *exe = os_get_executable_path_ptr(FFMPEG_MUX);
 	*args = os_process_args_create(exe);
 	bfree(exe);
+#endif
 
 	dstr_copy(&stream->path, path);
 	os_process_args_add_arg(*args, path);
