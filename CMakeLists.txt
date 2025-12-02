@@ -19,6 +19,10 @@ option(ENABLE_UI "Enable building with UI (requires Qt)" ON)
 option(ENABLE_SCRIPTING "Enable scripting support" ON)
 option(ENABLE_HEVC "Enable HEVC encoders" ON)
 
+if(ENABLE_UNIT_TESTS)
+  enable_testing()
+endif()
+
 add_subdirectory(libobs)
 if(OS_WINDOWS)
   add_subdirectory(libobs-d3d11)
@@ -30,7 +34,7 @@ if(OS_MACOS)
 endif()
 add_subdirectory(plugins)
 
-add_subdirectory(test/test-input)
+add_subdirectory(test)
 
 add_subdirectory(frontend)
 
