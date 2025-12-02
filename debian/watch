@@ -1,0 +1,29 @@
+#version=4
+#opts="filenamemangle=s%(?:.*?)?v?(\d[\d.]*)\.tar\.gz%obs-studio-$1.tar.gz%,dversionmangle=s%\+dfsg\d*$%%,repacksuffix=+dfsg1" \
+#https://github.com/jp9000/obs-studio/tags (?:.*?/)?v?(\d[\d.]*)\.tar\.gz
+
+version=4
+# check: uscan --report
+# update: gbp import-orig --upstream-vcs-tag=vX.Y.Z --uscan
+
+opts=\
+  filenamemangle=s/.*?(@ANY_VERSION@@ARCHIVE_EXT@)/@PACKAGE@-$1/,\
+  repacksuffix=+dfsg,\
+  uversionmangle=s/-?(alpha|beta|rc)/~$1/,\
+  dversionmangle=auto \
+	https://github.com/obsproject/obs-studio/tags \
+	.*?@ANY_VERSION@@ARCHIVE_EXT@
+
+## ouch, this will just import the latest (tagged) version of obs-websocket,
+# not necessarily the one that obs-studio included via .gitmodules
+# one solution would be https://github.com/obsproject/obs-studio/issues/7407,
+# another one to somehow parse the submodule SHA1 and use that,
+# a third one to switch to git rather than upstream tarballs.
+# for now, use this and pray.
+opts=\
+  filenamemangle=s/.*?(@ANY_VERSION@@ARCHIVE_EXT@)/@PACKAGE@-$1/,\
+  component=websocket,\
+  repacksuffix=+dfsg,\
+  dversionmangle=auto \
+	https://github.com/obsproject/obs-websocket/tags \
+	.*?@ANY_VERSION@@ARCHIVE_EXT@ ignore
