@@ -224,7 +224,7 @@ static bool ParseMath(CFParser &cfp, QStringList &values, vector<OBSThemeVariabl
 
 			var.name = QString("__unnamed_%1").arg(QRandomGenerator::global()->generate64());
 
-			OBSThemeVariable::VariableType varType;
+			OBSThemeVariable::VariableType varType = OBSThemeVariable::Min;
 			if (cf_token_is(cfp, "calc"))
 				varType = OBSThemeVariable::Calc;
 			else if (cf_token_is(cfp, "max"))
