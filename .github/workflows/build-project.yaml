@@ -173,7 +173,15 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-24.04]
-    runs-on: ${{ matrix.os }}
+        arch: [x86_64, arm64]
+        include:
+          - arch: x86_64
+            runs_on: ubuntu-24.04
+            deb_arch: amd64
+          - arch: arm64
+            runs_on: ubuntu-24.04-arm
+            deb_arch: arm64
+    runs-on: ${{ matrix.runs_on }}
     needs: check-event
     defaults:
       run:
@@ -188,56 +196,34 @@ jobs:
         id: ccache-cache
         with:
           path: ${{ github.workspace }}/.ccache
-          key: ${{ runner.os }}-${{ matrix.os }}-ccache-x86_64-${{ needs.check-event.outputs.config }}
+          key: ${{ runner.os }}-${{ matrix.os }}-ccache-${{ matrix.arch }}-${{ needs.check-event.outputs.config }}
           restore-keys: |
-            ${{ runner.os }}-${{ matrix.os }}-ccache-x86_64-
+            ${{ runner.os }}-${{ matrix.os }}-ccache-${{ matrix.arch }}-
 
-      - name: Build OBS Studio 🧱
-        uses: ./.github/actions/build-obs
-        env:
-          TWITCH_CLIENTID: ${{ secrets.TWITCH_CLIENT_ID }}
-          TWITCH_HASH: ${{ secrets.TWITCH_HASH }}
-          RESTREAM_CLIENTID: ${{ secrets.RESTREAM_CLIENTID }}
-          RESTREAM_HASH: ${{ secrets.RESTREAM_HASH }}
-          YOUTUBE_CLIENTID: ${{ secrets.YOUTUBE_CLIENTID }}
-          YOUTUBE_CLIENTID_HASH: ${{ secrets.YOUTUBE_CLIENTID_HASH }}
-          YOUTUBE_SECRET: ${{ secrets.YOUTUBE_SECRET }}
-          YOUTUBE_SECRET_HASH: ${{ secrets.YOUTUBE_SECRET_HASH }}
+      - name: Build and package OBS Studio 📀
+        uses: jtdor/build-deb-action@v1
         with:
-          target: x86_64
-          config: ${{ needs.check-event.outputs.config }}
-
-      - name: Package OBS Studio 📀
-        uses: ./.github/actions/package-obs
-        with:
-          target: x86_64
-          config: ${{ needs.check-event.outputs.config }}
-          package: ${{ fromJSON(needs.check-event.outputs.package) }}
-
-      - name: Upload Source Tarball 🗜️
-        uses: actions/upload-artifact@v4
-        with:
-          name: obs-studio-${{ matrix.os }}-sources-${{ needs.check-event.outputs.commitHash }}
-          path: ${{ github.workspace }}/build_ubuntu/obs-studio-*-sources.*
+          buildpackage-opts: --build=binary --no-sign
+          docker-image: ubuntu:24.04
 
       - name: Upload Artifacts 📡
         uses: actions/upload-artifact@v4
         with:
-          name: obs-studio-${{ matrix.os }}-x86_64-${{ needs.check-event.outputs.commitHash }}
-          path: ${{ github.workspace }}/build_ubuntu/obs-studio-*-x86_64-ubuntu-gnu.*
+          name: obs-studio-${{ matrix.os }}-${{ matrix.arch }}-${{ needs.check-event.outputs.commitHash }}
+          path: ${{ github.workspace }}/debian/artifacts/*_${{ matrix.deb_arch }}.*
 
       - name: Upload Debug Symbol Artifacts 🪲
         uses: actions/upload-artifact@v4
         if: ${{ fromJSON(needs.check-event.outputs.package) }}
         with:
-          name: obs-studio-${{ matrix.os }}-x86_64-${{ needs.check-event.outputs.commitHash }}-dbgsym
-          path: ${{ github.workspace }}/build_ubuntu/obs-studio-*-x86_64-ubuntu-gnu-dbgsym.ddeb
+          name: obs-studio-${{ matrix.os }}-${{ matrix.arch }}-${{ needs.check-event.outputs.commitHash }}-dbgsym
+          path: ${{ github.workspace }}/build_ubuntu/obs-studio-*-${{ matrix.deb_arch }}-ubuntu-gnu-dbgsym.ddeb
 
       - uses: actions/cache/save@v4
         if: github.event_name != 'pull_request' && steps.ccache-cache.outputs.cache-hit != 'true'
         with:
           path: ${{ github.workspace }}/.ccache
-          key: ${{ runner.os }}-${{ matrix.os }}-ccache-x86_64-${{ needs.check-event.outputs.config }}
+          key: ${{ runner.os }}-${{ matrix.os }}-ccache-${{ matrix.arch }}-${{ needs.check-event.outputs.config }}
 
   flatpak-build:
     name: Flatpak 📦
