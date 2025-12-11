@@ -1,4 +1,4 @@
-usr/bin/obs
+usr/bin/obs*
 usr/lib/*/obs-plugins/frontend-tools.so
 usr/lib/*/obs-plugins/image-source.so
 usr/lib/*/obs-plugins/linux-capture.so
