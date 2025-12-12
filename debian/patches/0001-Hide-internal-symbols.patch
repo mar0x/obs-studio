@@ -1,0 +1,26 @@
+From 3847e6d0d50cbf8526d7df4bbe6869b689b6c824 Mon Sep 17 00:00:00 2001
+From: Max Romanov <max.romanov@gmail.com>
+Date: Tue, 2 Dec 2025 15:07:06 +0300
+Subject: [PATCH] Hide-internal-symbols
+
+---
+ libobs/obs.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/libobs/obs.c b/libobs/obs.c
+index 6ea83a273..2409cfede 100644
+--- a/libobs/obs.c
++++ b/libobs/obs.c
+@@ -21,7 +21,9 @@
+ #include "callback/calldata.h"
+ 
+ #include "obs.h"
++#pragma GCC visibility push(default)
+ #include "obs-internal.h"
++#pragma GCC visibility pop
+ 
+ struct obs_core *obs = NULL;
+ 
+-- 
+2.43.0
+

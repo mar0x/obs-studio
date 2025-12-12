@@ -1,0 +1,26 @@
+From 5749b51a2378855802ff1f3bb6e3b14981d310a3 Mon Sep 17 00:00:00 2001
+From: Max Romanov <max.romanov@gmail.com>
+Date: Tue, 2 Dec 2025 15:33:43 +0300
+Subject: [PATCH] Prevent underlinking
+
+---
+ libobs/CMakeLists.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/libobs/CMakeLists.txt b/libobs/CMakeLists.txt
+index 3dc0a28e1..52adbba74 100644
+--- a/libobs/CMakeLists.txt
++++ b/libobs/CMakeLists.txt
+@@ -246,7 +246,9 @@ target_link_libraries(
+     FFmpeg::avutil
+     FFmpeg::swscale
+     FFmpeg::swresample
++    glib-2.0
+     jansson::jansson
++    m
+     Uthash::Uthash
+     ZLIB::ZLIB
+   PUBLIC SIMDe::SIMDe Threads::Threads
+-- 
+2.43.0
+
