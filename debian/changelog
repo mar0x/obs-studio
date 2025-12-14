@@ -1,3 +1,12 @@
+obs-studio (32.0.4+dfsg-1) noble; urgency=high
+
+  * Fixed an issue in 32.0.3 where deleting a scene does not remove its audio
+    sources from the Audio Mixer [exeldro/Warchamp7]
+  * Fixed an issue in 32.0.3 with audio device lag due to new deduplication logic [pkviet]
+  * Fixed an issue in 32.0.x where transition duration was not updated in the UI [Warchamp7]
+
+ -- Ryan Foster <ryan@obsproject.com>  Fri, 12 Dec 2025 15:29:34 -0500
+
 obs-studio (32.0.3+dfsg-1) noble; urgency=high
 
   * Adjusted application shutdown logic [Warchamp7]
