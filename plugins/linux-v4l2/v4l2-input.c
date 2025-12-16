@@ -83,6 +83,7 @@ struct v4l2_data {
 	os_event_t *event;
 	struct v4l2_decoder decoder;
 
+	bool pixfmt_unchanged;
 	bool framerate_unchanged;
 	bool resolution_unchanged;
 	int_fast32_t dev;
@@ -458,6 +459,8 @@ static void v4l2_format_list(int dev, obs_property_t *prop)
 
 	obs_property_list_clear(prop);
 
+	obs_property_list_add_int(prop, obs_module_text("LeaveUnchanged"), -1);
+
 	while (v4l2_ioctl(dev, VIDIOC_ENUM_FMT, &fmt) == 0) {
 		dstr_copy(&buffer, (char *)fmt.description);
 		if (fmt.flags & V4L2_FMT_FLAG_EMULATED)
@@ -529,13 +532,24 @@ static void v4l2_dv_timing_list(int dev, obs_property_t *prop)
 /*
  * List resolutions for device and format
  */
-static void v4l2_resolution_list(int dev, uint_fast32_t pixelformat, obs_property_t *prop)
+static void v4l2_resolution_list(int dev, int pixelformat, obs_property_t *prop)
 {
 	struct v4l2_frmsizeenum frmsize;
-	frmsize.pixel_format = pixelformat;
 	frmsize.index = 0;
 	struct dstr buffer;
 	dstr_init(&buffer);
+
+	if (pixelformat == -1) {
+		struct v4l2_format fmt;
+		fmt.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+		if (v4l2_ioctl(dev, VIDIOC_G_FMT, &fmt) < 0) {
+			blog(LOG_ERROR, "Unable to get format");
+			return;
+		}
+		frmsize.pixel_format = fmt.fmt.pix.pixelformat;
+	} else {
+		frmsize.pixel_format = pixelformat;
+	}
 
 	obs_property_list_clear(prop);
 
@@ -572,16 +586,27 @@ static void v4l2_resolution_list(int dev, uint_fast32_t pixelformat, obs_propert
 /*
  * List framerates for device and resolution
  */
-static void v4l2_framerate_list(int dev, uint_fast32_t pixelformat, uint_fast32_t width, uint_fast32_t height,
+static void v4l2_framerate_list(int dev, int pixelformat, uint_fast32_t width, uint_fast32_t height,
 				obs_property_t *prop)
 {
 	struct v4l2_frmivalenum frmival;
-	frmival.pixel_format = pixelformat;
 	frmival.width = width;
 	frmival.height = height;
 	frmival.index = 0;
 	struct dstr buffer;
 	dstr_init(&buffer);
+
+	if (pixelformat == -1) {
+		struct v4l2_format fmt;
+		fmt.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+		if (v4l2_ioctl(dev, VIDIOC_G_FMT, &fmt) < 0) {
+			blog(LOG_ERROR, "Unable to get format");
+			return;
+		}
+		frmival.pixel_format = fmt.fmt.pix.pixelformat;
+	} else {
+		frmival.pixel_format = pixelformat;
+	}
 
 	obs_property_list_clear(prop);
 
@@ -999,9 +1024,19 @@ static bool v4l2_settings_changed(struct v4l2_data *data, obs_data_t *settings)
 	if (obs_data_get_string(settings, "device_id") != NULL && data->device_id != NULL) {
 		res |= strcmp(data->device_id, obs_data_get_string(settings, "device_id")) != 0;
 		res |= data->input != obs_data_get_int(settings, "input");
-		res |= data->pixfmt != obs_data_get_int(settings, "pixelformat");
 		res |= data->standard != obs_data_get_int(settings, "standard");
 		res |= data->dv_timing != obs_data_get_int(settings, "dv_timing");
+
+		if (obs_data_get_int(settings, "pixelformat") == -1 && !data->pixfmt_unchanged) {
+			data->pixfmt_unchanged = true;
+			res |= true;
+		} else if (obs_data_get_int(settings, "pixelformat") == -1 && data->pixfmt_unchanged) {
+			res |= false;
+		} else {
+			data->pixfmt_unchanged = false;
+			res |= (data->pixfmt != obs_data_get_int(settings, "pixelformat")) &&
+			       (obs_data_get_int(settings, "pixelformat") != -1);
+		}
 
 		if (obs_data_get_int(settings, "resolution") == -1 && !data->resolution_unchanged) {
 			data->resolution_unchanged = true;
@@ -1075,6 +1110,7 @@ static void *v4l2_create(obs_data_t *settings, obs_source_t *source)
 	struct v4l2_data *data = bzalloc(sizeof(struct v4l2_data));
 	data->dev = -1;
 	data->source = source;
+	data->pixfmt_unchanged = false;
 	data->resolution_unchanged = false;
 	data->framerate_unchanged = false;
 
