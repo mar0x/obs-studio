@@ -1,3 +1,13 @@
+obs-studio (32.2.2+dfsg-1) noble; urgency=high
+
+  * Fixed an issue where plugins might not load properly on the first start after updating
+    OBS on Windows [notr1ch]
+  * Blocked OBS Studio from running on macOS 12 [RytoEX]
+    * Due to a Qt update, OBS Studio 32.2.x fails to launch on macOS 12. For macOS 12,
+      please use OBS Studio 32.1.2.
+
+ -- Ryan Foster <ryan@obsproject.com>  Sat, 15 Aug 2026 15:29:34 -0500
+
 obs-studio (32.0.4+dfsg-1) noble; urgency=high
 
   * Fixed an issue in 32.0.3 where deleting a scene does not remove its audio
