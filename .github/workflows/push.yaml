@@ -189,10 +189,6 @@ jobs:
           root_dir="${PWD}"
 
           commit_hash="${GITHUB_SHA:0:9}"
-          macos_arm64_artifact_name="obs-studio-macos-arm64-${commit_hash}"
-          macos_arm64_dsym_artifact_name="obs-studio-macos-arm64-${commit_hash}-dSYMs"
-          macos_intel_artifact_name="obs-studio-macos-x86_64-${commit_hash}"
-          macos_intel_dsym_artifact_name="obs-studio-macos-x86_64-${commit_hash}-dSYMs"
           ubuntu_2604_x86_64_artifact_name="obs-studio-ubuntu-26.04-x86_64-${commit_hash}"
           ubuntu_2604_x86_64_debug_name="obs-studio-ubuntu-26.04-x86_64-${commit_hash}-dbgsym"
           ubuntu_2604_aarch64_artifact_name="obs-studio-ubuntu-26.04-aarch64-${commit_hash}"
@@ -205,14 +201,6 @@ jobs:
           windows_arm64_debug_name="obs-studio-windows-arm64-${{ steps.check.outputs.version }}-pdbs"
 
           echo '::group::Renaming Artifacts'
-          mv -v "${macos_arm64_artifact_name}/"obs-studio-*-macos-apple.dmg \
-            "${root_dir}"/OBS-Studio-${{ steps.check.outputs.version }}-macOS-Apple.dmg
-          mv -v "${macos_arm64_dsym_artifact_name}/"obs-studio-*-macos-apple-dSYMs.tar.xz \
-            "${root_dir}"/OBS-Studio-${{ steps.check.outputs.version }}-macOS-Apple-dSYMs.tar.xz
-          mv -v "${macos_intel_artifact_name}/"obs-studio-*-macos-intel.dmg \
-            "${root_dir}"/OBS-Studio-${{ steps.check.outputs.version }}-macOS-Intel.dmg
-          mv -v "${macos_intel_dsym_artifact_name}/"obs-studio-*-macos-intel-dSYMs.tar.xz \
-            "${root_dir}"/OBS-Studio-${{ steps.check.outputs.version }}-macOS-Intel-dSYMs.tar.xz
           mv -v "${ubuntu_2604_x86_64_artifact_name}/"obs-studio-*-x86_64-ubuntu-gnu.deb \
             "${root_dir}"/OBS-Studio-${{ steps.check.outputs.version }}-Ubuntu-26.04-x86_64.deb
           mv -v "${ubuntu_2604_x86_64_debug_name}/"obs-studio-*-x86_64-ubuntu-gnu-dbgsym.ddeb \
@@ -258,8 +246,6 @@ jobs:
           name: OBS Studio ${{ steps.check.outputs.version }}
           body_path: ${{ github.workspace }}/CHECKSUMS.txt
           files: |
-            ${{ github.workspace }}/OBS-Studio-${{ steps.check.outputs.version }}-macOS-*.dmg
-            ${{ github.workspace }}/OBS-Studio-${{ steps.check.outputs.version }}-macOS-*-dSYMs.tar.xz
             ${{ github.workspace }}/OBS-Studio-${{ steps.check.outputs.version }}-Ubuntu-*.deb
             ${{ github.workspace }}/OBS-Studio-${{ steps.check.outputs.version }}-Ubuntu-*.ddeb
             ${{ github.workspace }}/OBS-Studio-${{ steps.check.outputs.version }}-Sources.tar.gz
