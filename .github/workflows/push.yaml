@@ -186,6 +186,9 @@ jobs:
           : Rename Files 🏷️
           if [[ "${RUNNER_DEBUG}" ]]; then set -x; fi
 
+          pwd
+          ls -R
+
           root_dir="${PWD}"
 
           commit_hash="${GITHUB_SHA:0:9}"
@@ -194,8 +197,8 @@ jobs:
           ubuntu_2604_sources_name="obs-studio-ubuntu-26.04-sources-${commit_hash}"
 
           echo '::group::Renaming Artifacts'
-          mv -v "${ubuntu_2604_aarch64_artifact_name}/"*.deb "${root_dir}"/
-          mv -v "${ubuntu_2604_aarch64_artifact_name}/"*.ddeb "${root_dir}"/
+          mv -v "${ubuntu_2604_aarch64_artifact_name}/"*.deb "${root_dir}"/ ||:
+          mv -v "${ubuntu_2604_aarch64_artifact_name}/"*.ddeb "${root_dir}"/ ||:
           echo '::endgroup::'
 
       - name: Generate Checksums 🪪
