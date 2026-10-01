@@ -194,12 +194,8 @@ jobs:
           ubuntu_2604_sources_name="obs-studio-ubuntu-26.04-sources-${commit_hash}"
 
           echo '::group::Renaming Artifacts'
-          mv -v "${ubuntu_2604_aarch64_artifact_name}/"obs-studio-*-aarch64-ubuntu-gnu.deb \
-            "${root_dir}"/OBS-Studio-${{ steps.check.outputs.version }}-Ubuntu-26.04-aarch64.deb
-          mv -v "${ubuntu_2604_aarch64_debug_name}/"obs-studio-*-aarch64-ubuntu-gnu-dbgsym.ddeb \
-            "${root_dir}"/OBS-Studio-${{ steps.check.outputs.version }}-Ubuntu-26.04-aarch64-dbsym.ddeb
-          mv -v "${ubuntu_2604_sources_name}/"obs-studio-*-sources.tar.gz \
-            "${root_dir}"/OBS-Studio-${{ steps.check.outputs.version }}-Sources.tar.gz
+          mv -v "${ubuntu_2604_aarch64_artifact_name}/"*.deb "${root_dir}"/
+          mv -v "${ubuntu_2604_aarch64_artifact_name}/"*.ddeb "${root_dir}"/
           echo '::endgroup::'
 
       - name: Generate Checksums 🪪
@@ -225,6 +221,5 @@ jobs:
           name: OBS Studio ${{ steps.check.outputs.version }}
           body_path: ${{ github.workspace }}/CHECKSUMS.txt
           files: |
-            ${{ github.workspace }}/OBS-Studio-${{ steps.check.outputs.version }}-Ubuntu-*.deb
-            ${{ github.workspace }}/OBS-Studio-${{ steps.check.outputs.version }}-Ubuntu-*.ddeb
-            ${{ github.workspace }}/OBS-Studio-${{ steps.check.outputs.version }}-Sources.tar.gz
+            ${{ github.workspace }}/*.deb
+            ${{ github.workspace }}/*.ddeb
