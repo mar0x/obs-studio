@@ -5,8 +5,13 @@ include /usr/share/dpkg/pkg-info.mk
 
 CONFIG=None
 
-export DEB_CPPFLAGS_MAINT_APPEND=-DFFMPEG_MUX_FIXED=\"/usr/lib/$(DEB_HOST_MULTIARCH)/obs-plugins/obs-ffmpeg/obs-ffmpeg-mux\"
-deb_cflags+=-DSIMDE_ENABLE_OPENMP -fopenmp-simd -O3 -fvisibility=hidden
+deb_cflags=
+deb_cflags+=-DFFMPEG_MUX_FIXED=\"/usr/lib/$(DEB_HOST_MULTIARCH)/obs-plugins/obs-ffmpeg/obs-ffmpeg-mux\"
+deb_cflags+=-DNVENC_TEST_FIXED=\"/usr/lib/$(DEB_HOST_MULTIARCH)/obs-plugins/obs-nvenc/obs-nvenc-test\"
+
+deb_cflags+=-DSIMDE_ENABLE_OPENMP -fopenmp-simd
+
+deb_cflags+=-O3 -fvisibility=hidden
 deb_cflags+=-Wno-error=deprecated-declarations
 
 confflags  =
@@ -16,24 +21,21 @@ confflags += -DOBS_VERSION_OVERRIDE=$(subst +dfsg,.1,$(DEB_VERSION))
 confflags += -DAPPDATA_RELEASE_DATE=$(shell date --utc --date=@$${SOURCE_DATE_EPOCH} +'%Y-%m-%d')
 confflags += -DUNIX_STRUCTURE=TRUE
 confflags += -DCMAKE_SKIP_RPATH=TRUE
+confflags += -DCMAKE_COMPILE_WARNING_AS_ERROR=FALSE
 confflags += -DDISABLE_UPDATE_MODULE=TRUE
-confflags += -DBUILD_TESTS=TRUE -DENABLE_UNIT_TESTS=TRUE
 confflags += -DENABLE_AJA=FALSE
 confflags += -DENABLE_JACK=TRUE
 confflags += -DENABLE_PIPEWIRE=TRUE
 confflags += -DENABLE_SNDIO=FALSE
-confflags += -DENABLE_VST=FALSE
+confflags += -DENABLE_VST=TRUE
 confflags += -DENABLE_WEBRTC=FALSE
 
 ifeq ($(DEB_HOST_ARCH_CPU), i386)
-confflags += -DENABLE_SIMD=FALSE
 deb_cflags+=-Wno-error=psabi
 endif
-ifeq ($(DEB_HOST_ARCH), armhf)
-deb_cflags+=-Wno-error=sign-compare
-endif
+
+export DEB_CPPFLAGS_MAINT_APPEND=$(deb_cflags)
 DEB_CFLAGS_MAINT_APPEND+=$(deb_cflags)
-DEB_CPPFLAGS_MAINT_APPEND+=$(deb_cflags)
 
 
 BUILDDIR=$(CURDIR)/obj-$(DEB_HOST_GNU_TYPE)
@@ -51,21 +53,26 @@ execute_after_dh_auto_build:
 
 
 override_dh_auto_test:
-#	LD_LIBRARY_PATH=$(BUILDDIR)/rundir/$(CONFIG)/lib/$(DEB_HOST_MULTIARCH) dh_auto_test
-#	Disabled for now until someone can figure out what they did with the tests
+#LD_LIBRARY_PATH=$(BUILDDIR)/rundir/$(CONFIG)/lib/$(DEB_HOST_MULTIARCH) dh_auto_test
 
 execute_after_dh_auto_install:
+# fix permissions
 	-find debian/tmp -type f -name "*.pem" -exec chmod a-x {} +
-	mkdir -p debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/obs-plugins/obs-ffmpeg
-	mv debian/tmp/usr/bin/obs-ffmpeg-mux \
-		debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/obs-plugins/obs-ffmpeg/obs-ffmpeg-mux
-ifeq ($(DEB_HOST_ARCH),amd64)
-	mkdir -p debian/obs-studio/usr/bin
-	mv debian/tmp/usr/bin/obs-nvenc-test debian/obs-studio/usr/bin/obs-nvenc-test
-endif
-
-execute_after_dh_install:
-	rm -rf debian/obs-studio/usr/share/obs/obs-studio/license
+# helper binary for obs-plugin
+	mkdir -p debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/obs-plugins/obs-ffmpeg/
+	-mv debian/tmp/usr/bin/obs-ffmpeg-mux \
+		debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/obs-plugins/obs-ffmpeg/
+	-rmdir debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/obs-plugins/obs-ffmpeg/
+# helper binary for obs-nvenc
+	mkdir -p debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/obs-plugins/obs-nvenc/
+	-mv debian/tmp/usr/bin/obs-nvenc-test \
+		debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/obs-plugins/obs-nvenc/
+	-rmdir debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/obs-plugins/obs-nvenc/
+# stray license file
+	rm -rf debian/tmp/usr/share/obs/obs-studio/license
+# drop CFLAGS from pkg-config files
+	-find debian/tmp -type f -name "*.pc" -exec \
+		sed -e 's| -fPIC | |g' -e 's| -fvisibility=hidden | |g' -e 's/ -Werror$$//' -i {} +
 
 execute_before_dh_shlibdeps:
 	echo "libobs 0 libobs0t64 (= $(DEB_VERSION))" > debian/shlibs.local
@@ -75,7 +82,9 @@ override_dh_python3:
 	dh_python3 -p obs-studio usr/lib/$(DEB_HOST_MULTIARCH)/obs-scripting
 
 override_dh_gencontrol:
-	dh_gencontrol -- -Vsimde:Built-Using="$(shell dpkg-query -f '$${source:Package} (= $${source:Version}), ' -W "libsimde-dev")"
+	dh_gencontrol -- \
+		-Vsimde:Built-Using="$(shell dpkg-query -f '$${source:Package} (= $${source:Version}), ' -W "libsimde-dev")" \
+		$(empty)
 
 ################################################################
 DEB_COPYRIGHT_CHECK_IGNORE_REGEX = \

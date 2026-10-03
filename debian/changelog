@@ -1,3 +1,24 @@
+obs-studio (32.2.2+ds-1build1) stonking; urgency=medium
+
+  * No-change rebuild against QWaylandApplication native interface 2 in
+    Qt 6.11.
+
+ -- Rik Mills <rikmills@kde.org>  Wed, 23 Sep 2026 13:40:20 +0100
+
+obs-studio (32.2.2+ds-1) unstable; urgency=medium
+
+  * New upstream version 32.2.2+ds
+    + Refresh d/patches
+  * Record new symbols for libobs0t64
+  * Move metainfo file to the main obs-studio package
+  * Set upstream metadata fields:
+    Repository, Repository-Browse, Security-Contact.
+  * Update copyright information
+    + Re-generate d/copyright_hints
+    + New copyright paragraphs
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Wed, 02 Sep 2026 14:21:19 +0200
+
 obs-studio (32.2.2+dfsg-1) noble; urgency=high
 
   * Fixed an issue where plugins might not load properly on the first start after updating
@@ -7,6 +28,85 @@ obs-studio (32.2.2+dfsg-1) noble; urgency=high
       please use OBS Studio 32.1.2.
 
  -- Ryan Foster <ryan@obsproject.com>  Sat, 15 Aug 2026 15:29:34 -0500
+
+obs-studio (32.1.2+ds-1) unstable; urgency=medium
+
+  * New upstream version 32.1.2+ds
+    + Refresh patches
+  * Update copyright information
+    + Re-generate d/copyright hints
+  * Bump standards version to 4.7.4
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Wed, 22 Apr 2026 16:05:14 +0200
+
+obs-studio (32.1.0-0ubuntu3) resolute; urgency=medium
+
+  * Fix FTBFS on non-amd64 architectures: obs-nvenc-test is only built on
+    amd64 (x86_64) per upstream CMake config, so install it conditionally.
+    (LP: #2139679)
+
+ -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Mon, 20 Apr 2026 11:15:49 -0700
+
+obs-studio (32.1.0-0ubuntu2) resolute; urgency=medium
+
+  * Package obs-nvenc-test to support NVENC. (LP: #2139679)
+
+ -- Charles <charles05@canonical.com>  Fri, 17 Apr 2026 19:17:21 +0100
+
+obs-studio (32.1.0-0ubuntu1) resolute; urgency=medium
+
+  * New upstream release (non-rc)
+
+ -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Wed, 11 Mar 2026 16:30:26 -0700
+
+obs-studio (32.1.0~rc2-0ubuntu1) resolute; urgency=medium
+
+  * New upstream release.
+
+ -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Sat, 28 Feb 2026 11:51:46 -0800
+
+obs-studio (32.1.0+ds-1) unstable; urgency=medium
+
+  * New upstream version 32.1.0+ds
+    (Closes: #1131618)
+  * Mark obs-studio-common as multi-arch:foreign
+  * Add new symbols to d/libobs0t64.symbols
+  * Update copyright information
+    + Fix License stanza for plugins/obs-qsv11/
+    + Re-generate d/copyright hints
+    + Drop unused license BSD-1-clause
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Mon, 23 Mar 2026 11:36:01 +0100
+
+obs-studio (32.1.0~rc1-0ubuntu1) resolute; urgency=medium
+
+  * New upstream release.
+  * d/rules: Fix armhf build
+  * Update 32-bit archs patch
+
+ -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Sun, 08 Feb 2026 14:45:30 -0800
+
+obs-studio (32.0.4+ds1-1) unstable; urgency=medium
+
+  * New upstream version 32.0.4+ds1
+    * Exclude some Windows-only directories (d3d-API, libdshowcapture)
+    * Closes: #1101351, #1098213
+  * Depend on qt6-svg-plugins (Closes: #1091910)
+  * Enable VST support
+  * Fix FTBFS on i386
+    + Update 32bit patch
+    + Enable SSE2 on i386 (and depend on "sse2-support" for this
+  * Configuration
+    + Disable -Werror via configure flags
+    + Don't attempt to disable non-existing test-suite
+  * Make installation of helper-binaries optional
+  * Add versioned Breaks/Replaces to obs-studio-common
+  * Update copyright information
+    + Update missed licenses
+
+  * Upload to unstable.
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Sun, 22 Feb 2026 14:07:19 +0100
 
 obs-studio (32.0.4+dfsg-1) noble; urgency=high
 
@@ -40,40 +140,6 @@ obs-studio (32.0.2+dfsg-1) noble; urgency=high
 
  -- Julian Andres Klode <juliank@ubuntu.com>  Mon, 08 Apr 2025 16:46:38 +0200
 
-obs-studio (32.1.0-0ubuntu3) resolute; urgency=medium
-
-  * Fix FTBFS on non-amd64 architectures: obs-nvenc-test is only built on
-    amd64 (x86_64) per upstream CMake config, so install it conditionally.
-    (LP: #2139679)
-
- -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Mon, 20 Apr 2026 11:15:49 -0700
-
-obs-studio (32.1.0-0ubuntu2) resolute; urgency=medium
-
-  * Package obs-nvenc-test to support NVENC. (LP: #2139679)
-
- -- Charles <charles05@canonical.com>  Fri, 17 Apr 2026 19:17:21 +0100
-
-obs-studio (32.1.0-0ubuntu1) resolute; urgency=medium
-
-  * New upstream release (non-rc)
-
- -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Wed, 11 Mar 2026 16:30:26 -0700
-
-obs-studio (32.1.0~rc2-0ubuntu1) resolute; urgency=medium
-
-  * New upstream release.
-
- -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Sat, 28 Feb 2026 11:51:46 -0800
-
-obs-studio (32.1.0~rc1-0ubuntu1) resolute; urgency=medium
-
-  * New upstream release.
-  * d/rules: Fix armhf build
-  * Update 32-bit archs patch
-
- -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Sun, 08 Feb 2026 14:45:30 -0800
-
 obs-studio (32.0.4-0ubuntu1) resolute; urgency=medium
 
   * New upstream release.
@@ -93,6 +159,35 @@ obs-studio (32.0.3-0ubuntu1) resolute; urgency=medium
 
  -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Fri, 05 Dec 2025 17:02:38 -0800
 
+obs-studio (32.0.3+ds-1~exp1) experimental; urgency=medium
+
+  * New upstream version 32.0.4+ds
+    + Drop obsolete patches
+    + Refresh patches
+  * libobs0t64
+    + Update symbols file
+    + Force soname to 0 (upstream changes ABI but does not bump soname)
+  * Re-introduce B-D on libvpl-dev (on amd64), as it is no longer unused.
+  * Sort patches: first code, then buildsystem
+  * Fix another 32bit FTBFS
+  * Re-include 'obs-qsv11' plugin (the license problem has been resolved)
+  * Install obs-nvenc-test helper binary into private location
+  * Move arch-independent files into obs-studio-common
+  * Depend on polkitd rather than deprecated policykit-1
+  * Strip internal compiler flags from pkg-config files
+  * Skip 'make test' as upstream no longer has a test-suite
+  * Slightly restructure setting of additional CPPFLAGS
+  * Update Build-Dependencies
+    - Drop B-D on obsolete pkg-config
+  * Update copyright information
+    + Update licenses
+    + Drop obsolete excluded files
+    + Re-generate d/copyright_hints
+  * Remove trailing whitespace from d/changelog
+  * Update d/watch to version 5
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Sat, 21 Feb 2026 21:34:38 +0100
+
 obs-studio (32.0.2-0ubuntu1) resolute; urgency=medium
 
   * New upstream release
@@ -100,6 +195,26 @@ obs-studio (32.0.2-0ubuntu1) resolute; urgency=medium
   * Disable tests until we can figure out where they moved to
 
  -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Wed, 12 Nov 2025 08:49:32 -0800
+
+obs-studio (30.2.3+dfsg-4) unstable; urgency=medium
+
+  [ Bastian Germann ]
+  * Drop unused libvpl (Closes: #1121381)
+
+  [ IOhannes m zmölnig (Debian/GNU) ]
+  * Acknowldge NMUs (Kudos Adrian Bunk)
+  * Drop obsolete 'Priority: optional' stanza.
+  * Drop obsolete 'Rules-Requires-Root: no' stanza.
+  * Bump standards version to 4.7.3
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Sat, 21 Feb 2026 11:29:03 +0100
+
+obs-studio (30.2.3+dfsg-3.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Backport upstream fix for FTBFS with FFmpeg 8. (Closes: #1115044)
+
+ -- Adrian Bunk <bunk@debian.org>  Sat, 03 Jan 2026 19:53:40 +0200
 
 obs-studio (30.2.3+dfsg-3.1) unstable; urgency=medium
 

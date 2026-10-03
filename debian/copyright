@@ -1,30 +1,25 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: obs-studio
 Source: https://obsproject.com
+Files-Excluded:
+ cmake/bundle
+ deps/blake2/*
+ deps/libdshowcapture/*
+ deps/w32-pthreads/need_errno.h
+ plugins/mac-*
+ plugins/win-*
+ shared/obs-d3d8-api/*
 
 Files: *
-Copyright: 2013-2023, Lain Bailey <lain@obsproject.com>
-           2017, Joel Bethke <joel.bethke@gmail.com>
-           2015, Andrew Skinner <obs@theandyroid.com>
+Copyright: 2013-2025, The OBS Developers (see AUTHORS for a full list)
            2014, Leonhard Oelke <leonhard@in-verted.de>
-           2017, Fabio Madia <admshao@gmail.com>
-           2017, Quinn Damerell <qdamere@microsoft.com>
-           2013-2024, The OBS Developers (see AUTHORS for a full list)
 License: GPL-2+
 
-Files: libobs/callback/*
-       libobs/data/deinterlace_base.effect
-       libobs/data/deinterlace_blend.effect
-       libobs/data/deinterlace_blend_2x.effect
-       libobs/data/deinterlace_discard.effect
-       libobs/data/deinterlace_discard_2x.effect
-       libobs/data/deinterlace_linear.effect
-       libobs/data/deinterlace_linear_2x.effect
-       libobs/data/deinterlace_yadif.effect
-       libobs/data/deinterlace_yadif_2x.effect
+Files: shared/media-playback/*
+       libobs/callback/*
+       libobs/data/deinterlace_*.effect
        libobs/util/*
-       plugins/obs-ffmpeg/ffmpeg-mux/ffmpeg-mux.c
-       plugins/obs-ffmpeg/ffmpeg-mux/ffmpeg-mux.h
+       plugins/obs-ffmpeg/ffmpeg-mux/ffmpeg-mux.*
        plugins/obs-ffmpeg/obs-ffmpeg-source.c
 Copyright: 2007, Alexey Vatchenko <av@bsdua.org>
            1986, Gary S. Brown
@@ -32,49 +27,127 @@ Copyright: 2007, Alexey Vatchenko <av@bsdua.org>
            2015, John R. Bradley <jrb@turrettech.com>
            2013-2023, Ruwen Hahn <palana@stunned.de>
            2017, Ryan Foster <RytoEX@gmail.com>
+           2023, Lain Bailey <lain@obsproject.com>
 License: ISC
 
+Files: libobs/util/source-profiler.*
+       libobs/util/uthash.h
+Copyright: 2023, Dennis Sädtler <dennis@obsproject.com>
+License: GPL-2+
+
+Files: libobs/util/sse-intrin.h
+Copyright: 2019, Peter Geis <pgwipeout@gmail.com>
+License: GPL-2+
+
 Files: plugins/obs-ffmpeg/obs-ffmpeg-rist.h
- plugins/obs-ffmpeg/obs-ffmpeg-srt.h
+       plugins/obs-ffmpeg/obs-ffmpeg-srt.h
 Copyright: 2022, pkv@obsproject.com
 License: ISC
 
 Files: plugins/decklink/decklink-device-instance.hpp
 Copyright: 2010-2011, Dmitry Vyukov.
-License: BSD-2-Clause-Views
+License: BSD-2-clause
+
+Files: plugins/obs-filters/rnnoise/*
+Copyright: 2017, Mozilla
+           2007-2017, Jean-Marc Valin
+           2005-2017, Xiph.Org Foundation
+           2003-2004, Mark Borgerding
+License: BSD-3-clause
+
+Files: plugins/obs-filters/rnnoise/include/rnnoise.h
+       plugins/obs-filters/rnnoise/src/rnn_reader.c
+       plugins/obs-filters/rnnoise/src/denoise.c
+Copyright: 2018, Gregor Richards
+           2017, Mozilla
+License: BSD-2-clause
+
+Files: plugins/obs-filters/rnnoise/src/_kiss_fft_guts.h
+       plugins/obs-filters/rnnoise/src/kiss_fft.*
+Copyright: 2003-2004, Mark Borgerding
+           2005-2008, Xiph.Org Foundation
+           2008,      CSIRO
+License: BSD-2-clause
+
+Files: plugins/obs-filters/rnnoise/src/arch.h
+       plugins/obs-filters/rnnoise/src/pitch.*
+Copyright: 2003-2008, Jean-Marc Valin
+           2007-2008, CSIRO
+           2007-2009, Xiph.Org Foundation
+License: BSD-2-clause
+
+
+Files: plugins/obs-filters/rnnoise/src/celt_lpc.*
+       plugins/obs-filters/rnnoise/src/opus_types.h
+Copyright: 2009-2010, Xiph.Org Foundation
+License: BSD-2-clause
+
+Files: plugins/obs-filters/rnnoise/src/rnn.*
+Copyright: 2008-2011, Octasic Inc
+           2012-2017, Jean-Marc Valin
+License: BSD-2-clause
 
 Files: plugins/obs-websocket/*
 Copyright: 2016-2021, Stephane Lepin <stephane.lepin@gmail.com>
-  2014, Leonhard Oelke <leonhard@in-verted.de>
-  2020-2023, Kyle Manning <tt2468@gmail.com>
+           2014, Leonhard Oelke <leonhard@in-verted.de>
+           2020-2023, Kyle Manning <tt2468@gmail.com>
 License: GPL-2+
 
-Files: libobs/util/uthash.h
- plugins/obs-outputs/mp4-*
-Copyright: 2023, Dennis Sädtler <dennis@obsproject.com>
-License: GPL-2+
+Files: plugins/obs-qsv11/QSV_Encoder*
+       plugins/obs-qsv11/obs-qsv11*
+Copyright: 2015, Intel Corporation
+License: BSD-3-clause or GPL-2
 
 Files: libobs/graphics/libnsgif/*
 Copyright: 2003, James Bursa <bursa@users.sourceforge.net>
-  2004, John Tytgat <John.Tytgat@aaug.net>
-  2004, Richard Wilson <richard.wilson@netsurf-browser.org>
-  2008, Sean Fox <dyntryx@gmail.com>
+           2004, John Tytgat <John.Tytgat@aaug.net>
+           2004, Richard Wilson <richard.wilson@netsurf-browser.org>
+           2008, Sean Fox <dyntryx@gmail.com>
 License: Expat
 
-Files: libobs/util/profiler.c
-       libobs/util/profiler.h
-       libobs/util/profiler.hpp
-Copyright: 2006, Alexander Chemeris
-           2008, Andreas Schneider <mail@cynapses.org>
-           2011, Fredrik Höglund <fredrik@kde.org>
-           2008, Helio Chissini de Castro <helio@kde.org>
-           2002-2014, Kitware, Inc
-           2013, Martin Gräßlin <mgraesslin@kde.org>
-           2007, Matthias Kretz <kretz@kde.org>
+Files: libobs/graphics/half.h
+Copyright: 2023, Lain Bailey <lain@obsproject.com>
+           2011-2019, Microsoft Corp
+License: GPL-2+ and Expat
+
+Files: frontend/components/FlowLayout.*pp
+Copyright: 2016, The Qt Company Ltd.
 License: BSD-3-clause
+
+Files: frontend/dialogs/OBSBasicSourceSelect.*pp
+ frontend/utility/ScreenshotObj.*pp
+Copyright: 2023, Lain Bailey <lain@obsproject.com>
+  2025, Taylor Giampaolo <warchamp7@obsproject.com>
+License: GPL-2+
+
+Files: frontend/updater/*
+Copyright: 2023, Lain Bailey <lain@obsproject.com>
+           2013, Richard Stanway
+License: ISC
+
+Files: frontend/utility/win-dll-blocklist.c
+Copyright: 2023, Richard Stanway
+License: GPL-2+
+
+Files: frontend/utility/models/branches.hpp
+ frontend/utility/models/whatsnew.hpp
+Copyright: 2023, Dennis Sädtler <dennis@obsproject.com>
+License: ISC
+
+Files: frontend/utility/models/multitrack-video.hpp
+Copyright: 2024, Ruwen Hahn <haruwenz@twitch.tv>
+License: ISC
 
 Files: deps/glad/include/KHR/*
 Copyright: 2008-2009, The Khronos Group Inc
+License: Expat
+
+Files: deps/glad/include/EGL/eglplatform.h
+Copyright: 2007-2020, The Khronos Group Inc
+License: Apache-2.0
+
+Files: deps/json11/*
+Copyright: 2013, Dropbox
 License: Expat
 
 Files: deps/libcaption/*
@@ -102,11 +175,21 @@ License: LGPL-2.1+
 Files: plugins/decklink/linux/decklink-sdk/*
        plugins/decklink/mac/decklink-sdk/*
        plugins/decklink/win/decklink-sdk/*
+       plugins/decklink/LICENSE.decklink-sdk
 Copyright: 2009-2021, Blackmagic Design
-License: BSL
+License: BSL-1.0
 
-Files: plugins/obs-ffmpeg/vaapi-utils.*
-Copyright: 2022, tytan652 <tytan652@tytanium.xyz>
+Files: shared/happy-eyeballs/*
+Copyright: 2023, Twitch Interactive, Inc.
+License: Expat
+
+Files: shared/ipc-util/ipc-util/*
+Copyright: 2023, Lain Bailey <lain@obsproject.com>
+License: ISC
+
+Files: shared/obs-scripting/obs-scripting-python.*
+Copyright: 2015, Andrew Skinner <obs@theandyroid.com>
+ 2023, Lain Bailey
 License: GPL-2+
 
 Files: plugins/obs-outputs/librtmp/*
@@ -115,10 +198,10 @@ Copyright: 2008-2009, Andrej Stepanchuk
            2005-2008, Team XBMC
 License: LGPL-2.1+
 Comment: Embedded copy of librtmp
- Unfortunately it contains some OBS Studio specific patches.
+ Unfortunately it contains some OBS Studio specific patches,
+ so we cannot unvendor it.
 
-Files: plugins/obs-outputs/librtmp/md5.c
-       plugins/obs-outputs/librtmp/md5.h
+Files: plugins/obs-outputs/librtmp/md5.*
 Copyright: none
 License: public-domain
  This software was written by Alexander Peslyak in 2001.  No copyright is
@@ -133,39 +216,89 @@ License: public-domain
  .
  There's ABSOLUTELY NO WARRANTY, express or implied.
 
+Files: plugins/obs-outputs/librtmp/cencode.*
+Copyright: none
+License: public-domain
+  This is free and unencumbered software released into the public domain
+
 Files: debian/*
 Copyright: 2015, Carl Fürstenberg <azatoth@gmail.com>
            2016-2022, Sebastian Ramacher <sramacher@debian.org>
-           2022-2024, IOhannes m zmölnig <umlaeute@debian.org>
+           2022-2026, IOhannes m zmölnig <umlaeute@debian.org>
 License: GPL-2+
 
 Files: debian/extra/qr/*
 Copyright: 2020, Project Nayuki.
 License: Expat
 
-
-
-
-License: BSD-1-Clause
- Redistribution and use in source and binary forms, with or without
- modification, are permitted provided that the following conditions
- are met:
- 1. Redistributions of source code must retain the above copyright
-    notice, this list of conditions and the following disclaimer.
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
  .
- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
- ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
- A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE HOLDERS OR
- CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
- EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
- PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
- PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>
+Comment:
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
 
-License: BSD-2-Clause-Views
+License: GPL-2
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of version 2 of the GNU General Public License as
+ published by the Free Software Foundation.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>
+Comment:
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+License: LGPL-2+
+ This package is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>.
+Comment:
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in "/usr/share/common-licenses/LGPL-2".
+
+License: LGPL-2.1+
+ This package is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>.
+Comment:
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in "/usr/share/common-licenses/LGPL-2.1".
+
+License: BSD-2-clause
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
  .
@@ -186,11 +319,6 @@ License: BSD-2-Clause-Views
  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- .
- The views and conclusions contained in the software and documentation are
- those of the authors and should not be interpreted as representing official
- policies, either expressed or implied, of the copyright holders or
- contributors.
 
 License: BSD-3-clause
  Redistribution and use in source and binary forms, with or without
@@ -217,7 +345,7 @@ License: BSD-3-clause
  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-License: BSL
+License: BSL-1.0
  Permission is hereby granted, free of charge, to any person or organization
  obtaining a copy of the software and accompanying documentation covered by
  this license (the "Software") to use, reproduce, display, distribute,
@@ -259,23 +387,6 @@ License: Expat
  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-License: GPL-2+
- This package is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
- .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>
- .
- On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
-
 License: ISC
  Permission to use, copy, modify, and distribute this software for any
  purpose with or without fee is hereby granted, provided that the above
@@ -289,36 +400,18 @@ License: ISC
  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-License: LGPL-2+
- This package is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2 of the License, or (at your option) any later version.
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
  .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
+ http://www.apache.org/licenses/LICENSE-2.0
  .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>.
- .
- On Debian systems, the complete text of the GNU Lesser General
- Public License can be found in "/usr/share/common-licenses/LGPL-2".
-
-License: LGPL-2.1+
- This package is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2.1 of the License, or (at your option) any later version.
- .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>.
- .
- On Debian systems, the complete text of the GNU Lesser General
- Public License can be found in "/usr/share/common-licenses/LGPL-2.1".
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+Comment:
+ On Debian systems, the full text of the Apache License Version 2.0
+ can be found in the file `/usr/share/common-licenses/Apache-2.0'.

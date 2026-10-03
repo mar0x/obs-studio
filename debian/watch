@@ -1,19 +1,10 @@
-version=4
-#opts="filenamemangle=s%(?:.*?)?v?(\d[\d.]*)\.tar\.gz%obs-studio-$1.tar.gz%,dversionmangle=s%\+dfsg\d*$%%,repacksuffix=+dfsg1" \
-#https://github.com/jp9000/obs-studio/tags (?:.*?/)?v?(\d[\d.]*)\.tar\.gz
+Version: 5
 
-# check: uscan --report
-# update: gbp import-orig --upstream-vcs-tag=vX.Y.Z --uscan
-#opts=\
-#  filenamemangle=s/.*?(@ANY_VERSION@@ARCHIVE_EXT@)/@PACKAGE@-$1/,\
-#  repacksuffix=+dfsg,\
-#  uversionmangle=s/-?(alpha|beta|rc)/~$1/,\
-#  dversionmangle=auto \
-#	https://github.com/obsproject/obs-studio/tags \
-#	.*?@ANY_VERSION@@ARCHIVE_EXT@
-opts=searchmode=plain,\
-  repacksuffix=+dfsg,\
-  uversionmangle=s/-?(alpha|beta|rc)/~$1/,\
-  dversionmangle=auto \
-    https://api.github.com/repos/obsproject/obs-studio/releases?per_page=100 \
-    https://github.com/obsproject/obs-studio/releases/download/[^/]+/OBS-Studio-@ANY_VERSION@-Sources@ARCHIVE_EXT@
+Source: https://api.github.com/repos/obsproject/obs-studio/releases?per_page=100
+#Matching-Pattern: https://api.github.com/repos/obsproject/obs-studio/tarball/@ANY_VERSION@
+Matching-Pattern: https://github.com/obsproject/obs-studio/releases/download/\d[\.\d]*/OBS-Studio-@ANY_VERSION@-Sources.tar.gz
+Filename-Mangle: s%.*/OBS-Studio-@ANY_VERSION@-Sources.*%@PACKAGE@-$1.tar.gz%
+Search-Mode: plain
+Repacksuffix: +ds
+Dversion-Mangle: auto
+Uversion-Mangle: auto

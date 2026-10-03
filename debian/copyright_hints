@@ -8,751 +8,33 @@ Files: AUTHORS
  CMakeLists.txt
  CMakePresets.json
  COC.rst
+ CODESTYLE.md
  COMMITMENT
- CONTRIBUTING.rst
+ CONTRIBUTING.md
  INSTALL
- UI/CMakeLists.txt
- UI/absolute-slider.cpp
- UI/absolute-slider.hpp
- UI/adv-audio-control.cpp
- UI/adv-audio-control.hpp
- UI/api-interface.cpp
- UI/audio-encoders.cpp
- UI/audio-encoders.hpp
- UI/auth-base.cpp
- UI/auth-base.hpp
- UI/auth-listener.cpp
- UI/auth-listener.hpp
- UI/auth-oauth.cpp
- UI/auth-oauth.hpp
- UI/auth-restream.cpp
- UI/auth-restream.hpp
- UI/auth-twitch.cpp
- UI/auth-twitch.hpp
- UI/auth-youtube.cpp
- UI/auth-youtube.hpp
- UI/balance-slider.hpp
- UI/basic-controls.cpp
- UI/basic-controls.hpp
- UI/clickable-label.hpp
- UI/cmake/feature-browserpanels.cmake
- UI/cmake/feature-importers.cmake
- UI/cmake/feature-macos-update.cmake
- UI/cmake/feature-restream.cmake
- UI/cmake/feature-sparkle.cmake
- UI/cmake/feature-twitch.cmake
- UI/cmake/feature-whatsnew.cmake
- UI/cmake/feature-youtube.cmake
- UI/cmake/legacy.cmake
- UI/cmake/linux/com.obsproject.Studio.desktop
- UI/cmake/linux/com.obsproject.Studio.metainfo.xml.in
- UI/cmake/linux/icons/obs-logo-scalable.svg
- UI/cmake/macos/Assets.xcassets/AppIcon.appiconset/Contents.json
- UI/cmake/macos/Assets.xcassets/Contents.json
- UI/cmake/macos/Info.plist.in
- UI/cmake/macos/entitlements-extension.plist
- UI/cmake/macos/entitlements.plist
- UI/cmake/macos/exportOptions-extension.plist.in
- UI/cmake/macos/exportOptions.plist.in
- UI/cmake/macos/qt.conf
- UI/cmake/os-freebsd.cmake
- UI/cmake/os-linux.cmake
- UI/cmake/os-macos.cmake
- UI/cmake/os-windows.cmake
- UI/cmake/ui-elements.cmake
- UI/cmake/ui-qt.cmake
- UI/cmake/ui-windows.cmake
- UI/cmake/windows/obs.manifest
- UI/cmake/windows/obs.rc.in
- UI/context-bar-controls.cpp
- UI/context-bar-controls.hpp
- UI/data/OBSPublicRSAKey.pem
- UI/data/locale.ini
- UI/data/locale/af-ZA.ini
- UI/data/locale/an-ES.ini
- UI/data/locale/ar-SA.ini
- UI/data/locale/az-AZ.ini
- UI/data/locale/ba-RU.ini
- UI/data/locale/be-BY.ini
- UI/data/locale/bem-ZM.ini
- UI/data/locale/bg-BG.ini
- UI/data/locale/bn-BD.ini
- UI/data/locale/ca-ES.ini
- UI/data/locale/cs-CZ.ini
- UI/data/locale/da-DK.ini
- UI/data/locale/de-DE.ini
- UI/data/locale/el-GR.ini
- UI/data/locale/en-GB.ini
- UI/data/locale/en-US.ini
- UI/data/locale/eo-UY.ini
- UI/data/locale/es-ES.ini
- UI/data/locale/et-EE.ini
- UI/data/locale/eu-ES.ini
- UI/data/locale/fa-IR.ini
- UI/data/locale/fi-FI.ini
- UI/data/locale/fil-PH.ini
- UI/data/locale/fr-FR.ini
- UI/data/locale/gd-GB.ini
- UI/data/locale/gl-ES.ini
- UI/data/locale/he-IL.ini
- UI/data/locale/hi-IN.ini
- UI/data/locale/hr-HR.ini
- UI/data/locale/hu-HU.ini
- UI/data/locale/hy-AM.ini
- UI/data/locale/id-ID.ini
- UI/data/locale/is-IS.ini
- UI/data/locale/it-IT.ini
- UI/data/locale/ja-JP.ini
- UI/data/locale/ka-GE.ini
- UI/data/locale/kaa.ini
- UI/data/locale/kab-KAB.ini
- UI/data/locale/kmr-TR.ini
- UI/data/locale/ko-KR.ini
- UI/data/locale/lo-LA.ini
- UI/data/locale/lt-LT.ini
- UI/data/locale/lv-LV.ini
- UI/data/locale/mn-MN.ini
- UI/data/locale/ms-MY.ini
- UI/data/locale/nb-NO.ini
- UI/data/locale/nl-NL.ini
- UI/data/locale/nn-NO.ini
- UI/data/locale/oc-FR.ini
- UI/data/locale/pa-IN.ini
- UI/data/locale/pl-PL.ini
- UI/data/locale/pt-BR.ini
- UI/data/locale/pt-PT.ini
- UI/data/locale/ro-RO.ini
- UI/data/locale/ru-RU.ini
- UI/data/locale/si-LK.ini
- UI/data/locale/sk-SK.ini
- UI/data/locale/sl-SI.ini
- UI/data/locale/sq-AL.ini
- UI/data/locale/sr-CS.ini
- UI/data/locale/sr-SP.ini
- UI/data/locale/sv-SE.ini
- UI/data/locale/szl-PL.ini
- UI/data/locale/ta-IN.ini
- UI/data/locale/te-IN.ini
- UI/data/locale/th-TH.ini
- UI/data/locale/tl-PH.ini
- UI/data/locale/tr-TR.ini
- UI/data/locale/tt-RU.ini
- UI/data/locale/ug-CN.ini
- UI/data/locale/uk-UA.ini
- UI/data/locale/ur-PK.ini
- UI/data/locale/vi-VN.ini
- UI/data/locale/zh-CN.ini
- UI/data/locale/zh-TW.ini
- UI/data/themes/Dark/alert.svg
- UI/data/themes/Dark/close.svg
- UI/data/themes/Dark/cogs.svg
- UI/data/themes/Dark/collapse.svg
- UI/data/themes/Dark/dots-vert.svg
- UI/data/themes/Dark/dots.svg
- UI/data/themes/Dark/down.svg
- UI/data/themes/Dark/entry-clear.svg
- UI/data/themes/Dark/expand.svg
- UI/data/themes/Dark/filter.svg
- UI/data/themes/Dark/interact.svg
- UI/data/themes/Dark/left.svg
- UI/data/themes/Dark/locked.svg
- UI/data/themes/Dark/media-pause.svg
- UI/data/themes/Dark/media/media_next.svg
- UI/data/themes/Dark/media/media_pause.svg
- UI/data/themes/Dark/media/media_play.svg
- UI/data/themes/Dark/media/media_previous.svg
- UI/data/themes/Dark/media/media_restart.svg
- UI/data/themes/Dark/media/media_stop.svg
- UI/data/themes/Dark/minus.svg
- UI/data/themes/Dark/mute.svg
- UI/data/themes/Dark/network-disconnected.svg
- UI/data/themes/Dark/network-inactive.svg
- UI/data/themes/Dark/no_sources.svg
- UI/data/themes/Dark/plus.svg
- UI/data/themes/Dark/popout.svg
- UI/data/themes/Dark/recording-inactive.svg
- UI/data/themes/Dark/recording-pause-inactive.svg
- UI/data/themes/Dark/refresh.svg
- UI/data/themes/Dark/revert.svg
- UI/data/themes/Dark/right.svg
- UI/data/themes/Dark/save.svg
- UI/data/themes/Dark/settings/accessibility.svg
- UI/data/themes/Dark/settings/advanced.svg
- UI/data/themes/Dark/settings/appearance.svg
- UI/data/themes/Dark/settings/audio.svg
- UI/data/themes/Dark/settings/general.svg
- UI/data/themes/Dark/settings/hotkeys.svg
- UI/data/themes/Dark/settings/output.svg
- UI/data/themes/Dark/settings/stream.svg
- UI/data/themes/Dark/settings/video.svg
- UI/data/themes/Dark/sources/brush.svg
- UI/data/themes/Dark/sources/camera.svg
- UI/data/themes/Dark/sources/default.svg
- UI/data/themes/Dark/sources/gamepad.svg
- UI/data/themes/Dark/sources/globe.svg
- UI/data/themes/Dark/sources/group.svg
- UI/data/themes/Dark/sources/image.svg
- UI/data/themes/Dark/sources/media.svg
- UI/data/themes/Dark/sources/microphone.svg
- UI/data/themes/Dark/sources/scene.svg
- UI/data/themes/Dark/sources/slideshow.svg
- UI/data/themes/Dark/sources/text.svg
- UI/data/themes/Dark/sources/window.svg
- UI/data/themes/Dark/sources/windowaudio.svg
- UI/data/themes/Dark/streaming-inactive.svg
- UI/data/themes/Dark/trash.svg
- UI/data/themes/Dark/unassigned.svg
- UI/data/themes/Dark/up.svg
- UI/data/themes/Dark/updown.svg
- UI/data/themes/Dark/visible.svg
- UI/data/themes/Light/alert.svg
- UI/data/themes/Light/checkbox_checked.svg
- UI/data/themes/Light/checkbox_checked_disabled.svg
- UI/data/themes/Light/checkbox_checked_focus.svg
- UI/data/themes/Light/checkbox_unchecked.svg
- UI/data/themes/Light/checkbox_unchecked_disabled.svg
- UI/data/themes/Light/checkbox_unchecked_focus.svg
- UI/data/themes/Light/close.svg
- UI/data/themes/Light/cogs.svg
- UI/data/themes/Light/collapse.svg
- UI/data/themes/Light/dots-vert.svg
- UI/data/themes/Light/dots.svg
- UI/data/themes/Light/down.svg
- UI/data/themes/Light/entry-clear.svg
- UI/data/themes/Light/expand.svg
- UI/data/themes/Light/filter.svg
- UI/data/themes/Light/interact.svg
- UI/data/themes/Light/left.svg
- UI/data/themes/Light/locked.svg
- UI/data/themes/Light/media-pause.svg
- UI/data/themes/Light/media/media_next.svg
- UI/data/themes/Light/media/media_pause.svg
- UI/data/themes/Light/media/media_play.svg
- UI/data/themes/Light/media/media_previous.svg
- UI/data/themes/Light/media/media_restart.svg
- UI/data/themes/Light/media/media_stop.svg
- UI/data/themes/Light/minus.svg
- UI/data/themes/Light/mute.svg
- UI/data/themes/Light/no_sources.svg
- UI/data/themes/Light/plus.svg
- UI/data/themes/Light/popout.svg
- UI/data/themes/Light/refresh.svg
- UI/data/themes/Light/revert.svg
- UI/data/themes/Light/right.svg
- UI/data/themes/Light/save.svg
- UI/data/themes/Light/settings/accessibility.svg
- UI/data/themes/Light/settings/advanced.svg
- UI/data/themes/Light/settings/appearance.svg
- UI/data/themes/Light/settings/audio.svg
- UI/data/themes/Light/settings/general.svg
- UI/data/themes/Light/settings/hotkeys.svg
- UI/data/themes/Light/settings/output.svg
- UI/data/themes/Light/settings/stream.svg
- UI/data/themes/Light/settings/video.svg
- UI/data/themes/Light/sources/brush.svg
- UI/data/themes/Light/sources/camera.svg
- UI/data/themes/Light/sources/default.svg
- UI/data/themes/Light/sources/gamepad.svg
- UI/data/themes/Light/sources/globe.svg
- UI/data/themes/Light/sources/group.svg
- UI/data/themes/Light/sources/image.svg
- UI/data/themes/Light/sources/media.svg
- UI/data/themes/Light/sources/microphone.svg
- UI/data/themes/Light/sources/scene.svg
- UI/data/themes/Light/sources/slideshow.svg
- UI/data/themes/Light/sources/text.svg
- UI/data/themes/Light/sources/window.svg
- UI/data/themes/Light/sources/windowaudio.svg
- UI/data/themes/Light/trash.svg
- UI/data/themes/Light/up.svg
- UI/data/themes/Light/updown.svg
- UI/data/themes/Light/visible.svg
- UI/data/themes/System.obt
- UI/data/themes/Yami.obt
- UI/data/themes/Yami/checkbox_checked.svg
- UI/data/themes/Yami/checkbox_checked_disabled.svg
- UI/data/themes/Yami/checkbox_checked_focus.svg
- UI/data/themes/Yami/checkbox_unchecked.svg
- UI/data/themes/Yami/checkbox_unchecked_disabled.svg
- UI/data/themes/Yami/checkbox_unchecked_focus.svg
- UI/data/themes/Yami_Acri.ovt
- UI/data/themes/Yami_Classic.ovt
- UI/data/themes/Yami_Default.ovt
- UI/data/themes/Yami_Grey.ovt
- UI/data/themes/Yami_Light.ovt
- UI/data/themes/Yami_Rachni.ovt
- UI/double-slider.cpp
- UI/double-slider.hpp
- UI/focus-list.cpp
- UI/focus-list.hpp
- UI/forms/AutoConfigFinishPage.ui
- UI/forms/AutoConfigStartPage.ui
- UI/forms/AutoConfigStreamPage.ui
- UI/forms/AutoConfigTestPage.ui
- UI/forms/AutoConfigVideoPage.ui
- UI/forms/ColorSelect.ui
- UI/forms/OBSAbout.ui
- UI/forms/OBSAdvAudio.ui
- UI/forms/OBSBasic.ui
- UI/forms/OBSBasicControls.ui
- UI/forms/OBSBasicFilters.ui
- UI/forms/OBSBasicInteraction.ui
- UI/forms/OBSBasicProperties.ui
- UI/forms/OBSBasicSettings.ui
- UI/forms/OBSBasicSourceSelect.ui
- UI/forms/OBSBasicTransform.ui
- UI/forms/OBSBasicVCamConfig.ui
- UI/forms/OBSExtraBrowsers.ui
- UI/forms/OBSImporter.ui
- UI/forms/OBSLogReply.ui
- UI/forms/OBSLogViewer.ui
- UI/forms/OBSMissingFiles.ui
- UI/forms/OBSPermissions.ui
- UI/forms/OBSRemux.ui
- UI/forms/OBSUpdate.ui
- UI/forms/OBSYoutubeActions.ui
- UI/forms/StatusBarWidget.ui
- UI/forms/XML-Schema-Qt5.15.xsd
- UI/forms/images/alert.svg
- UI/forms/images/cogs.svg
- UI/forms/images/collapse.svg
- UI/forms/images/dots-vert.svg
- UI/forms/images/dots.svg
- UI/forms/images/down.svg
- UI/forms/images/entry-clear.svg
- UI/forms/images/expand.svg
- UI/forms/images/filter.svg
- UI/forms/images/help.svg
- UI/forms/images/help_light.svg
- UI/forms/images/interact.svg
- UI/forms/images/invisible.svg
- UI/forms/images/locked.svg
- UI/forms/images/media-pause.svg
- UI/forms/images/media/media_next.svg
- UI/forms/images/media/media_pause.svg
- UI/forms/images/media/media_play.svg
- UI/forms/images/media/media_previous.svg
- UI/forms/images/media/media_restart.svg
- UI/forms/images/media/media_stop.svg
- UI/forms/images/minus.svg
- UI/forms/images/mute.svg
- UI/forms/images/network-bad.svg
- UI/forms/images/network-disconnected.svg
- UI/forms/images/network-excellent.svg
- UI/forms/images/network-good.svg
- UI/forms/images/network-inactive.svg
- UI/forms/images/network-mediocre.svg
- UI/forms/images/no_sources.svg
- UI/forms/images/obs_macos.svg
- UI/forms/images/obs_paused_macos.svg
- UI/forms/images/plus.svg
- UI/forms/images/recording-active.svg
- UI/forms/images/recording-inactive.svg
- UI/forms/images/recording-pause-inactive.svg
- UI/forms/images/recording-pause.svg
- UI/forms/images/refresh.svg
- UI/forms/images/revert.svg
- UI/forms/images/right.svg
- UI/forms/images/save.svg
- UI/forms/images/settings/accessibility.svg
- UI/forms/images/settings/advanced.svg
- UI/forms/images/settings/appearance.svg
- UI/forms/images/settings/audio.svg
- UI/forms/images/settings/general.svg
- UI/forms/images/settings/hotkeys.svg
- UI/forms/images/settings/output.svg
- UI/forms/images/settings/stream.svg
- UI/forms/images/settings/video.svg
- UI/forms/images/sources/brush.svg
- UI/forms/images/sources/camera.svg
- UI/forms/images/sources/default.svg
- UI/forms/images/sources/gamepad.svg
- UI/forms/images/sources/globe.svg
- UI/forms/images/sources/group.svg
- UI/forms/images/sources/image.svg
- UI/forms/images/sources/media.svg
- UI/forms/images/sources/microphone.svg
- UI/forms/images/sources/scene.svg
- UI/forms/images/sources/slideshow.svg
- UI/forms/images/sources/text.svg
- UI/forms/images/sources/window.svg
- UI/forms/images/sources/windowaudio.svg
- UI/forms/images/streaming-active.svg
- UI/forms/images/streaming-inactive.svg
- UI/forms/images/tray_active_macos.svg
- UI/forms/images/unlocked.svg
- UI/forms/images/up.svg
- UI/forms/images/visible.svg
- UI/forms/images/warning.svg
- UI/forms/obs.qrc
- UI/forms/source-toolbar/browser-source-toolbar.ui
- UI/forms/source-toolbar/color-source-toolbar.ui
- UI/forms/source-toolbar/device-select-toolbar.ui
- UI/forms/source-toolbar/game-capture-toolbar.ui
- UI/forms/source-toolbar/image-source-toolbar.ui
- UI/forms/source-toolbar/media-controls.ui
- UI/forms/source-toolbar/text-source-toolbar.ui
- UI/frontend-plugins/CMakeLists.txt
- UI/frontend-plugins/aja-output-ui/AJAOutputUI.cpp
- UI/frontend-plugins/aja-output-ui/AJAOutputUI.h
- UI/frontend-plugins/aja-output-ui/CMakeLists.txt
- UI/frontend-plugins/aja-output-ui/aja-ui-main.cpp
- UI/frontend-plugins/aja-output-ui/aja-ui-main.h
- UI/frontend-plugins/aja-output-ui/cmake/legacy.cmake
- UI/frontend-plugins/aja-output-ui/cmake/windows/obs-module.rc.in
- UI/frontend-plugins/aja-output-ui/data/locale/af-ZA.ini
- UI/frontend-plugins/aja-output-ui/data/locale/ar-SA.ini
- UI/frontend-plugins/aja-output-ui/data/locale/be-BY.ini
- UI/frontend-plugins/aja-output-ui/data/locale/bg-BG.ini
- UI/frontend-plugins/aja-output-ui/data/locale/ca-ES.ini
- UI/frontend-plugins/aja-output-ui/data/locale/cs-CZ.ini
- UI/frontend-plugins/aja-output-ui/data/locale/da-DK.ini
- UI/frontend-plugins/aja-output-ui/data/locale/de-DE.ini
- UI/frontend-plugins/aja-output-ui/data/locale/el-GR.ini
- UI/frontend-plugins/aja-output-ui/data/locale/en-GB.ini
- UI/frontend-plugins/aja-output-ui/data/locale/en-US.ini
- UI/frontend-plugins/aja-output-ui/data/locale/es-ES.ini
- UI/frontend-plugins/aja-output-ui/data/locale/et-EE.ini
- UI/frontend-plugins/aja-output-ui/data/locale/eu-ES.ini
- UI/frontend-plugins/aja-output-ui/data/locale/fa-IR.ini
- UI/frontend-plugins/aja-output-ui/data/locale/fi-FI.ini
- UI/frontend-plugins/aja-output-ui/data/locale/fil-PH.ini
- UI/frontend-plugins/aja-output-ui/data/locale/fr-FR.ini
- UI/frontend-plugins/aja-output-ui/data/locale/gl-ES.ini
- UI/frontend-plugins/aja-output-ui/data/locale/he-IL.ini
- UI/frontend-plugins/aja-output-ui/data/locale/hi-IN.ini
- UI/frontend-plugins/aja-output-ui/data/locale/hr-HR.ini
- UI/frontend-plugins/aja-output-ui/data/locale/hu-HU.ini
- UI/frontend-plugins/aja-output-ui/data/locale/hy-AM.ini
- UI/frontend-plugins/aja-output-ui/data/locale/id-ID.ini
- UI/frontend-plugins/aja-output-ui/data/locale/it-IT.ini
- UI/frontend-plugins/aja-output-ui/data/locale/ja-JP.ini
- UI/frontend-plugins/aja-output-ui/data/locale/ka-GE.ini
- UI/frontend-plugins/aja-output-ui/data/locale/kaa.ini
- UI/frontend-plugins/aja-output-ui/data/locale/kmr-TR.ini
- UI/frontend-plugins/aja-output-ui/data/locale/ko-KR.ini
- UI/frontend-plugins/aja-output-ui/data/locale/ms-MY.ini
- UI/frontend-plugins/aja-output-ui/data/locale/nb-NO.ini
- UI/frontend-plugins/aja-output-ui/data/locale/nl-NL.ini
- UI/frontend-plugins/aja-output-ui/data/locale/pl-PL.ini
- UI/frontend-plugins/aja-output-ui/data/locale/pt-BR.ini
- UI/frontend-plugins/aja-output-ui/data/locale/pt-PT.ini
- UI/frontend-plugins/aja-output-ui/data/locale/ro-RO.ini
- UI/frontend-plugins/aja-output-ui/data/locale/ru-RU.ini
- UI/frontend-plugins/aja-output-ui/data/locale/si-LK.ini
- UI/frontend-plugins/aja-output-ui/data/locale/sk-SK.ini
- UI/frontend-plugins/aja-output-ui/data/locale/sl-SI.ini
- UI/frontend-plugins/aja-output-ui/data/locale/sv-SE.ini
- UI/frontend-plugins/aja-output-ui/data/locale/th-TH.ini
- UI/frontend-plugins/aja-output-ui/data/locale/tr-TR.ini
- UI/frontend-plugins/aja-output-ui/data/locale/tt-RU.ini
- UI/frontend-plugins/aja-output-ui/data/locale/ug-CN.ini
- UI/frontend-plugins/aja-output-ui/data/locale/uk-UA.ini
- UI/frontend-plugins/aja-output-ui/data/locale/ur-PK.ini
- UI/frontend-plugins/aja-output-ui/data/locale/vi-VN.ini
- UI/frontend-plugins/aja-output-ui/data/locale/zh-CN.ini
- UI/frontend-plugins/aja-output-ui/data/locale/zh-TW.ini
- UI/frontend-plugins/aja-output-ui/forms/output.ui
- UI/frontend-plugins/decklink-captions/CMakeLists.txt
- UI/frontend-plugins/decklink-captions/cmake/legacy.cmake
- UI/frontend-plugins/decklink-captions/cmake/windows/obs-module.rc.in
- UI/frontend-plugins/decklink-captions/decklink-captions.cpp
- UI/frontend-plugins/decklink-captions/decklink-captions.h
- UI/frontend-plugins/decklink-captions/forms/captions.ui
- UI/frontend-plugins/decklink-output-ui/CMakeLists.txt
- UI/frontend-plugins/decklink-output-ui/DecklinkOutputUI.cpp
- UI/frontend-plugins/decklink-output-ui/DecklinkOutputUI.h
- UI/frontend-plugins/decklink-output-ui/cmake/legacy.cmake
- UI/frontend-plugins/decklink-output-ui/cmake/windows/obs-module.rc.in
- UI/frontend-plugins/decklink-output-ui/decklink-ui-main.cpp
- UI/frontend-plugins/decklink-output-ui/decklink-ui-main.h
- UI/frontend-plugins/decklink-output-ui/forms/output.ui
- UI/frontend-plugins/frontend-tools/CMakeLists.txt
- UI/frontend-plugins/frontend-tools/auto-scene-switcher-nix.cpp
- UI/frontend-plugins/frontend-tools/auto-scene-switcher-osx.mm
- UI/frontend-plugins/frontend-tools/auto-scene-switcher-win.cpp
- UI/frontend-plugins/frontend-tools/auto-scene-switcher.cpp
- UI/frontend-plugins/frontend-tools/auto-scene-switcher.hpp
- UI/frontend-plugins/frontend-tools/captions-handler.cpp
- UI/frontend-plugins/frontend-tools/captions-handler.hpp
- UI/frontend-plugins/frontend-tools/captions-mssapi-stream.cpp
- UI/frontend-plugins/frontend-tools/captions-mssapi-stream.hpp
- UI/frontend-plugins/frontend-tools/captions-mssapi.cpp
- UI/frontend-plugins/frontend-tools/captions-mssapi.hpp
- UI/frontend-plugins/frontend-tools/captions.cpp
- UI/frontend-plugins/frontend-tools/captions.hpp
- UI/frontend-plugins/frontend-tools/cmake/legacy.cmake
- UI/frontend-plugins/frontend-tools/cmake/windows/obs-module.rc.in
- UI/frontend-plugins/frontend-tools/data/locale/af-ZA.ini
- UI/frontend-plugins/frontend-tools/data/locale/an-ES.ini
- UI/frontend-plugins/frontend-tools/data/locale/ar-SA.ini
- UI/frontend-plugins/frontend-tools/data/locale/az-AZ.ini
- UI/frontend-plugins/frontend-tools/data/locale/ba-RU.ini
- UI/frontend-plugins/frontend-tools/data/locale/be-BY.ini
- UI/frontend-plugins/frontend-tools/data/locale/bg-BG.ini
- UI/frontend-plugins/frontend-tools/data/locale/bn-BD.ini
- UI/frontend-plugins/frontend-tools/data/locale/ca-ES.ini
- UI/frontend-plugins/frontend-tools/data/locale/cs-CZ.ini
- UI/frontend-plugins/frontend-tools/data/locale/da-DK.ini
- UI/frontend-plugins/frontend-tools/data/locale/de-DE.ini
- UI/frontend-plugins/frontend-tools/data/locale/el-GR.ini
- UI/frontend-plugins/frontend-tools/data/locale/en-GB.ini
- UI/frontend-plugins/frontend-tools/data/locale/en-US.ini
- UI/frontend-plugins/frontend-tools/data/locale/eo-UY.ini
- UI/frontend-plugins/frontend-tools/data/locale/es-ES.ini
- UI/frontend-plugins/frontend-tools/data/locale/et-EE.ini
- UI/frontend-plugins/frontend-tools/data/locale/eu-ES.ini
- UI/frontend-plugins/frontend-tools/data/locale/fa-IR.ini
- UI/frontend-plugins/frontend-tools/data/locale/fi-FI.ini
- UI/frontend-plugins/frontend-tools/data/locale/fil-PH.ini
- UI/frontend-plugins/frontend-tools/data/locale/fr-FR.ini
- UI/frontend-plugins/frontend-tools/data/locale/gd-GB.ini
- UI/frontend-plugins/frontend-tools/data/locale/gl-ES.ini
- UI/frontend-plugins/frontend-tools/data/locale/he-IL.ini
- UI/frontend-plugins/frontend-tools/data/locale/hi-IN.ini
- UI/frontend-plugins/frontend-tools/data/locale/hr-HR.ini
- UI/frontend-plugins/frontend-tools/data/locale/hu-HU.ini
- UI/frontend-plugins/frontend-tools/data/locale/hy-AM.ini
- UI/frontend-plugins/frontend-tools/data/locale/id-ID.ini
- UI/frontend-plugins/frontend-tools/data/locale/is-IS.ini
- UI/frontend-plugins/frontend-tools/data/locale/it-IT.ini
- UI/frontend-plugins/frontend-tools/data/locale/ja-JP.ini
- UI/frontend-plugins/frontend-tools/data/locale/ka-GE.ini
- UI/frontend-plugins/frontend-tools/data/locale/kaa.ini
- UI/frontend-plugins/frontend-tools/data/locale/kab-KAB.ini
- UI/frontend-plugins/frontend-tools/data/locale/kmr-TR.ini
- UI/frontend-plugins/frontend-tools/data/locale/ko-KR.ini
- UI/frontend-plugins/frontend-tools/data/locale/lo-LA.ini
- UI/frontend-plugins/frontend-tools/data/locale/lt-LT.ini
- UI/frontend-plugins/frontend-tools/data/locale/mn-MN.ini
- UI/frontend-plugins/frontend-tools/data/locale/ms-MY.ini
- UI/frontend-plugins/frontend-tools/data/locale/nb-NO.ini
- UI/frontend-plugins/frontend-tools/data/locale/nl-NL.ini
- UI/frontend-plugins/frontend-tools/data/locale/nn-NO.ini
- UI/frontend-plugins/frontend-tools/data/locale/oc-FR.ini
- UI/frontend-plugins/frontend-tools/data/locale/pl-PL.ini
- UI/frontend-plugins/frontend-tools/data/locale/pt-BR.ini
- UI/frontend-plugins/frontend-tools/data/locale/pt-PT.ini
- UI/frontend-plugins/frontend-tools/data/locale/ro-RO.ini
- UI/frontend-plugins/frontend-tools/data/locale/ru-RU.ini
- UI/frontend-plugins/frontend-tools/data/locale/si-LK.ini
- UI/frontend-plugins/frontend-tools/data/locale/sk-SK.ini
- UI/frontend-plugins/frontend-tools/data/locale/sl-SI.ini
- UI/frontend-plugins/frontend-tools/data/locale/sq-AL.ini
- UI/frontend-plugins/frontend-tools/data/locale/sr-CS.ini
- UI/frontend-plugins/frontend-tools/data/locale/sr-SP.ini
- UI/frontend-plugins/frontend-tools/data/locale/sv-SE.ini
- UI/frontend-plugins/frontend-tools/data/locale/szl-PL.ini
- UI/frontend-plugins/frontend-tools/data/locale/ta-IN.ini
- UI/frontend-plugins/frontend-tools/data/locale/th-TH.ini
- UI/frontend-plugins/frontend-tools/data/locale/tl-PH.ini
- UI/frontend-plugins/frontend-tools/data/locale/tr-TR.ini
- UI/frontend-plugins/frontend-tools/data/locale/tt-RU.ini
- UI/frontend-plugins/frontend-tools/data/locale/ug-CN.ini
- UI/frontend-plugins/frontend-tools/data/locale/uk-UA.ini
- UI/frontend-plugins/frontend-tools/data/locale/vi-VN.ini
- UI/frontend-plugins/frontend-tools/data/locale/zh-CN.ini
- UI/frontend-plugins/frontend-tools/data/locale/zh-TW.ini
- UI/frontend-plugins/frontend-tools/data/scripts/clock-source.lua
- UI/frontend-plugins/frontend-tools/data/scripts/countdown.lua
- UI/frontend-plugins/frontend-tools/data/scripts/instant-replay.lua
- UI/frontend-plugins/frontend-tools/data/scripts/pause-scene.lua
- UI/frontend-plugins/frontend-tools/data/scripts/url-text.py
- UI/frontend-plugins/frontend-tools/forms/auto-scene-switcher.ui
- UI/frontend-plugins/frontend-tools/forms/captions.ui
- UI/frontend-plugins/frontend-tools/forms/output-timer.ui
- UI/frontend-plugins/frontend-tools/forms/scripts.ui
- UI/frontend-plugins/frontend-tools/frontend-tools-config.h.in
- UI/frontend-plugins/frontend-tools/frontend-tools.c
- UI/frontend-plugins/frontend-tools/output-timer.cpp
- UI/frontend-plugins/frontend-tools/output-timer.hpp
- UI/frontend-plugins/frontend-tools/scripts.cpp
- UI/frontend-plugins/frontend-tools/scripts.hpp
- UI/frontend-plugins/frontend-tools/tool-helpers.hpp
- UI/goliveapi-censoredjson.cpp
- UI/goliveapi-censoredjson.hpp
- UI/goliveapi-network.cpp
- UI/goliveapi-network.hpp
- UI/goliveapi-postdata.cpp
- UI/goliveapi-postdata.hpp
- UI/horizontal-scroll-area.cpp
- UI/horizontal-scroll-area.hpp
- UI/lineedit-autoresize.cpp
- UI/lineedit-autoresize.hpp
- UI/log-viewer.cpp
- UI/log-viewer.hpp
- UI/media-controls.cpp
- UI/media-controls.hpp
- UI/menu-button.cpp
- UI/menu-button.hpp
- UI/multitrack-video-error.cpp
- UI/multitrack-video-error.hpp
- UI/multitrack-video-output.cpp
- UI/multitrack-video-output.hpp
- UI/multiview.cpp
- UI/multiview.hpp
- UI/mute-checkbox.hpp
- UI/noncheckable-button.hpp
- UI/obf.c
- UI/obf.h
- UI/obs-frontend-api/CMakeLists.txt
- UI/obs-frontend-api/cmake/legacy.cmake
- UI/obs-frontend-api/cmake/linux/obs-frontend-api.pc.in
- UI/obs-frontend-api/cmake/obs-frontend-apiConfig.cmake.in
- UI/obs-frontend-api/cmake/windows/obs-module.rc.in
- UI/obs-frontend-api/obs-frontend-api.cpp
- UI/obs-frontend-api/obs-frontend-api.h
- UI/obs-frontend-api/obs-frontend-internal.hpp
- UI/obs-proxy-style.cpp
- UI/obs-proxy-style.hpp
- UI/obs.manifest
- UI/obs.rc.in
- UI/plain-text-edit.cpp
- UI/plain-text-edit.hpp
- UI/properties-view.cpp
- UI/properties-view.hpp
- UI/properties-view.moc.hpp
- UI/qt-display.cpp
- UI/qt-display.hpp
- UI/scene-tree.cpp
- UI/scene-tree.hpp
- UI/slider-ignorewheel.cpp
- UI/slider-ignorewheel.hpp
- UI/source-tree.cpp
- UI/source-tree.hpp
- UI/spinbox-ignorewheel.cpp
- UI/spinbox-ignorewheel.hpp
- UI/system-info-macos.mm
- UI/system-info-posix.cpp
- UI/system-info-windows.cpp
- UI/system-info.hpp
- UI/ui-config.h.in
- UI/ui-validation.cpp
- UI/ui-validation.hpp
- UI/undo-stack-obs.cpp
- UI/undo-stack-obs.hpp
- UI/update/crypto-helpers-mac.mm
- UI/update/crypto-helpers-mbedtls.cpp
- UI/update/crypto-helpers.hpp
- UI/update/mac-update.cpp
- UI/update/mac-update.hpp
- UI/update/shared-update.cpp
- UI/update/shared-update.hpp
- UI/update/sparkle-updater.mm
- UI/update/update-helpers.cpp
- UI/update/update-helpers.hpp
- UI/update/update-window.cpp
- UI/update/update-window.hpp
- UI/update/win-update.cpp
- UI/update/win-update.hpp
- UI/url-push-button.cpp
- UI/url-push-button.hpp
- UI/vertical-scroll-area.cpp
- UI/vertical-scroll-area.hpp
- UI/visibility-item-widget.cpp
- UI/visibility-item-widget.hpp
- UI/volume-control.cpp
- UI/volume-control.hpp
- UI/win-update/updater/CMakeLists.txt
- UI/win-update/updater/cmake/legacy.cmake
- UI/win-update/updater/helpers.cpp
- UI/win-update/updater/helpers.hpp
- UI/win-update/updater/init-hook-files.c
- UI/win-update/updater/resource.h
- UI/win-update/updater/updater.manifest
- UI/window-basic-about.cpp
- UI/window-basic-about.hpp
- UI/window-basic-adv-audio.cpp
- UI/window-basic-adv-audio.hpp
- UI/window-basic-auto-config-test.cpp
- UI/window-basic-auto-config.cpp
- UI/window-basic-auto-config.hpp
- UI/window-basic-main-dropfiles.cpp
- UI/window-basic-main-icons.cpp
- UI/window-basic-main-outputs.cpp
- UI/window-basic-main-outputs.hpp
- UI/window-basic-preview.cpp
- UI/window-basic-preview.hpp
- UI/window-basic-settings-a11y.cpp
- UI/window-basic-settings-appearance.cpp
- UI/window-basic-settings-stream.cpp
- UI/window-basic-stats.cpp
- UI/window-basic-stats.hpp
- UI/window-basic-status-bar.cpp
- UI/window-basic-status-bar.hpp
- UI/window-basic-transform.cpp
- UI/window-basic-transform.hpp
- UI/window-basic-vcam-config.cpp
- UI/window-basic-vcam-config.hpp
- UI/window-basic-vcam.hpp
- UI/window-dock-browser.cpp
- UI/window-dock-browser.hpp
- UI/window-dock-youtube-app.cpp
- UI/window-dock-youtube-app.hpp
- UI/window-dock.cpp
- UI/window-dock.hpp
- UI/window-extra-browsers.cpp
- UI/window-extra-browsers.hpp
- UI/window-main.hpp
- UI/window-projector.cpp
- UI/window-projector.hpp
- UI/window-youtube-actions.cpp
- UI/window-youtube-actions.hpp
- UI/xdg-data/CMakeLists.txt
- UI/xdg-data/com.obsproject.Studio.desktop
- UI/xdg-data/com.obsproject.Studio.metainfo.xml.in
- UI/xdg-data/icons/obs-logo-scalable.svg
- UI/youtube-api-wrappers.cpp
- UI/youtube-api-wrappers.hpp
+ SECURITY.md
+ build-aux/.functions/log_debug
+ build-aux/.functions/log_error
+ build-aux/.functions/log_group
+ build-aux/.functions/log_info
+ build-aux/.functions/log_output
+ build-aux/.functions/log_status
+ build-aux/.functions/log_warning
+ build-aux/.functions/set_loglevel
+ build-aux/.run-format.zsh
+ build-aux/README.md
+ build-aux/com.obsproject.Studio.json
+ build-aux/format-manifest.py
+ build-aux/steam/obs_build.vdf
+ build-aux/steam/obs_playtest_build.vdf
+ build-aux/steam/scripts_macos/launch.sh
+ build-aux/steam/scripts_windows/install.bat
+ build-aux/steam/scripts_windows/installscript.vdf
+ build-aux/steam/scripts_windows/uninstall.bat
  cmake/.CMakeBuildNumber
- cmake/32bit/projects.cmake
- cmake/Modules/CompilerConfig.cmake
- cmake/Modules/CopyMSVCBins.cmake
- cmake/Modules/DeprecationHelpers.cmake
- cmake/Modules/FindAMF.cmake
- cmake/Modules/FindAsio.cmake
- cmake/Modules/FindCEF.cmake
- cmake/Modules/FindDetours.cmake
- cmake/Modules/FindFFmpeg.cmake
- cmake/Modules/FindFFnvcodec.cmake
- cmake/Modules/FindGio.cmake
- cmake/Modules/FindJansson.cmake
- cmake/Modules/FindLibAJANTV2.cmake
- cmake/Modules/FindLibUUID.cmake
- cmake/Modules/FindLibVLC.cmake
- cmake/Modules/FindLibdrm.cmake
- cmake/Modules/FindLibfdk.cmake
- cmake/Modules/FindLibpci.cmake
- cmake/Modules/FindLibrist.cmake
- cmake/Modules/FindLibrnnoise.cmake
- cmake/Modules/FindLibspeexdsp.cmake
- cmake/Modules/FindLibsrt.cmake
- cmake/Modules/FindLibv4l2.cmake
- cmake/Modules/FindLibva.cmake
- cmake/Modules/FindLibx264.cmake
- cmake/Modules/FindLuajit.cmake
- cmake/Modules/FindMbedTLS.cmake
- cmake/Modules/FindOSS.cmake
- cmake/Modules/FindPythonWindows.cmake
- cmake/Modules/FindSndio.cmake
- cmake/Modules/FindSwigWindows.cmake
- cmake/Modules/FindSysinfo.cmake
- cmake/Modules/FindUdev.cmake
- cmake/Modules/FindUthash.cmake
- cmake/Modules/FindVPL.cmake
- cmake/Modules/FindWebsocketpp.cmake
- cmake/Modules/FindXkbcommon.cmake
- cmake/Modules/Findqrcodegencpp.cmake
- cmake/Modules/IDLFileHelper.cmake
- cmake/Modules/ObsDefaults_Linux.cmake
- cmake/Modules/ObsDefaults_Windows.cmake
- cmake/Modules/ObsDefaults_macOS.cmake
- cmake/Modules/ObsHelpers.cmake
- cmake/Modules/ObsHelpers_Linux.cmake
- cmake/Modules/ObsHelpers_Windows.cmake
- cmake/Modules/ObsHelpers_macOS.cmake
- cmake/Modules/VersionConfig.cmake
  cmake/common/bootstrap.cmake
+ cmake/common/buildnumber.cmake
+ cmake/common/buildspec_common.cmake
  cmake/common/ccache.cmake
  cmake/common/compiler_common.cmake
  cmake/common/cpackconfig_common.cmake
@@ -787,41 +69,37 @@ Files: AUTHORS
  cmake/finders/FindOSS.cmake
  cmake/finders/FindPipeWire.cmake
  cmake/finders/FindPulseAudio.cmake
+ cmake/finders/FindSIMDe.cmake
  cmake/finders/FindSndio.cmake
  cmake/finders/FindSysinfo.cmake
  cmake/finders/FindUthash.cmake
  cmake/finders/FindVPL.cmake
- cmake/finders/FindWayland.cmake
  cmake/finders/FindWebsocketpp.cmake
- cmake/finders/FindX11-xcb.cmake
- cmake/finders/FindXcb.cmake
  cmake/finders/FindXkbcommon.cmake
  cmake/finders/Findjansson.cmake
  cmake/finders/Findqrcodegencpp.cmake
  cmake/linux/compilerconfig.cmake
  cmake/linux/cpackconfig.cmake
  cmake/linux/defaults.cmake
+ cmake/linux/ecmconfig.cmake
  cmake/linux/helpers.cmake
  cmake/linux/toolchain-aarch64-clang.cmake
  cmake/linux/toolchain-aarch64-gcc.cmake
  cmake/linux/toolchain-x86_64-gcc.cmake
+ cmake/macos/buildspec.cmake
  cmake/macos/compilerconfig.cmake
  cmake/macos/defaults.cmake
  cmake/macos/helpers.cmake
- cmake/macos/resources/ccache-launcher-c.in
- cmake/macos/resources/ccache-launcher-cxx.in
  cmake/macos/resources/package.applescript
  cmake/macos/xcode.cmake
  cmake/windows/FindPython.cmake
+ cmake/windows/architecture.cmake
+ cmake/windows/buildspec.cmake
  cmake/windows/compilerconfig.cmake
  cmake/windows/cpackconfig.cmake
  cmake/windows/defaults.cmake
  cmake/windows/helpers.cmake
  cmake/windows/idlfilehelper.cmake
- deps/CMakeLists.txt
- deps/file-updater/CMakeLists.txt
- deps/file-updater/file-updater/file-updater.c
- deps/file-updater/file-updater/file-updater.h
  deps/glad/.clang-format
  deps/glad/CMakeLists.txt
  deps/glad/include/glad/glad.h
@@ -830,8 +108,6 @@ Files: AUTHORS
  deps/glad/src/glad.c
  deps/glad/src/glad_egl.c
  deps/glad/src/glad_wgl.c
- deps/happy-eyeballs/CMakeLists.txt
- deps/ipc-util/CMakeLists.txt
  deps/json11/.clang-format
  deps/json11/CMakeLists.txt
  deps/libcaption/.clang-format
@@ -839,28 +115,8 @@ Files: AUTHORS
  deps/libcaption/Doxyfile.in
  deps/libcaption/README.md
  deps/libcaption/caption/dvtcc.h
- deps/libcaption/cmake/legacy.cmake
  deps/libcaption/format.sh
  deps/libcaption/src/dvtcc.c
- deps/media-playback/CMakeLists.txt
- deps/obs-scripting/CMakeLists.txt
- deps/obs-scripting/cmake/cstrcache.cmake
- deps/obs-scripting/cmake/legacy.cmake
- deps/obs-scripting/cmake/lua.cmake
- deps/obs-scripting/cmake/python.cmake
- deps/obs-scripting/cmake/windows/obs-module.rc.in
- deps/obs-scripting/cstrcache.cpp
- deps/obs-scripting/cstrcache.h
- deps/obs-scripting/obs-scripting-config.h.in
- deps/obs-scripting/obslua/CMakeLists.txt
- deps/obs-scripting/obslua/cmake/legacy.cmake
- deps/obs-scripting/obslua/obslua.i
- deps/obs-scripting/obspython/CMakeLists.txt
- deps/obs-scripting/obspython/cmake/legacy.cmake
- deps/obs-scripting/obspython/obspython.i
- deps/opts-parser/CMakeLists.txt
- deps/opts-parser/opts-parser.c
- deps/opts-parser/opts-parser.h
  deps/w32-pthreads/.clang-format
  deps/w32-pthreads/BUGS
  deps/w32-pthreads/Bmakefile
@@ -881,7 +137,7 @@ Files: AUTHORS
  deps/w32-pthreads/README.WinCE
  deps/w32-pthreads/TODO
  deps/w32-pthreads/WinCE-PORT
- deps/w32-pthreads/cmake/legacy.cmake
+ deps/w32-pthreads/builddmc.bat
  deps/w32-pthreads/cmake/w32-pthreadsConfig.cmake.in
  deps/w32-pthreads/cmake/windows/obs-module.rc.in
  deps/w32-pthreads/config.h
@@ -920,6 +176,7 @@ Files: AUTHORS
  deps/w32-pthreads/manual/sem_init.html
  deps/w32-pthreads/pthread.dsp
  deps/w32-pthreads/pthread.dsw
+ deps/w32-pthreads/pthread.lastbuildstate
  deps/w32-pthreads/pthread.sln
  deps/w32-pthreads/pthread.vcxproj
  deps/w32-pthreads/pthread.vcxproj.filters
@@ -951,6 +208,7 @@ Files: AUTHORS
  docs/sphinx/logo.svg
  docs/sphinx/make.bat
  docs/sphinx/plugins.rst
+ docs/sphinx/reference-canvases.rst
  docs/sphinx/reference-core-objects.rst
  docs/sphinx/reference-core.rst
  docs/sphinx/reference-encoders.rst
@@ -970,7 +228,6 @@ Files: AUTHORS
  docs/sphinx/reference-libobs-media-io.rst
  docs/sphinx/reference-libobs-util-base.rst
  docs/sphinx/reference-libobs-util-bmem.rst
- docs/sphinx/reference-libobs-util-circlebuf.rst
  docs/sphinx/reference-libobs-util-config-file.rst
  docs/sphinx/reference-libobs-util-darray.rst
  docs/sphinx/reference-libobs-util-deque.rst
@@ -978,6 +235,7 @@ Files: AUTHORS
  docs/sphinx/reference-libobs-util-platform.rst
  docs/sphinx/reference-libobs-util-profiler.rst
  docs/sphinx/reference-libobs-util-serializers.rst
+ docs/sphinx/reference-libobs-util-source-profiler.rst
  docs/sphinx/reference-libobs-util-text-lookup.rst
  docs/sphinx/reference-libobs-util-threading.rst
  docs/sphinx/reference-libobs-util.rst
@@ -990,19 +248,605 @@ Files: AUTHORS
  docs/sphinx/reference-sources.rst
  docs/sphinx/requirements.txt
  docs/sphinx/scripting.rst
+ frontend/CMakeLists.txt
+ frontend/OBSStudioAPI.cpp
+ frontend/api/CMakeLists.txt
+ frontend/api/cmake/linux/obs-frontend-api.pc.in
+ frontend/api/cmake/obs-frontend-apiConfig.cmake.in
+ frontend/api/cmake/windows/obs-module.rc.in
+ frontend/api/obs-frontend-api.cpp
+ frontend/api/obs-frontend-api.h
+ frontend/api/obs-frontend-internal.hpp
+ frontend/cmake/feature-browserpanels.cmake
+ frontend/cmake/feature-idian-playground.cmake
+ frontend/cmake/feature-importers.cmake
+ frontend/cmake/feature-macos-update.cmake
+ frontend/cmake/feature-plugin-manager.cmake
+ frontend/cmake/feature-restream.cmake
+ frontend/cmake/feature-sparkle.cmake
+ frontend/cmake/feature-twitch.cmake
+ frontend/cmake/feature-whatsnew.cmake
+ frontend/cmake/feature-youtube.cmake
+ frontend/cmake/linux/com.obsproject.Studio.desktop
+ frontend/cmake/linux/com.obsproject.Studio.metainfo.xml.in
+ frontend/cmake/linux/icons/obs-logo-scalable.svg
+ frontend/cmake/macos/Assets.xcassets/AppIcon.appiconset/Contents.json
+ frontend/cmake/macos/Assets.xcassets/Contents.json
+ frontend/cmake/macos/Info.plist.in
+ frontend/cmake/macos/entitlements-extension.plist
+ frontend/cmake/macos/entitlements.plist
+ frontend/cmake/macos/exportOptions-extension.plist.in
+ frontend/cmake/macos/exportOptions.plist.in
+ frontend/cmake/macos/qt.conf
+ frontend/cmake/os-freebsd.cmake
+ frontend/cmake/os-linux.cmake
+ frontend/cmake/os-macos.cmake
+ frontend/cmake/os-windows.cmake
+ frontend/cmake/templates/ui-config.h.in
+ frontend/cmake/ui-components.cmake
+ frontend/cmake/ui-dialogs.cmake
+ frontend/cmake/ui-docks.cmake
+ frontend/cmake/ui-models.cmake
+ frontend/cmake/ui-oauth.cmake
+ frontend/cmake/ui-qt.cmake
+ frontend/cmake/ui-settings.cmake
+ frontend/cmake/ui-utility.cmake
+ frontend/cmake/ui-widgets.cmake
+ frontend/cmake/ui-wizards.cmake
+ frontend/cmake/windows/obs.manifest
+ frontend/cmake/windows/obs.rc.in
+ frontend/components/AbsoluteSlider.cpp
+ frontend/components/AbsoluteSlider.hpp
+ frontend/components/ApplicationAudioCaptureToolbar.cpp
+ frontend/components/ApplicationAudioCaptureToolbar.hpp
+ frontend/components/AudioCaptureToolbar.cpp
+ frontend/components/AudioCaptureToolbar.hpp
+ frontend/components/BalanceSlider.hpp
+ frontend/components/BrowserToolbar.cpp
+ frontend/components/BrowserToolbar.hpp
+ frontend/components/ClickableLabel.hpp
+ frontend/components/ColorSourceToolbar.cpp
+ frontend/components/ColorSourceToolbar.hpp
+ frontend/components/ComboSelectToolbar.cpp
+ frontend/components/ComboSelectToolbar.hpp
+ frontend/components/DelButton.hpp
+ frontend/components/DeviceCaptureToolbar.cpp
+ frontend/components/DeviceCaptureToolbar.hpp
+ frontend/components/DisplayCaptureToolbar.cpp
+ frontend/components/DisplayCaptureToolbar.hpp
+ frontend/components/EditWidget.hpp
+ frontend/components/FocusList.cpp
+ frontend/components/FocusList.hpp
+ frontend/components/GameCaptureToolbar.cpp
+ frontend/components/GameCaptureToolbar.hpp
+ frontend/components/ImageSourceToolbar.cpp
+ frontend/components/ImageSourceToolbar.hpp
+ frontend/components/MediaControls.cpp
+ frontend/components/MediaControls.hpp
+ frontend/components/MenuButton.cpp
+ frontend/components/MenuButton.hpp
+ frontend/components/Multiview.cpp
+ frontend/components/Multiview.hpp
+ frontend/components/MuteCheckBox.hpp
+ frontend/components/OBSAdvAudioCtrl.cpp
+ frontend/components/OBSAdvAudioCtrl.hpp
+ frontend/components/SceneTree.cpp
+ frontend/components/SceneTree.hpp
+ frontend/components/SourceToolbar.cpp
+ frontend/components/SourceToolbar.hpp
+ frontend/components/SourceTree.cpp
+ frontend/components/SourceTree.hpp
+ frontend/components/SourceTreeDelegate.cpp
+ frontend/components/SourceTreeDelegate.hpp
+ frontend/components/SourceTreeItem.cpp
+ frontend/components/SourceTreeItem.hpp
+ frontend/components/SourceTreeModel.cpp
+ frontend/components/SourceTreeModel.hpp
+ frontend/components/TextSourceToolbar.cpp
+ frontend/components/TextSourceToolbar.hpp
+ frontend/components/UIValidation.cpp
+ frontend/components/UIValidation.hpp
+ frontend/components/UrlPushButton.cpp
+ frontend/components/UrlPushButton.hpp
+ frontend/components/VisibilityItemDelegate.cpp
+ frontend/components/VisibilityItemDelegate.hpp
+ frontend/components/VisibilityItemWidget.cpp
+ frontend/components/VisibilityItemWidget.hpp
+ frontend/components/VolumeAccessibleInterface.cpp
+ frontend/components/VolumeAccessibleInterface.hpp
+ frontend/components/VolumeControl.cpp
+ frontend/components/VolumeControl.hpp
+ frontend/components/VolumeMeter.cpp
+ frontend/components/VolumeMeter.hpp
+ frontend/components/VolumeSlider.cpp
+ frontend/components/VolumeSlider.hpp
+ frontend/components/WindowCaptureToolbar.cpp
+ frontend/components/WindowCaptureToolbar.hpp
+ frontend/data/OBSPublicRSAKey.pem
+ frontend/data/locale.ini
+ frontend/data/locale/af-ZA.ini
+ frontend/data/locale/an-ES.ini
+ frontend/data/locale/ar-SA.ini
+ frontend/data/locale/az-AZ.ini
+ frontend/data/locale/ba-RU.ini
+ frontend/data/locale/be-BY.ini
+ frontend/data/locale/bem-ZM.ini
+ frontend/data/locale/bg-BG.ini
+ frontend/data/locale/bn-BD.ini
+ frontend/data/locale/ca-ES.ini
+ frontend/data/locale/cs-CZ.ini
+ frontend/data/locale/da-DK.ini
+ frontend/data/locale/de-DE.ini
+ frontend/data/locale/el-GR.ini
+ frontend/data/locale/en-GB.ini
+ frontend/data/locale/en-US.ini
+ frontend/data/locale/eo-UY.ini
+ frontend/data/locale/es-ES.ini
+ frontend/data/locale/et-EE.ini
+ frontend/data/locale/eu-ES.ini
+ frontend/data/locale/fa-IR.ini
+ frontend/data/locale/fi-FI.ini
+ frontend/data/locale/fil-PH.ini
+ frontend/data/locale/fr-FR.ini
+ frontend/data/locale/gd-GB.ini
+ frontend/data/locale/gl-ES.ini
+ frontend/data/locale/he-IL.ini
+ frontend/data/locale/hi-IN.ini
+ frontend/data/locale/hr-HR.ini
+ frontend/data/locale/hu-HU.ini
+ frontend/data/locale/hy-AM.ini
+ frontend/data/locale/id-ID.ini
+ frontend/data/locale/is-IS.ini
+ frontend/data/locale/it-IT.ini
+ frontend/data/locale/ja-JP.ini
+ frontend/data/locale/ka-GE.ini
+ frontend/data/locale/kaa.ini
+ frontend/data/locale/kab-KAB.ini
+ frontend/data/locale/kmr-TR.ini
+ frontend/data/locale/ko-KR.ini
+ frontend/data/locale/lo-LA.ini
+ frontend/data/locale/lt-LT.ini
+ frontend/data/locale/lv-LV.ini
+ frontend/data/locale/mn-MN.ini
+ frontend/data/locale/ms-MY.ini
+ frontend/data/locale/nb-NO.ini
+ frontend/data/locale/nl-NL.ini
+ frontend/data/locale/nn-NO.ini
+ frontend/data/locale/oc-FR.ini
+ frontend/data/locale/pa-IN.ini
+ frontend/data/locale/pl-PL.ini
+ frontend/data/locale/pt-BR.ini
+ frontend/data/locale/pt-PT.ini
+ frontend/data/locale/ro-RO.ini
+ frontend/data/locale/ru-RU.ini
+ frontend/data/locale/si-LK.ini
+ frontend/data/locale/sk-SK.ini
+ frontend/data/locale/sl-SI.ini
+ frontend/data/locale/sq-AL.ini
+ frontend/data/locale/sr-CS.ini
+ frontend/data/locale/sr-SP.ini
+ frontend/data/locale/sv-SE.ini
+ frontend/data/locale/szl-PL.ini
+ frontend/data/locale/ta-IN.ini
+ frontend/data/locale/te-IN.ini
+ frontend/data/locale/th-TH.ini
+ frontend/data/locale/tl-PH.ini
+ frontend/data/locale/tr-TR.ini
+ frontend/data/locale/tt-RU.ini
+ frontend/data/locale/ug-CN.ini
+ frontend/data/locale/uk-UA.ini
+ frontend/data/locale/ur-PK.ini
+ frontend/data/locale/uz-UZ.ini
+ frontend/data/locale/val-ES.ini
+ frontend/data/locale/vi-VN.ini
+ frontend/data/locale/zh-CN.ini
+ frontend/data/locale/zh-TW.ini
+ frontend/data/striped_line.effect
+ frontend/data/themes/Dark/alert.svg
+ frontend/data/themes/Dark/close.svg
+ frontend/data/themes/Dark/cogs.svg
+ frontend/data/themes/Dark/collapse.svg
+ frontend/data/themes/Dark/dots-vert.svg
+ frontend/data/themes/Dark/dots.svg
+ frontend/data/themes/Dark/down.svg
+ frontend/data/themes/Dark/entry-clear.svg
+ frontend/data/themes/Dark/expand.svg
+ frontend/data/themes/Dark/filter.svg
+ frontend/data/themes/Dark/headphones-off.svg
+ frontend/data/themes/Dark/headphones.svg
+ frontend/data/themes/Dark/interact.svg
+ frontend/data/themes/Dark/layout-horizontal.svg
+ frontend/data/themes/Dark/layout-vertical.svg
+ frontend/data/themes/Dark/left.svg
+ frontend/data/themes/Dark/locked.svg
+ frontend/data/themes/Dark/media-pause.svg
+ frontend/data/themes/Dark/media/media_next.svg
+ frontend/data/themes/Dark/media/media_pause.svg
+ frontend/data/themes/Dark/media/media_play.svg
+ frontend/data/themes/Dark/media/media_previous.svg
+ frontend/data/themes/Dark/media/media_restart.svg
+ frontend/data/themes/Dark/media/media_stop.svg
+ frontend/data/themes/Dark/minus.svg
+ frontend/data/themes/Dark/mute.svg
+ frontend/data/themes/Dark/network-disconnected.svg
+ frontend/data/themes/Dark/network-inactive.svg
+ frontend/data/themes/Dark/no_sources.svg
+ frontend/data/themes/Dark/plus.svg
+ frontend/data/themes/Dark/popout.svg
+ frontend/data/themes/Dark/recording-inactive.svg
+ frontend/data/themes/Dark/recording-pause-inactive.svg
+ frontend/data/themes/Dark/refresh.svg
+ frontend/data/themes/Dark/revert.svg
+ frontend/data/themes/Dark/right.svg
+ frontend/data/themes/Dark/save.svg
+ frontend/data/themes/Dark/settings/accessibility.svg
+ frontend/data/themes/Dark/settings/advanced.svg
+ frontend/data/themes/Dark/settings/appearance.svg
+ frontend/data/themes/Dark/settings/audio.svg
+ frontend/data/themes/Dark/settings/general.svg
+ frontend/data/themes/Dark/settings/hotkeys.svg
+ frontend/data/themes/Dark/settings/output.svg
+ frontend/data/themes/Dark/settings/stream.svg
+ frontend/data/themes/Dark/settings/video.svg
+ frontend/data/themes/Dark/sources/brush.svg
+ frontend/data/themes/Dark/sources/camera.svg
+ frontend/data/themes/Dark/sources/default.svg
+ frontend/data/themes/Dark/sources/gamepad.svg
+ frontend/data/themes/Dark/sources/globe.svg
+ frontend/data/themes/Dark/sources/group.svg
+ frontend/data/themes/Dark/sources/image.svg
+ frontend/data/themes/Dark/sources/media.svg
+ frontend/data/themes/Dark/sources/microphone.svg
+ frontend/data/themes/Dark/sources/scene.svg
+ frontend/data/themes/Dark/sources/slideshow.svg
+ frontend/data/themes/Dark/sources/text.svg
+ frontend/data/themes/Dark/sources/window.svg
+ frontend/data/themes/Dark/sources/windowaudio.svg
+ frontend/data/themes/Dark/streaming-inactive.svg
+ frontend/data/themes/Dark/trash.svg
+ frontend/data/themes/Dark/unassigned.svg
+ frontend/data/themes/Dark/up.svg
+ frontend/data/themes/Dark/updown.svg
+ frontend/data/themes/Dark/visible.svg
+ frontend/data/themes/Light/alert.svg
+ frontend/data/themes/Light/checkbox_checked.svg
+ frontend/data/themes/Light/checkbox_checked_disabled.svg
+ frontend/data/themes/Light/checkbox_checked_focus.svg
+ frontend/data/themes/Light/checkbox_unchecked.svg
+ frontend/data/themes/Light/checkbox_unchecked_disabled.svg
+ frontend/data/themes/Light/checkbox_unchecked_focus.svg
+ frontend/data/themes/Light/close.svg
+ frontend/data/themes/Light/cogs.svg
+ frontend/data/themes/Light/collapse.svg
+ frontend/data/themes/Light/dots-vert.svg
+ frontend/data/themes/Light/dots.svg
+ frontend/data/themes/Light/down.svg
+ frontend/data/themes/Light/entry-clear.svg
+ frontend/data/themes/Light/expand.svg
+ frontend/data/themes/Light/filter.svg
+ frontend/data/themes/Light/headphones-off.svg
+ frontend/data/themes/Light/headphones.svg
+ frontend/data/themes/Light/interact.svg
+ frontend/data/themes/Light/layout-horizontal.svg
+ frontend/data/themes/Light/layout-vertical.svg
+ frontend/data/themes/Light/left.svg
+ frontend/data/themes/Light/locked.svg
+ frontend/data/themes/Light/media-pause.svg
+ frontend/data/themes/Light/media/media_next.svg
+ frontend/data/themes/Light/media/media_pause.svg
+ frontend/data/themes/Light/media/media_play.svg
+ frontend/data/themes/Light/media/media_previous.svg
+ frontend/data/themes/Light/media/media_restart.svg
+ frontend/data/themes/Light/media/media_stop.svg
+ frontend/data/themes/Light/minus.svg
+ frontend/data/themes/Light/mute.svg
+ frontend/data/themes/Light/no_sources.svg
+ frontend/data/themes/Light/plus.svg
+ frontend/data/themes/Light/popout.svg
+ frontend/data/themes/Light/refresh.svg
+ frontend/data/themes/Light/revert.svg
+ frontend/data/themes/Light/right.svg
+ frontend/data/themes/Light/save.svg
+ frontend/data/themes/Light/settings/accessibility.svg
+ frontend/data/themes/Light/settings/advanced.svg
+ frontend/data/themes/Light/settings/appearance.svg
+ frontend/data/themes/Light/settings/audio.svg
+ frontend/data/themes/Light/settings/general.svg
+ frontend/data/themes/Light/settings/hotkeys.svg
+ frontend/data/themes/Light/settings/output.svg
+ frontend/data/themes/Light/settings/stream.svg
+ frontend/data/themes/Light/settings/video.svg
+ frontend/data/themes/Light/sources/brush.svg
+ frontend/data/themes/Light/sources/camera.svg
+ frontend/data/themes/Light/sources/default.svg
+ frontend/data/themes/Light/sources/gamepad.svg
+ frontend/data/themes/Light/sources/globe.svg
+ frontend/data/themes/Light/sources/group.svg
+ frontend/data/themes/Light/sources/image.svg
+ frontend/data/themes/Light/sources/media.svg
+ frontend/data/themes/Light/sources/microphone.svg
+ frontend/data/themes/Light/sources/scene.svg
+ frontend/data/themes/Light/sources/slideshow.svg
+ frontend/data/themes/Light/sources/text.svg
+ frontend/data/themes/Light/sources/window.svg
+ frontend/data/themes/Light/sources/windowaudio.svg
+ frontend/data/themes/Light/trash.svg
+ frontend/data/themes/Light/up.svg
+ frontend/data/themes/Light/updown.svg
+ frontend/data/themes/Light/visible.svg
+ frontend/data/themes/System.obt
+ frontend/data/themes/Yami.obt
+ frontend/data/themes/Yami/checkbox_checked.svg
+ frontend/data/themes/Yami/checkbox_checked_disabled.svg
+ frontend/data/themes/Yami/checkbox_checked_focus.svg
+ frontend/data/themes/Yami/checkbox_unchecked.svg
+ frontend/data/themes/Yami/checkbox_unchecked_disabled.svg
+ frontend/data/themes/Yami/checkbox_unchecked_focus.svg
+ frontend/data/themes/Yami_Acri.ovt
+ frontend/data/themes/Yami_Classic.ovt
+ frontend/data/themes/Yami_Default.ovt
+ frontend/data/themes/Yami_Grey.ovt
+ frontend/data/themes/Yami_Light.ovt
+ frontend/data/themes/Yami_Rachni.ovt
+ frontend/dialogs/OAuthLogin.cpp
+ frontend/dialogs/OAuthLogin.hpp
+ frontend/dialogs/OBSAbout.cpp
+ frontend/dialogs/OBSAbout.hpp
+ frontend/dialogs/OBSBasicAdvAudio.cpp
+ frontend/dialogs/OBSBasicAdvAudio.hpp
+ frontend/dialogs/OBSBasicTransform.cpp
+ frontend/dialogs/OBSBasicTransform.hpp
+ frontend/dialogs/OBSBasicVCamConfig.cpp
+ frontend/dialogs/OBSBasicVCamConfig.hpp
+ frontend/dialogs/OBSExtraBrowsers.cpp
+ frontend/dialogs/OBSExtraBrowsers.hpp
+ frontend/dialogs/OBSLogViewer.cpp
+ frontend/dialogs/OBSLogViewer.hpp
+ frontend/dialogs/OBSUpdate.cpp
+ frontend/dialogs/OBSUpdate.hpp
+ frontend/dialogs/OBSWhatsNew.cpp
+ frontend/dialogs/OBSWhatsNew.hpp
+ frontend/dialogs/OBSYoutubeActions.cpp
+ frontend/dialogs/OBSYoutubeActions.hpp
+ frontend/docks/BrowserDock.cpp
+ frontend/docks/BrowserDock.hpp
+ frontend/docks/OBSDock.cpp
+ frontend/docks/OBSDock.hpp
+ frontend/docks/YouTubeAppDock.cpp
+ frontend/docks/YouTubeAppDock.hpp
+ frontend/docks/YouTubeChatDock.cpp
+ frontend/docks/YouTubeChatDock.hpp
+ frontend/forms/AutoConfigFinishPage.ui
+ frontend/forms/AutoConfigStartPage.ui
+ frontend/forms/AutoConfigStreamPage.ui
+ frontend/forms/AutoConfigTestPage.ui
+ frontend/forms/AutoConfigVideoPage.ui
+ frontend/forms/ColorSelect.ui
+ frontend/forms/LogUploadDialog.ui
+ frontend/forms/OBSAbout.ui
+ frontend/forms/OBSAdvAudio.ui
+ frontend/forms/OBSBasic.ui
+ frontend/forms/OBSBasicControls.ui
+ frontend/forms/OBSBasicFilters.ui
+ frontend/forms/OBSBasicInteraction.ui
+ frontend/forms/OBSBasicProperties.ui
+ frontend/forms/OBSBasicSettings.ui
+ frontend/forms/OBSBasicSourceSelect.ui
+ frontend/forms/OBSBasicTransform.ui
+ frontend/forms/OBSBasicVCamConfig.ui
+ frontend/forms/OBSExtraBrowsers.ui
+ frontend/forms/OBSIdianPlayground.ui
+ frontend/forms/OBSImporter.ui
+ frontend/forms/OBSLogViewer.ui
+ frontend/forms/OBSMissingFiles.ui
+ frontend/forms/OBSPermissions.ui
+ frontend/forms/OBSRemux.ui
+ frontend/forms/OBSUpdate.ui
+ frontend/forms/OBSYoutubeActions.ui
+ frontend/forms/PluginManagerWindow.ui
+ frontend/forms/StatusBarWidget.ui
+ frontend/forms/XML-Schema-Qt5.15.xsd
+ frontend/forms/images/alert.svg
+ frontend/forms/images/close.svg
+ frontend/forms/images/cogs.svg
+ frontend/forms/images/collapse.svg
+ frontend/forms/images/dots-vert.svg
+ frontend/forms/images/dots.svg
+ frontend/forms/images/down.svg
+ frontend/forms/images/entry-clear.svg
+ frontend/forms/images/expand.svg
+ frontend/forms/images/filter.svg
+ frontend/forms/images/headphones-off.svg
+ frontend/forms/images/headphones.svg
+ frontend/forms/images/help.svg
+ frontend/forms/images/help_light.svg
+ frontend/forms/images/hide.svg
+ frontend/forms/images/interact.svg
+ frontend/forms/images/invisible.svg
+ frontend/forms/images/layout-horizontal.svg
+ frontend/forms/images/layout-vertical.svg
+ frontend/forms/images/locked.svg
+ frontend/forms/images/media-pause.svg
+ frontend/forms/images/media/media_next.svg
+ frontend/forms/images/media/media_pause.svg
+ frontend/forms/images/media/media_play.svg
+ frontend/forms/images/media/media_previous.svg
+ frontend/forms/images/media/media_restart.svg
+ frontend/forms/images/media/media_stop.svg
+ frontend/forms/images/minus.svg
+ frontend/forms/images/mute.svg
+ frontend/forms/images/network-bad.svg
+ frontend/forms/images/network-disconnected.svg
+ frontend/forms/images/network-excellent.svg
+ frontend/forms/images/network-good.svg
+ frontend/forms/images/network-inactive.svg
+ frontend/forms/images/network-mediocre.svg
+ frontend/forms/images/no_sources.svg
+ frontend/forms/images/obs_macos.svg
+ frontend/forms/images/obs_paused_macos.svg
+ frontend/forms/images/plus.svg
+ frontend/forms/images/recording-active.svg
+ frontend/forms/images/recording-inactive.svg
+ frontend/forms/images/recording-pause-inactive.svg
+ frontend/forms/images/recording-pause.svg
+ frontend/forms/images/refresh.svg
+ frontend/forms/images/revert.svg
+ frontend/forms/images/right.svg
+ frontend/forms/images/save.svg
+ frontend/forms/images/settings/accessibility.svg
+ frontend/forms/images/settings/advanced.svg
+ frontend/forms/images/settings/appearance.svg
+ frontend/forms/images/settings/audio.svg
+ frontend/forms/images/settings/general.svg
+ frontend/forms/images/settings/hotkeys.svg
+ frontend/forms/images/settings/output.svg
+ frontend/forms/images/settings/stream.svg
+ frontend/forms/images/settings/video.svg
+ frontend/forms/images/sources/brush.svg
+ frontend/forms/images/sources/camera.svg
+ frontend/forms/images/sources/default.svg
+ frontend/forms/images/sources/gamepad.svg
+ frontend/forms/images/sources/globe.svg
+ frontend/forms/images/sources/group.svg
+ frontend/forms/images/sources/image.svg
+ frontend/forms/images/sources/media.svg
+ frontend/forms/images/sources/microphone.svg
+ frontend/forms/images/sources/scene.svg
+ frontend/forms/images/sources/slideshow.svg
+ frontend/forms/images/sources/text.svg
+ frontend/forms/images/sources/window.svg
+ frontend/forms/images/sources/windowaudio.svg
+ frontend/forms/images/streaming-active.svg
+ frontend/forms/images/streaming-inactive.svg
+ frontend/forms/images/trash.svg
+ frontend/forms/images/tray_active_macos.svg
+ frontend/forms/images/unassigned.svg
+ frontend/forms/images/unlocked.svg
+ frontend/forms/images/up.svg
+ frontend/forms/images/visible.svg
+ frontend/forms/images/warning.svg
+ frontend/forms/obs.qrc
+ frontend/forms/source-toolbar/browser-source-toolbar.ui
+ frontend/forms/source-toolbar/color-source-toolbar.ui
+ frontend/forms/source-toolbar/device-select-toolbar.ui
+ frontend/forms/source-toolbar/game-capture-toolbar.ui
+ frontend/forms/source-toolbar/image-source-toolbar.ui
+ frontend/forms/source-toolbar/media-controls.ui
+ frontend/forms/source-toolbar/text-source-toolbar.ui
+ frontend/oauth/Auth.cpp
+ frontend/oauth/Auth.hpp
+ frontend/oauth/AuthListener.cpp
+ frontend/oauth/AuthListener.hpp
+ frontend/oauth/OAuth.cpp
+ frontend/oauth/OAuth.hpp
+ frontend/oauth/RestreamAuth.cpp
+ frontend/oauth/RestreamAuth.hpp
+ frontend/oauth/TwitchAuth.cpp
+ frontend/oauth/TwitchAuth.hpp
+ frontend/oauth/YoutubeAuth.cpp
+ frontend/oauth/YoutubeAuth.hpp
+ frontend/settings/OBSBasicSettings_A11y.cpp
+ frontend/settings/OBSBasicSettings_Appearance.cpp
+ frontend/settings/OBSBasicSettings_Stream.cpp
+ frontend/updater/CMakeLists.txt
+ frontend/updater/helpers.cpp
+ frontend/updater/helpers.hpp
+ frontend/updater/init-hook-files.c
+ frontend/updater/resource.h
+ frontend/updater/updater.manifest
+ frontend/utility/AdvancedOutput.cpp
+ frontend/utility/AdvancedOutput.hpp
+ frontend/utility/AutoUpdateThread.cpp
+ frontend/utility/AutoUpdateThread.hpp
+ frontend/utility/BasicOutputHandler.cpp
+ frontend/utility/BasicOutputHandler.hpp
+ frontend/utility/ExtraBrowsersDelegate.cpp
+ frontend/utility/ExtraBrowsersDelegate.hpp
+ frontend/utility/ExtraBrowsersModel.cpp
+ frontend/utility/ExtraBrowsersModel.hpp
+ frontend/utility/GoLiveAPI_CensoredJson.cpp
+ frontend/utility/GoLiveAPI_CensoredJson.hpp
+ frontend/utility/GoLiveAPI_Network.cpp
+ frontend/utility/GoLiveAPI_Network.hpp
+ frontend/utility/GoLiveAPI_PostData.cpp
+ frontend/utility/GoLiveAPI_PostData.hpp
+ frontend/utility/MacUpdateThread.cpp
+ frontend/utility/MacUpdateThread.hpp
+ frontend/utility/MultitrackVideoError.cpp
+ frontend/utility/MultitrackVideoError.hpp
+ frontend/utility/MultitrackVideoOutput.cpp
+ frontend/utility/MultitrackVideoOutput.hpp
+ frontend/utility/OBSProxyStyle.cpp
+ frontend/utility/OBSProxyStyle.hpp
+ frontend/utility/OBSSparkle.hpp
+ frontend/utility/OBSSparkle.mm
+ frontend/utility/OBSUpdateDelegate.mm
+ frontend/utility/SimpleOutput.cpp
+ frontend/utility/SimpleOutput.hpp
+ frontend/utility/StartMultiTrackVideoStreamingGuard.hpp
+ frontend/utility/SurfaceEventFilter.hpp
+ frontend/utility/VCamConfig.hpp
+ frontend/utility/WhatsNewBrowserInitThread.cpp
+ frontend/utility/WhatsNewBrowserInitThread.hpp
+ frontend/utility/WhatsNewInfoThread.cpp
+ frontend/utility/WhatsNewInfoThread.hpp
+ frontend/utility/YoutubeApiWrappers.cpp
+ frontend/utility/YoutubeApiWrappers.hpp
+ frontend/utility/audio-encoders.cpp
+ frontend/utility/audio-encoders.hpp
+ frontend/utility/crypto-helpers-mac.mm
+ frontend/utility/crypto-helpers-mbedtls.cpp
+ frontend/utility/crypto-helpers.hpp
+ frontend/utility/obf.c
+ frontend/utility/obf.h
+ frontend/utility/system-info-macos.mm
+ frontend/utility/system-info-posix.cpp
+ frontend/utility/system-info-windows.cpp
+ frontend/utility/system-info.hpp
+ frontend/utility/undo_stack.cpp
+ frontend/utility/undo_stack.hpp
+ frontend/utility/update-helpers.cpp
+ frontend/utility/update-helpers.hpp
+ frontend/widgets/OBSBasicControls.cpp
+ frontend/widgets/OBSBasicControls.hpp
+ frontend/widgets/OBSBasicPreview.cpp
+ frontend/widgets/OBSBasicPreview.hpp
+ frontend/widgets/OBSBasicStats.cpp
+ frontend/widgets/OBSBasicStats.hpp
+ frontend/widgets/OBSBasicStatusBar.cpp
+ frontend/widgets/OBSBasicStatusBar.hpp
+ frontend/widgets/OBSMainWindow.hpp
+ frontend/widgets/OBSProjector.cpp
+ frontend/widgets/OBSProjector.hpp
+ frontend/widgets/OBSQTDisplay.cpp
+ frontend/widgets/OBSQTDisplay.hpp
+ frontend/widgets/StatusBarWidget.cpp
+ frontend/widgets/StatusBarWidget.hpp
+ frontend/wizards/AutoConfig.cpp
+ frontend/wizards/AutoConfig.hpp
+ frontend/wizards/AutoConfigStartPage.cpp
+ frontend/wizards/AutoConfigStartPage.hpp
+ frontend/wizards/AutoConfigStreamPage.cpp
+ frontend/wizards/AutoConfigStreamPage.hpp
+ frontend/wizards/AutoConfigTestPage.cpp
+ frontend/wizards/AutoConfigTestPage.hpp
+ frontend/wizards/AutoConfigVideoPage.cpp
+ frontend/wizards/AutoConfigVideoPage.hpp
+ frontend/wizards/TestMode.hpp
  libobs-d3d11/CMakeLists.txt
- libobs-d3d11/cmake/legacy.cmake
  libobs-d3d11/cmake/windows/obs-module.rc.in
+ libobs-metal/CMakeLists.txt
+ libobs-metal/README.md
+ libobs-opengl/.clang-format
  libobs-opengl/CMakeLists.txt
- libobs-opengl/cmake/legacy.cmake
  libobs-opengl/cmake/windows/obs-module.rc.in
  libobs-opengl/gl-egl-common.h
  libobs-winrt/CMakeLists.txt
- libobs-winrt/cmake/legacy.cmake
  libobs-winrt/winrt-capture.cpp
  libobs-winrt/winrt-capture.h
  libobs-winrt/winrt-dispatch.cpp
  libobs-winrt/winrt-dispatch.h
+ libobs/.clang-format
  libobs/CMakeLists.txt
  libobs/audio-monitoring/null/null-audio-monitoring.c
  libobs/audio-monitoring/osx/coreaudio-enum-devices.c
@@ -1016,7 +860,6 @@ Files: AUTHORS
  libobs/audio-monitoring/win32/wasapi-monitoring-available.c
  libobs/audio-monitoring/win32/wasapi-output.c
  libobs/audio-monitoring/win32/wasapi-output.h
- libobs/cmake/legacy.cmake
  libobs/cmake/libobsConfig.cmake.in
  libobs/cmake/linux/libobs.pc.in
  libobs/cmake/macos/entitlements.plist
@@ -1039,7 +882,6 @@ Files: AUTHORS
  libobs/data/solid.effect
  libobs/graphics/basemath.hpp
  libobs/graphics/graphics-ffmpeg.c
- libobs/graphics/graphics-magick.c
  libobs/graphics/libnsgif/.clang-format
  libobs/media-io/frame-rate.h
  libobs/obs-ffmpeg-compat.h
@@ -1063,6 +905,46 @@ Files: AUTHORS
  libobs/util/windows/window-helpers.c
  libobs/util/windows/window-helpers.h
  plugins/CMakeLists.txt
+ plugins/aja-output-ui/AJAOutputUI.cpp
+ plugins/aja-output-ui/AJAOutputUI.h
+ plugins/aja-output-ui/CMakeLists.txt
+ plugins/aja-output-ui/aja-ui-main.cpp
+ plugins/aja-output-ui/aja-ui-main.h
+ plugins/aja-output-ui/cmake/windows/obs-module.rc.in
+ plugins/aja-output-ui/data/locale/ar-SA.ini
+ plugins/aja-output-ui/data/locale/az-AZ.ini
+ plugins/aja-output-ui/data/locale/be-BY.ini
+ plugins/aja-output-ui/data/locale/ca-ES.ini
+ plugins/aja-output-ui/data/locale/cs-CZ.ini
+ plugins/aja-output-ui/data/locale/de-DE.ini
+ plugins/aja-output-ui/data/locale/en-GB.ini
+ plugins/aja-output-ui/data/locale/en-US.ini
+ plugins/aja-output-ui/data/locale/es-ES.ini
+ plugins/aja-output-ui/data/locale/et-EE.ini
+ plugins/aja-output-ui/data/locale/fa-IR.ini
+ plugins/aja-output-ui/data/locale/fr-FR.ini
+ plugins/aja-output-ui/data/locale/gl-ES.ini
+ plugins/aja-output-ui/data/locale/hu-HU.ini
+ plugins/aja-output-ui/data/locale/id-ID.ini
+ plugins/aja-output-ui/data/locale/it-IT.ini
+ plugins/aja-output-ui/data/locale/ja-JP.ini
+ plugins/aja-output-ui/data/locale/ka-GE.ini
+ plugins/aja-output-ui/data/locale/kab-KAB.ini
+ plugins/aja-output-ui/data/locale/ko-KR.ini
+ plugins/aja-output-ui/data/locale/ms-MY.ini
+ plugins/aja-output-ui/data/locale/nl-NL.ini
+ plugins/aja-output-ui/data/locale/pl-PL.ini
+ plugins/aja-output-ui/data/locale/pt-BR.ini
+ plugins/aja-output-ui/data/locale/pt-PT.ini
+ plugins/aja-output-ui/data/locale/ru-RU.ini
+ plugins/aja-output-ui/data/locale/sk-SK.ini
+ plugins/aja-output-ui/data/locale/sv-SE.ini
+ plugins/aja-output-ui/data/locale/th-TH.ini
+ plugins/aja-output-ui/data/locale/tr-TR.ini
+ plugins/aja-output-ui/data/locale/ug-CN.ini
+ plugins/aja-output-ui/data/locale/zh-CN.ini
+ plugins/aja-output-ui/data/locale/zh-TW.ini
+ plugins/aja-output-ui/forms/output.ui
  plugins/aja/CMakeLists.txt
  plugins/aja/aja-card-manager.cpp
  plugins/aja/aja-card-manager.hpp
@@ -1087,10 +969,10 @@ Files: AUTHORS
  plugins/aja/audio-repack.c
  plugins/aja/audio-repack.h
  plugins/aja/audio-repack.hpp
- plugins/aja/cmake/legacy.cmake
  plugins/aja/cmake/windows/obs-module.rc.in
  plugins/aja/data/locale/af-ZA.ini
  plugins/aja/data/locale/ar-SA.ini
+ plugins/aja/data/locale/az-AZ.ini
  plugins/aja/data/locale/be-BY.ini
  plugins/aja/data/locale/bg-BG.ini
  plugins/aja/data/locale/bn-BD.ini
@@ -1115,12 +997,15 @@ Files: AUTHORS
  plugins/aja/data/locale/hu-HU.ini
  plugins/aja/data/locale/hy-AM.ini
  plugins/aja/data/locale/id-ID.ini
+ plugins/aja/data/locale/is-IS.ini
  plugins/aja/data/locale/it-IT.ini
  plugins/aja/data/locale/ja-JP.ini
  plugins/aja/data/locale/ka-GE.ini
  plugins/aja/data/locale/kaa.ini
+ plugins/aja/data/locale/kab-KAB.ini
  plugins/aja/data/locale/kmr-TR.ini
  plugins/aja/data/locale/ko-KR.ini
+ plugins/aja/data/locale/lo-LA.ini
  plugins/aja/data/locale/ms-MY.ini
  plugins/aja/data/locale/nb-NO.ini
  plugins/aja/data/locale/nl-NL.ini
@@ -1133,6 +1018,8 @@ Files: AUTHORS
  plugins/aja/data/locale/si-LK.ini
  plugins/aja/data/locale/sk-SK.ini
  plugins/aja/data/locale/sl-SI.ini
+ plugins/aja/data/locale/sq-AL.ini
+ plugins/aja/data/locale/sr-SP.ini
  plugins/aja/data/locale/sv-SE.ini
  plugins/aja/data/locale/th-TH.ini
  plugins/aja/data/locale/tr-TR.ini
@@ -1145,7 +1032,6 @@ Files: AUTHORS
  plugins/aja/data/locale/zh-TW.ini
  plugins/aja/main.cpp
  plugins/coreaudio-encoder/CMakeLists.txt
- plugins/coreaudio-encoder/cmake/legacy.cmake
  plugins/coreaudio-encoder/cmake/windows/obs-module.rc.in
  plugins/coreaudio-encoder/data/locale/af-ZA.ini
  plugins/coreaudio-encoder/data/locale/an-ES.ini
@@ -1181,9 +1067,11 @@ Files: AUTHORS
  plugins/coreaudio-encoder/data/locale/it-IT.ini
  plugins/coreaudio-encoder/data/locale/ja-JP.ini
  plugins/coreaudio-encoder/data/locale/ka-GE.ini
+ plugins/coreaudio-encoder/data/locale/kaa.ini
  plugins/coreaudio-encoder/data/locale/kab-KAB.ini
  plugins/coreaudio-encoder/data/locale/kmr-TR.ini
  plugins/coreaudio-encoder/data/locale/ko-KR.ini
+ plugins/coreaudio-encoder/data/locale/lo-LA.ini
  plugins/coreaudio-encoder/data/locale/mn-MN.ini
  plugins/coreaudio-encoder/data/locale/ms-MY.ini
  plugins/coreaudio-encoder/data/locale/nb-NO.ini
@@ -1215,6 +1103,18 @@ Files: AUTHORS
  plugins/coreaudio-encoder/data/locale/zh-TW.ini
  plugins/coreaudio-encoder/encoder.cpp
  plugins/coreaudio-encoder/windows-imports.h
+ plugins/decklink-captions/CMakeLists.txt
+ plugins/decklink-captions/cmake/windows/obs-module.rc.in
+ plugins/decklink-captions/decklink-captions.cpp
+ plugins/decklink-captions/decklink-captions.h
+ plugins/decklink-captions/forms/captions.ui
+ plugins/decklink-output-ui/CMakeLists.txt
+ plugins/decklink-output-ui/DecklinkOutputUI.cpp
+ plugins/decklink-output-ui/DecklinkOutputUI.h
+ plugins/decklink-output-ui/cmake/windows/obs-module.rc.in
+ plugins/decklink-output-ui/decklink-ui-main.cpp
+ plugins/decklink-output-ui/decklink-ui-main.h
+ plugins/decklink-output-ui/forms/output.ui
  plugins/decklink/CMakeLists.txt
  plugins/decklink/DecklinkBase.cpp
  plugins/decklink/DecklinkBase.h
@@ -1227,7 +1127,6 @@ Files: AUTHORS
  plugins/decklink/audio-repack.c
  plugins/decklink/audio-repack.h
  plugins/decklink/audio-repack.hpp
- plugins/decklink/cmake/legacy.cmake
  plugins/decklink/cmake/windows/obs-module.rc.in
  plugins/decklink/const.h
  plugins/decklink/data/locale/af-ZA.ini
@@ -1268,6 +1167,7 @@ Files: AUTHORS
  plugins/decklink/data/locale/kab-KAB.ini
  plugins/decklink/data/locale/kmr-TR.ini
  plugins/decklink/data/locale/ko-KR.ini
+ plugins/decklink/data/locale/lo-LA.ini
  plugins/decklink/data/locale/lt-LT.ini
  plugins/decklink/data/locale/mn-MN.ini
  plugins/decklink/data/locale/ms-MY.ini
@@ -1318,8 +1218,76 @@ Files: AUTHORS
  plugins/decklink/util.cpp
  plugins/decklink/util.hpp
  plugins/decklink/win/platform.cpp
+ plugins/frontend-tools/CMakeLists.txt
+ plugins/frontend-tools/auto-scene-switcher-nix.cpp
+ plugins/frontend-tools/auto-scene-switcher-osx.mm
+ plugins/frontend-tools/auto-scene-switcher-win.cpp
+ plugins/frontend-tools/auto-scene-switcher.cpp
+ plugins/frontend-tools/auto-scene-switcher.hpp
+ plugins/frontend-tools/captions-handler.cpp
+ plugins/frontend-tools/captions-handler.hpp
+ plugins/frontend-tools/captions-mssapi-stream.cpp
+ plugins/frontend-tools/captions-mssapi-stream.hpp
+ plugins/frontend-tools/captions-mssapi.cpp
+ plugins/frontend-tools/captions-mssapi.hpp
+ plugins/frontend-tools/captions.cpp
+ plugins/frontend-tools/captions.hpp
+ plugins/frontend-tools/cmake/windows/obs-module.rc.in
+ plugins/frontend-tools/data/locale/ar-SA.ini
+ plugins/frontend-tools/data/locale/az-AZ.ini
+ plugins/frontend-tools/data/locale/be-BY.ini
+ plugins/frontend-tools/data/locale/ca-ES.ini
+ plugins/frontend-tools/data/locale/cs-CZ.ini
+ plugins/frontend-tools/data/locale/da-DK.ini
+ plugins/frontend-tools/data/locale/de-DE.ini
+ plugins/frontend-tools/data/locale/en-GB.ini
+ plugins/frontend-tools/data/locale/en-US.ini
+ plugins/frontend-tools/data/locale/es-ES.ini
+ plugins/frontend-tools/data/locale/et-EE.ini
+ plugins/frontend-tools/data/locale/fa-IR.ini
+ plugins/frontend-tools/data/locale/fi-FI.ini
+ plugins/frontend-tools/data/locale/fr-FR.ini
+ plugins/frontend-tools/data/locale/gl-ES.ini
+ plugins/frontend-tools/data/locale/hu-HU.ini
+ plugins/frontend-tools/data/locale/id-ID.ini
+ plugins/frontend-tools/data/locale/it-IT.ini
+ plugins/frontend-tools/data/locale/ja-JP.ini
+ plugins/frontend-tools/data/locale/ka-GE.ini
+ plugins/frontend-tools/data/locale/kab-KAB.ini
+ plugins/frontend-tools/data/locale/ko-KR.ini
+ plugins/frontend-tools/data/locale/ms-MY.ini
+ plugins/frontend-tools/data/locale/nl-NL.ini
+ plugins/frontend-tools/data/locale/pl-PL.ini
+ plugins/frontend-tools/data/locale/pt-BR.ini
+ plugins/frontend-tools/data/locale/pt-PT.ini
+ plugins/frontend-tools/data/locale/ru-RU.ini
+ plugins/frontend-tools/data/locale/sk-SK.ini
+ plugins/frontend-tools/data/locale/sv-SE.ini
+ plugins/frontend-tools/data/locale/th-TH.ini
+ plugins/frontend-tools/data/locale/tr-TR.ini
+ plugins/frontend-tools/data/locale/tt-RU.ini
+ plugins/frontend-tools/data/locale/ug-CN.ini
+ plugins/frontend-tools/data/locale/vi-VN.ini
+ plugins/frontend-tools/data/locale/zh-CN.ini
+ plugins/frontend-tools/data/locale/zh-TW.ini
+ plugins/frontend-tools/data/scripts/clock-source.lua
+ plugins/frontend-tools/data/scripts/countdown.lua
+ plugins/frontend-tools/data/scripts/instant-replay.lua
+ plugins/frontend-tools/data/scripts/pause-scene.lua
+ plugins/frontend-tools/data/scripts/url-text.py
+ plugins/frontend-tools/forms/auto-scene-switcher.ui
+ plugins/frontend-tools/forms/captions.ui
+ plugins/frontend-tools/forms/output-timer.ui
+ plugins/frontend-tools/forms/scripts.ui
+ plugins/frontend-tools/frontend-tools-config.h.in
+ plugins/frontend-tools/frontend-tools.c
+ plugins/frontend-tools/output-timer.cpp
+ plugins/frontend-tools/output-timer.hpp
+ plugins/frontend-tools/scripts.cpp
+ plugins/frontend-tools/scripts.hpp
+ plugins/frontend-tools/tool-helpers.hpp
+ plugins/image-source/.clang-format
  plugins/image-source/CMakeLists.txt
- plugins/image-source/cmake/legacy.cmake
  plugins/image-source/cmake/windows/obs-module.rc.in
  plugins/image-source/color-source.c
  plugins/image-source/data/locale/af-ZA.ini
@@ -1375,6 +1343,7 @@ Files: AUTHORS
  plugins/image-source/data/locale/si-LK.ini
  plugins/image-source/data/locale/sk-SK.ini
  plugins/image-source/data/locale/sl-SI.ini
+ plugins/image-source/data/locale/sq-AL.ini
  plugins/image-source/data/locale/sr-CS.ini
  plugins/image-source/data/locale/sr-SP.ini
  plugins/image-source/data/locale/sv-SE.ini
@@ -1392,8 +1361,8 @@ Files: AUTHORS
  plugins/image-source/image-source.c
  plugins/image-source/obs-slideshow-mk2.c
  plugins/image-source/obs-slideshow.c
+ plugins/linux-alsa/.clang-format
  plugins/linux-alsa/CMakeLists.txt
- plugins/linux-alsa/cmake/legacy.cmake
  plugins/linux-alsa/data/locale/af-ZA.ini
  plugins/linux-alsa/data/locale/an-ES.ini
  plugins/linux-alsa/data/locale/ar-SA.ini
@@ -1432,7 +1401,9 @@ Files: AUTHORS
  plugins/linux-alsa/data/locale/kab-KAB.ini
  plugins/linux-alsa/data/locale/kmr-TR.ini
  plugins/linux-alsa/data/locale/ko-KR.ini
+ plugins/linux-alsa/data/locale/lo-LA.ini
  plugins/linux-alsa/data/locale/lt-LT.ini
+ plugins/linux-alsa/data/locale/lv-LV.ini
  plugins/linux-alsa/data/locale/ms-MY.ini
  plugins/linux-alsa/data/locale/nb-NO.ini
  plugins/linux-alsa/data/locale/nl-NL.ini
@@ -1445,6 +1416,7 @@ Files: AUTHORS
  plugins/linux-alsa/data/locale/si-LK.ini
  plugins/linux-alsa/data/locale/sk-SK.ini
  plugins/linux-alsa/data/locale/sl-SI.ini
+ plugins/linux-alsa/data/locale/sq-AL.ini
  plugins/linux-alsa/data/locale/sr-CS.ini
  plugins/linux-alsa/data/locale/sr-SP.ini
  plugins/linux-alsa/data/locale/sv-SE.ini
@@ -1460,9 +1432,9 @@ Files: AUTHORS
  plugins/linux-alsa/data/locale/vi-VN.ini
  plugins/linux-alsa/data/locale/zh-CN.ini
  plugins/linux-alsa/data/locale/zh-TW.ini
+ plugins/linux-capture/.clang-format
  plugins/linux-capture/CMakeLists.txt
  plugins/linux-capture/README
- plugins/linux-capture/cmake/legacy.cmake
  plugins/linux-capture/data/locale/af-ZA.ini
  plugins/linux-capture/data/locale/ar-SA.ini
  plugins/linux-capture/data/locale/az-AZ.ini
@@ -1500,6 +1472,7 @@ Files: AUTHORS
  plugins/linux-capture/data/locale/kmr-TR.ini
  plugins/linux-capture/data/locale/ko-KR.ini
  plugins/linux-capture/data/locale/lo-LA.ini
+ plugins/linux-capture/data/locale/lv-LV.ini
  plugins/linux-capture/data/locale/ms-MY.ini
  plugins/linux-capture/data/locale/nb-NO.ini
  plugins/linux-capture/data/locale/nl-NL.ini
@@ -1512,11 +1485,14 @@ Files: AUTHORS
  plugins/linux-capture/data/locale/si-LK.ini
  plugins/linux-capture/data/locale/sk-SK.ini
  plugins/linux-capture/data/locale/sl-SI.ini
+ plugins/linux-capture/data/locale/sq-AL.ini
  plugins/linux-capture/data/locale/sr-CS.ini
  plugins/linux-capture/data/locale/sr-SP.ini
  plugins/linux-capture/data/locale/sv-SE.ini
  plugins/linux-capture/data/locale/szl-PL.ini
  plugins/linux-capture/data/locale/ta-IN.ini
+ plugins/linux-capture/data/locale/te-IN.ini
+ plugins/linux-capture/data/locale/th-TH.ini
  plugins/linux-capture/data/locale/tl-PH.ini
  plugins/linux-capture/data/locale/tr-TR.ini
  plugins/linux-capture/data/locale/tt-RU.ini
@@ -1527,8 +1503,8 @@ Files: AUTHORS
  plugins/linux-capture/data/locale/zh-TW.ini
  plugins/linux-capture/xcomposite-input.c
  plugins/linux-capture/xcomposite-input.h
+ plugins/linux-jack/.clang-format
  plugins/linux-jack/CMakeLists.txt
- plugins/linux-jack/cmake/legacy.cmake
  plugins/linux-jack/data/locale/af-ZA.ini
  plugins/linux-jack/data/locale/ar-SA.ini
  plugins/linux-jack/data/locale/az-AZ.ini
@@ -1565,6 +1541,7 @@ Files: AUTHORS
  plugins/linux-jack/data/locale/kab-KAB.ini
  plugins/linux-jack/data/locale/kmr-TR.ini
  plugins/linux-jack/data/locale/ko-KR.ini
+ plugins/linux-jack/data/locale/lo-LA.ini
  plugins/linux-jack/data/locale/ms-MY.ini
  plugins/linux-jack/data/locale/nb-NO.ini
  plugins/linux-jack/data/locale/nl-NL.ini
@@ -1582,6 +1559,7 @@ Files: AUTHORS
  plugins/linux-jack/data/locale/sv-SE.ini
  plugins/linux-jack/data/locale/szl-PL.ini
  plugins/linux-jack/data/locale/th-TH.ini
+ plugins/linux-jack/data/locale/tl-PH.ini
  plugins/linux-jack/data/locale/tr-TR.ini
  plugins/linux-jack/data/locale/tt-RU.ini
  plugins/linux-jack/data/locale/ug-CN.ini
@@ -1590,10 +1568,11 @@ Files: AUTHORS
  plugins/linux-jack/data/locale/vi-VN.ini
  plugins/linux-jack/data/locale/zh-CN.ini
  plugins/linux-jack/data/locale/zh-TW.ini
+ plugins/linux-pipewire/.clang-format
  plugins/linux-pipewire/CMakeLists.txt
- plugins/linux-pipewire/cmake/legacy.cmake
  plugins/linux-pipewire/data/locale/af-ZA.ini
  plugins/linux-pipewire/data/locale/ar-SA.ini
+ plugins/linux-pipewire/data/locale/az-AZ.ini
  plugins/linux-pipewire/data/locale/be-BY.ini
  plugins/linux-pipewire/data/locale/bn-BD.ini
  plugins/linux-pipewire/data/locale/ca-ES.ini
@@ -1621,8 +1600,10 @@ Files: AUTHORS
  plugins/linux-pipewire/data/locale/ja-JP.ini
  plugins/linux-pipewire/data/locale/ka-GE.ini
  plugins/linux-pipewire/data/locale/kaa.ini
+ plugins/linux-pipewire/data/locale/kab-KAB.ini
  plugins/linux-pipewire/data/locale/kmr-TR.ini
  plugins/linux-pipewire/data/locale/ko-KR.ini
+ plugins/linux-pipewire/data/locale/lo-LA.ini
  plugins/linux-pipewire/data/locale/ms-MY.ini
  plugins/linux-pipewire/data/locale/nb-NO.ini
  plugins/linux-pipewire/data/locale/nl-NL.ini
@@ -1634,8 +1615,10 @@ Files: AUTHORS
  plugins/linux-pipewire/data/locale/si-LK.ini
  plugins/linux-pipewire/data/locale/sk-SK.ini
  plugins/linux-pipewire/data/locale/sl-SI.ini
+ plugins/linux-pipewire/data/locale/sr-SP.ini
  plugins/linux-pipewire/data/locale/sv-SE.ini
  plugins/linux-pipewire/data/locale/ta-IN.ini
+ plugins/linux-pipewire/data/locale/th-TH.ini
  plugins/linux-pipewire/data/locale/tr-TR.ini
  plugins/linux-pipewire/data/locale/tt-RU.ini
  plugins/linux-pipewire/data/locale/ug-CN.ini
@@ -1643,8 +1626,8 @@ Files: AUTHORS
  plugins/linux-pipewire/data/locale/vi-VN.ini
  plugins/linux-pipewire/data/locale/zh-CN.ini
  plugins/linux-pipewire/data/locale/zh-TW.ini
+ plugins/linux-pulseaudio/.clang-format
  plugins/linux-pulseaudio/CMakeLists.txt
- plugins/linux-pulseaudio/cmake/legacy.cmake
  plugins/linux-pulseaudio/data/locale/af-ZA.ini
  plugins/linux-pulseaudio/data/locale/ar-SA.ini
  plugins/linux-pulseaudio/data/locale/az-AZ.ini
@@ -1682,6 +1665,7 @@ Files: AUTHORS
  plugins/linux-pulseaudio/data/locale/kab-KAB.ini
  plugins/linux-pulseaudio/data/locale/kmr-TR.ini
  plugins/linux-pulseaudio/data/locale/ko-KR.ini
+ plugins/linux-pulseaudio/data/locale/lo-LA.ini
  plugins/linux-pulseaudio/data/locale/ms-MY.ini
  plugins/linux-pulseaudio/data/locale/nb-NO.ini
  plugins/linux-pulseaudio/data/locale/nl-NL.ini
@@ -1709,8 +1693,8 @@ Files: AUTHORS
  plugins/linux-pulseaudio/data/locale/vi-VN.ini
  plugins/linux-pulseaudio/data/locale/zh-CN.ini
  plugins/linux-pulseaudio/data/locale/zh-TW.ini
+ plugins/linux-v4l2/.clang-format
  plugins/linux-v4l2/CMakeLists.txt
- plugins/linux-v4l2/cmake/legacy.cmake
  plugins/linux-v4l2/data/locale/af-ZA.ini
  plugins/linux-v4l2/data/locale/ar-SA.ini
  plugins/linux-v4l2/data/locale/az-AZ.ini
@@ -1747,6 +1731,7 @@ Files: AUTHORS
  plugins/linux-v4l2/data/locale/kab-KAB.ini
  plugins/linux-v4l2/data/locale/kmr-TR.ini
  plugins/linux-v4l2/data/locale/ko-KR.ini
+ plugins/linux-v4l2/data/locale/lo-LA.ini
  plugins/linux-v4l2/data/locale/ms-MY.ini
  plugins/linux-v4l2/data/locale/nb-NO.ini
  plugins/linux-v4l2/data/locale/nl-NL.ini
@@ -1760,11 +1745,13 @@ Files: AUTHORS
  plugins/linux-v4l2/data/locale/si-LK.ini
  plugins/linux-v4l2/data/locale/sk-SK.ini
  plugins/linux-v4l2/data/locale/sl-SI.ini
+ plugins/linux-v4l2/data/locale/sq-AL.ini
  plugins/linux-v4l2/data/locale/sr-CS.ini
  plugins/linux-v4l2/data/locale/sr-SP.ini
  plugins/linux-v4l2/data/locale/sv-SE.ini
  plugins/linux-v4l2/data/locale/szl-PL.ini
  plugins/linux-v4l2/data/locale/ta-IN.ini
+ plugins/linux-v4l2/data/locale/th-TH.ini
  plugins/linux-v4l2/data/locale/tl-PH.ini
  plugins/linux-v4l2/data/locale/tr-TR.ini
  plugins/linux-v4l2/data/locale/tt-RU.ini
@@ -1775,16 +1762,83 @@ Files: AUTHORS
  plugins/linux-v4l2/data/locale/zh-CN.ini
  plugins/linux-v4l2/data/locale/zh-TW.ini
  plugins/linux-v4l2/v4l2-output.c
+ plugins/nv-filters/.clang-format
+ plugins/nv-filters/CMakeLists.txt
+ plugins/nv-filters/cmake/windows/obs-module.rc.in
+ plugins/nv-filters/data/color.effect
+ plugins/nv-filters/data/locale/ar-SA.ini
+ plugins/nv-filters/data/locale/az-AZ.ini
+ plugins/nv-filters/data/locale/be-BY.ini
+ plugins/nv-filters/data/locale/ca-ES.ini
+ plugins/nv-filters/data/locale/cs-CZ.ini
+ plugins/nv-filters/data/locale/da-DK.ini
+ plugins/nv-filters/data/locale/de-DE.ini
+ plugins/nv-filters/data/locale/el-GR.ini
+ plugins/nv-filters/data/locale/en-GB.ini
+ plugins/nv-filters/data/locale/en-US.ini
+ plugins/nv-filters/data/locale/es-ES.ini
+ plugins/nv-filters/data/locale/et-EE.ini
+ plugins/nv-filters/data/locale/fa-IR.ini
+ plugins/nv-filters/data/locale/fi-FI.ini
+ plugins/nv-filters/data/locale/fr-FR.ini
+ plugins/nv-filters/data/locale/gl-ES.ini
+ plugins/nv-filters/data/locale/he-IL.ini
+ plugins/nv-filters/data/locale/hi-IN.ini
+ plugins/nv-filters/data/locale/hr-HR.ini
+ plugins/nv-filters/data/locale/hu-HU.ini
+ plugins/nv-filters/data/locale/id-ID.ini
+ plugins/nv-filters/data/locale/it-IT.ini
+ plugins/nv-filters/data/locale/ja-JP.ini
+ plugins/nv-filters/data/locale/ka-GE.ini
+ plugins/nv-filters/data/locale/kab-KAB.ini
+ plugins/nv-filters/data/locale/kmr-TR.ini
+ plugins/nv-filters/data/locale/ko-KR.ini
+ plugins/nv-filters/data/locale/lo-LA.ini
+ plugins/nv-filters/data/locale/lv-LV.ini
+ plugins/nv-filters/data/locale/ms-MY.ini
+ plugins/nv-filters/data/locale/nb-NO.ini
+ plugins/nv-filters/data/locale/nl-NL.ini
+ plugins/nv-filters/data/locale/pl-PL.ini
+ plugins/nv-filters/data/locale/pt-BR.ini
+ plugins/nv-filters/data/locale/pt-PT.ini
+ plugins/nv-filters/data/locale/ru-RU.ini
+ plugins/nv-filters/data/locale/sk-SK.ini
+ plugins/nv-filters/data/locale/sq-AL.ini
+ plugins/nv-filters/data/locale/sr-SP.ini
+ plugins/nv-filters/data/locale/sv-SE.ini
+ plugins/nv-filters/data/locale/ta-IN.ini
+ plugins/nv-filters/data/locale/th-TH.ini
+ plugins/nv-filters/data/locale/tr-TR.ini
+ plugins/nv-filters/data/locale/tt-RU.ini
+ plugins/nv-filters/data/locale/ug-CN.ini
+ plugins/nv-filters/data/locale/uk-UA.ini
+ plugins/nv-filters/data/locale/vi-VN.ini
+ plugins/nv-filters/data/locale/zh-CN.ini
+ plugins/nv-filters/data/locale/zh-TW.ini
+ plugins/nv-filters/data/rtx_blur.effect
+ plugins/nv-filters/data/rtx_greenscreen.effect
+ plugins/nv-filters/nv-filters.c
+ plugins/nv-filters/nv_sdk_versions.h
+ plugins/nv-filters/nvafx-load.h
+ plugins/nv-filters/nvidia-audiofx-filter.c
+ plugins/nv-filters/nvidia-videofx-filter.c
+ plugins/nv-filters/nvvfx-load.h
  plugins/obs-browser/.clang-format
  plugins/obs-browser/.cmake-format.json
- plugins/obs-browser/CI/check-format.sh
  plugins/obs-browser/CMakeLists.txt
- plugins/obs-browser/FindCEF.cmake
  plugins/obs-browser/README.md
  plugins/obs-browser/browser-config.h.in
  plugins/obs-browser/browser-version.h
+ plugins/obs-browser/build-aux/.functions/log_debug
+ plugins/obs-browser/build-aux/.functions/log_error
+ plugins/obs-browser/build-aux/.functions/log_group
+ plugins/obs-browser/build-aux/.functions/log_info
+ plugins/obs-browser/build-aux/.functions/log_output
+ plugins/obs-browser/build-aux/.functions/log_status
+ plugins/obs-browser/build-aux/.functions/log_warning
+ plugins/obs-browser/build-aux/.functions/set_loglevel
+ plugins/obs-browser/build-aux/.run-format.zsh
  plugins/obs-browser/cmake/feature-panels.cmake
- plugins/obs-browser/cmake/legacy.cmake
  plugins/obs-browser/cmake/macos/Info-helper.plist.in
  plugins/obs-browser/cmake/macos/Info.plist.in
  plugins/obs-browser/cmake/macos/entitlements-helper.gpu.plist
@@ -1795,6 +1849,8 @@ Files: AUTHORS
  plugins/obs-browser/cmake/os-macos.cmake
  plugins/obs-browser/cmake/os-windows.cmake
  plugins/obs-browser/cmake/windows/obs-browser-page.manifest
+ plugins/obs-browser/cmake/windows/obs-module-helper.rc.in
+ plugins/obs-browser/cmake/windows/obs-module.rc.in
  plugins/obs-browser/data/error.html
  plugins/obs-browser/data/locale/af-ZA.ini
  plugins/obs-browser/data/locale/ar-SA.ini
@@ -1829,9 +1885,11 @@ Files: AUTHORS
  plugins/obs-browser/data/locale/it-IT.ini
  plugins/obs-browser/data/locale/ja-JP.ini
  plugins/obs-browser/data/locale/ka-GE.ini
+ plugins/obs-browser/data/locale/kaa.ini
  plugins/obs-browser/data/locale/kab-KAB.ini
  plugins/obs-browser/data/locale/kmr-TR.ini
  plugins/obs-browser/data/locale/ko-KR.ini
+ plugins/obs-browser/data/locale/lo-LA.ini
  plugins/obs-browser/data/locale/lt-LT.ini
  plugins/obs-browser/data/locale/mn-MN.ini
  plugins/obs-browser/data/locale/ms-MY.ini
@@ -1847,6 +1905,7 @@ Files: AUTHORS
  plugins/obs-browser/data/locale/si-LK.ini
  plugins/obs-browser/data/locale/sk-SK.ini
  plugins/obs-browser/data/locale/sl-SI.ini
+ plugins/obs-browser/data/locale/sq-AL.ini
  plugins/obs-browser/data/locale/sr-CS.ini
  plugins/obs-browser/data/locale/sr-SP.ini
  plugins/obs-browser/data/locale/sv-SE.ini
@@ -1863,8 +1922,8 @@ Files: AUTHORS
  plugins/obs-browser/data/locale/zh-TW.ini
  plugins/obs-browser/deps/base64/.clang-format
  plugins/obs-browser/deps/base64/base64.hpp
- plugins/obs-browser/deps/obs-websocket-api/.clang-format
- plugins/obs-browser/formatcode.sh
+ plugins/obs-browser/drm-format.cpp
+ plugins/obs-browser/drm-format.hpp
  plugins/obs-browser/helper-info.plist
  plugins/obs-browser/linux-keyboard-helpers.hpp
  plugins/obs-browser/obs-browser-page.manifest
@@ -1873,12 +1932,13 @@ Files: AUTHORS
  plugins/obs-browser/panel/browser-panel-internal.hpp
  plugins/obs-browser/panel/browser-panel.cpp
  plugins/obs-browser/panel/browser-panel.hpp
+ plugins/obs-ffmpeg/.clang-format
  plugins/obs-ffmpeg/CMakeLists.txt
  plugins/obs-ffmpeg/cmake/dependencies.cmake
- plugins/obs-ffmpeg/cmake/legacy.cmake
  plugins/obs-ffmpeg/cmake/windows/obs-module.rc.in
  plugins/obs-ffmpeg/data/locale/af-ZA.ini
  plugins/obs-ffmpeg/data/locale/ar-SA.ini
+ plugins/obs-ffmpeg/data/locale/az-AZ.ini
  plugins/obs-ffmpeg/data/locale/ba-RU.ini
  plugins/obs-ffmpeg/data/locale/be-BY.ini
  plugins/obs-ffmpeg/data/locale/bg-BG.ini
@@ -1913,6 +1973,8 @@ Files: AUTHORS
  plugins/obs-ffmpeg/data/locale/kab-KAB.ini
  plugins/obs-ffmpeg/data/locale/kmr-TR.ini
  plugins/obs-ffmpeg/data/locale/ko-KR.ini
+ plugins/obs-ffmpeg/data/locale/lo-LA.ini
+ plugins/obs-ffmpeg/data/locale/lt-LT.ini
  plugins/obs-ffmpeg/data/locale/ms-MY.ini
  plugins/obs-ffmpeg/data/locale/nb-NO.ini
  plugins/obs-ffmpeg/data/locale/nl-NL.ini
@@ -1942,9 +2004,7 @@ Files: AUTHORS
  plugins/obs-ffmpeg/data/locale/zh-CN.ini
  plugins/obs-ffmpeg/data/locale/zh-TW.ini
  plugins/obs-ffmpeg/ffmpeg-mux/CMakeLists.txt
- plugins/obs-ffmpeg/ffmpeg-mux/cmake/legacy.cmake
  plugins/obs-ffmpeg/obs-amf-test/CMakeLists.txt
- plugins/obs-ffmpeg/obs-amf-test/cmake/legacy.cmake
  plugins/obs-ffmpeg/obs-amf-test/obs-amf-test.cpp
  plugins/obs-ffmpeg/obs-ffmpeg-compat.h
  plugins/obs-ffmpeg/obs-ffmpeg-config.h.in
@@ -1957,20 +2017,12 @@ Files: AUTHORS
  plugins/obs-ffmpeg/obs-ffmpeg-video-encoders.c
  plugins/obs-ffmpeg/obs-ffmpeg-video-encoders.h
  plugins/obs-ffmpeg/obs-ffmpeg.c
- plugins/obs-ffmpeg/obs-nvenc-helpers.c
- plugins/obs-ffmpeg/obs-nvenc-test/CMakeLists.txt
- plugins/obs-ffmpeg/obs-nvenc-test/cmake/legacy.cmake
- plugins/obs-ffmpeg/obs-nvenc-test/obs-nvenc-test.c
- plugins/obs-ffmpeg/obs-nvenc-ver.h
- plugins/obs-ffmpeg/obs-nvenc.c
- plugins/obs-ffmpeg/obs-nvenc.h
  plugins/obs-ffmpeg/texture-amf-opts.hpp
  plugins/obs-ffmpeg/texture-amf.cpp
+ plugins/obs-filters/.clang-format
  plugins/obs-filters/CMakeLists.txt
  plugins/obs-filters/async-delay-filter.c
  plugins/obs-filters/chroma-key-filter.c
- plugins/obs-filters/cmake/legacy.cmake
- plugins/obs-filters/cmake/nvidia.cmake
  plugins/obs-filters/cmake/rnnoise.cmake
  plugins/obs-filters/cmake/speexdsp.cmake
  plugins/obs-filters/cmake/windows/obs-module.rc.in
@@ -2028,6 +2080,7 @@ Files: AUTHORS
  plugins/obs-filters/data/locale/kab-KAB.ini
  plugins/obs-filters/data/locale/kmr-TR.ini
  plugins/obs-filters/data/locale/ko-KR.ini
+ plugins/obs-filters/data/locale/lo-LA.ini
  plugins/obs-filters/data/locale/ms-MY.ini
  plugins/obs-filters/data/locale/nb-NO.ini
  plugins/obs-filters/data/locale/nl-NL.ini
@@ -2058,7 +2111,7 @@ Files: AUTHORS
  plugins/obs-filters/data/luma_key_filter_v2.effect
  plugins/obs-filters/data/mask_alpha_filter.effect
  plugins/obs-filters/data/mask_color_filter.effect
- plugins/obs-filters/data/rtx_greenscreen.effect
+ plugins/obs-filters/data/sdr_on_hdr_filter.effect
  plugins/obs-filters/data/sharpness.effect
  plugins/obs-filters/eq-filter.c
  plugins/obs-filters/expander-filter.c
@@ -2071,9 +2124,6 @@ Files: AUTHORS
  plugins/obs-filters/mask-filter.c
  plugins/obs-filters/noise-gate-filter.c
  plugins/obs-filters/noise-suppress-filter.c
- plugins/obs-filters/nvafx-load.h
- plugins/obs-filters/nvidia-greenscreen-filter.c
- plugins/obs-filters/nvvfx-load.h
  plugins/obs-filters/obs-filters-config.h.in
  plugins/obs-filters/obs-filters.c
  plugins/obs-filters/rnnoise/.clang-format
@@ -2087,11 +2137,13 @@ Files: AUTHORS
  plugins/obs-filters/rnnoise/src/tansig_table.h
  plugins/obs-filters/scale-filter.c
  plugins/obs-filters/scroll-filter.c
+ plugins/obs-filters/sdr-on-hdr-filter.c
  plugins/obs-filters/sharpness-filter.c
+ plugins/obs-libfdk/.clang-format
  plugins/obs-libfdk/CMakeLists.txt
- plugins/obs-libfdk/cmake/legacy.cmake
  plugins/obs-libfdk/data/locale/af-ZA.ini
  plugins/obs-libfdk/data/locale/ar-SA.ini
+ plugins/obs-libfdk/data/locale/az-AZ.ini
  plugins/obs-libfdk/data/locale/ba-RU.ini
  plugins/obs-libfdk/data/locale/be-BY.ini
  plugins/obs-libfdk/data/locale/bg-BG.ini
@@ -2125,6 +2177,7 @@ Files: AUTHORS
  plugins/obs-libfdk/data/locale/kab-KAB.ini
  plugins/obs-libfdk/data/locale/kmr-TR.ini
  plugins/obs-libfdk/data/locale/ko-KR.ini
+ plugins/obs-libfdk/data/locale/lo-LA.ini
  plugins/obs-libfdk/data/locale/ms-MY.ini
  plugins/obs-libfdk/data/locale/nb-NO.ini
  plugins/obs-libfdk/data/locale/nl-NL.ini
@@ -2152,12 +2205,82 @@ Files: AUTHORS
  plugins/obs-libfdk/data/locale/zh-CN.ini
  plugins/obs-libfdk/data/locale/zh-TW.ini
  plugins/obs-libfdk/obs-libfdk.c
+ plugins/obs-nvenc/.clang-format
+ plugins/obs-nvenc/CMakeLists.txt
+ plugins/obs-nvenc/cmake/windows/obs-module.rc.in
+ plugins/obs-nvenc/cuda-helpers.c
+ plugins/obs-nvenc/cuda-helpers.h
+ plugins/obs-nvenc/data/locale/ar-SA.ini
+ plugins/obs-nvenc/data/locale/az-AZ.ini
+ plugins/obs-nvenc/data/locale/be-BY.ini
+ plugins/obs-nvenc/data/locale/bg-BG.ini
+ plugins/obs-nvenc/data/locale/ca-ES.ini
+ plugins/obs-nvenc/data/locale/cs-CZ.ini
+ plugins/obs-nvenc/data/locale/da-DK.ini
+ plugins/obs-nvenc/data/locale/de-DE.ini
+ plugins/obs-nvenc/data/locale/el-GR.ini
+ plugins/obs-nvenc/data/locale/en-GB.ini
+ plugins/obs-nvenc/data/locale/en-US.ini
+ plugins/obs-nvenc/data/locale/es-ES.ini
+ plugins/obs-nvenc/data/locale/et-EE.ini
+ plugins/obs-nvenc/data/locale/fa-IR.ini
+ plugins/obs-nvenc/data/locale/fi-FI.ini
+ plugins/obs-nvenc/data/locale/fr-FR.ini
+ plugins/obs-nvenc/data/locale/gl-ES.ini
+ plugins/obs-nvenc/data/locale/he-IL.ini
+ plugins/obs-nvenc/data/locale/hi-IN.ini
+ plugins/obs-nvenc/data/locale/hr-HR.ini
+ plugins/obs-nvenc/data/locale/hu-HU.ini
+ plugins/obs-nvenc/data/locale/id-ID.ini
+ plugins/obs-nvenc/data/locale/is-IS.ini
+ plugins/obs-nvenc/data/locale/it-IT.ini
+ plugins/obs-nvenc/data/locale/ja-JP.ini
+ plugins/obs-nvenc/data/locale/ka-GE.ini
+ plugins/obs-nvenc/data/locale/kaa.ini
+ plugins/obs-nvenc/data/locale/kab-KAB.ini
+ plugins/obs-nvenc/data/locale/kmr-TR.ini
+ plugins/obs-nvenc/data/locale/ko-KR.ini
+ plugins/obs-nvenc/data/locale/lo-LA.ini
+ plugins/obs-nvenc/data/locale/ms-MY.ini
+ plugins/obs-nvenc/data/locale/nb-NO.ini
+ plugins/obs-nvenc/data/locale/nl-NL.ini
+ plugins/obs-nvenc/data/locale/nn-NO.ini
+ plugins/obs-nvenc/data/locale/pl-PL.ini
+ plugins/obs-nvenc/data/locale/pt-BR.ini
+ plugins/obs-nvenc/data/locale/pt-PT.ini
+ plugins/obs-nvenc/data/locale/ro-RO.ini
+ plugins/obs-nvenc/data/locale/ru-RU.ini
+ plugins/obs-nvenc/data/locale/sk-SK.ini
+ plugins/obs-nvenc/data/locale/sr-SP.ini
+ plugins/obs-nvenc/data/locale/sv-SE.ini
+ plugins/obs-nvenc/data/locale/th-TH.ini
+ plugins/obs-nvenc/data/locale/tr-TR.ini
+ plugins/obs-nvenc/data/locale/tt-RU.ini
+ plugins/obs-nvenc/data/locale/ug-CN.ini
+ plugins/obs-nvenc/data/locale/uk-UA.ini
+ plugins/obs-nvenc/data/locale/vi-VN.ini
+ plugins/obs-nvenc/data/locale/zh-CN.ini
+ plugins/obs-nvenc/data/locale/zh-TW.ini
+ plugins/obs-nvenc/nvenc-compat.c
+ plugins/obs-nvenc/nvenc-cuda.c
+ plugins/obs-nvenc/nvenc-d3d11.c
+ plugins/obs-nvenc/nvenc-helpers.c
+ plugins/obs-nvenc/nvenc-helpers.h
+ plugins/obs-nvenc/nvenc-internal.h
+ plugins/obs-nvenc/nvenc-opengl.c
+ plugins/obs-nvenc/nvenc-opts-parser.c
+ plugins/obs-nvenc/nvenc-properties.c
+ plugins/obs-nvenc/nvenc.c
+ plugins/obs-nvenc/obs-nvenc-test/CMakeLists.txt
+ plugins/obs-nvenc/obs-nvenc-test/obs-nvenc-test.cpp
+ plugins/obs-nvenc/obs-nvenc.c
+ plugins/obs-nvenc/obs-nvenc.h
+ plugins/obs-outputs/.clang-format
  plugins/obs-outputs/CMakeLists.txt
- plugins/obs-outputs/cmake/ftl.cmake
- plugins/obs-outputs/cmake/legacy.cmake
  plugins/obs-outputs/cmake/windows/obs-module.rc.in
  plugins/obs-outputs/data/locale/af-ZA.ini
  plugins/obs-outputs/data/locale/ar-SA.ini
+ plugins/obs-outputs/data/locale/az-AZ.ini
  plugins/obs-outputs/data/locale/ba-RU.ini
  plugins/obs-outputs/data/locale/be-BY.ini
  plugins/obs-outputs/data/locale/bg-BG.ini
@@ -2192,6 +2315,7 @@ Files: AUTHORS
  plugins/obs-outputs/data/locale/kab-KAB.ini
  plugins/obs-outputs/data/locale/kmr-TR.ini
  plugins/obs-outputs/data/locale/ko-KR.ini
+ plugins/obs-outputs/data/locale/lo-LA.ini
  plugins/obs-outputs/data/locale/mn-MN.ini
  plugins/obs-outputs/data/locale/ms-MY.ini
  plugins/obs-outputs/data/locale/nb-NO.ini
@@ -2220,50 +2344,91 @@ Files: AUTHORS
  plugins/obs-outputs/data/locale/vi-VN.ini
  plugins/obs-outputs/data/locale/zh-CN.ini
  plugins/obs-outputs/data/locale/zh-TW.ini
- plugins/obs-outputs/ftl-sdk/.dockerignore
- plugins/obs-outputs/ftl-sdk/CMakeLists.txt
- plugins/obs-outputs/ftl-sdk/Dockerfile
- plugins/obs-outputs/ftl-sdk/Doxyfile
- plugins/obs-outputs/ftl-sdk/Jenkinsfile
- plugins/obs-outputs/ftl-sdk/README.md
- plugins/obs-outputs/ftl-sdk/ftl_app/bitstream.c
- plugins/obs-outputs/ftl-sdk/ftl_app/bitstream.h
- plugins/obs-outputs/ftl-sdk/ftl_app/dec_obj.h
- plugins/obs-outputs/ftl-sdk/ftl_app/decode.c
- plugins/obs-outputs/ftl-sdk/ftl_app/decode.h
- plugins/obs-outputs/ftl-sdk/ftl_app/file_parser.c
- plugins/obs-outputs/ftl-sdk/ftl_app/file_parser.h
- plugins/obs-outputs/ftl-sdk/ftl_app/gettimeofday.h
- plugins/obs-outputs/ftl-sdk/ftl_app/nalu.c
- plugins/obs-outputs/ftl-sdk/ftl_app/nalu.h
- plugins/obs-outputs/ftl-sdk/ftl_app/utils.c
- plugins/obs-outputs/ftl-sdk/ftl_app/utils.h
- plugins/obs-outputs/ftl-sdk/ftl_app/win32/xgetopt.c
- plugins/obs-outputs/ftl-sdk/ftl_app/win32/xgetopt.h
- plugins/obs-outputs/ftl-sdk/get-audio
- plugins/obs-outputs/ftl-sdk/get-video
- plugins/obs-outputs/ftl-sdk/libftl/ftl-sdk.c
- plugins/obs-outputs/ftl-sdk/libftl/gettimeofday/gettimeofday.h
- plugins/obs-outputs/ftl-sdk/libftl/hmac/hmac.c
- plugins/obs-outputs/ftl-sdk/libftl/hmac/hmac.h
- plugins/obs-outputs/ftl-sdk/libftl/ingest.c
- plugins/obs-outputs/ftl-sdk/libftl/media.c
- plugins/obs-outputs/ftl-sdk/libftl/posix/socket.h
- plugins/obs-outputs/ftl-sdk/libftl/win32/socket.h
- plugins/obs-outputs/ftl-sdk/make-deployment-yml
- plugins/obs-outputs/ftl-sdk/scripts/docker-test
- plugins/obs-outputs/ftl-sdk/scripts/lint
- plugins/obs-outputs/ftl-sdk/scripts/prep-artifacts
- plugins/obs-outputs/ftl-sdk/scripts/test
- plugins/obs-outputs/ftl-sdk/start-stream
  plugins/obs-outputs/librtmp/.clang-format
  plugins/obs-outputs/obs-output-ver.h
  plugins/obs-outputs/obs-outputs.c
  plugins/obs-outputs/rtmp-stream.h
  plugins/obs-outputs/rtmp-windows.c
  plugins/obs-outputs/utils.h
+ plugins/obs-qsv11/CMakeLists.txt
+ plugins/obs-qsv11/QSV11-License-Clarification-Email.txt
+ plugins/obs-qsv11/bits/.clang-format
+ plugins/obs-qsv11/bits/linux_defs.h
+ plugins/obs-qsv11/bits/windows_defs.h
+ plugins/obs-qsv11/cmake/windows/obs-module.rc.in
+ plugins/obs-qsv11/common_directx11.cpp
+ plugins/obs-qsv11/common_directx11.h
+ plugins/obs-qsv11/common_utils.cpp
+ plugins/obs-qsv11/common_utils.h
+ plugins/obs-qsv11/common_utils_linux.cpp
+ plugins/obs-qsv11/common_utils_windows.cpp
+ plugins/obs-qsv11/data/locale/af-ZA.ini
+ plugins/obs-qsv11/data/locale/ar-SA.ini
+ plugins/obs-qsv11/data/locale/az-AZ.ini
+ plugins/obs-qsv11/data/locale/ba-RU.ini
+ plugins/obs-qsv11/data/locale/be-BY.ini
+ plugins/obs-qsv11/data/locale/bg-BG.ini
+ plugins/obs-qsv11/data/locale/bn-BD.ini
+ plugins/obs-qsv11/data/locale/ca-ES.ini
+ plugins/obs-qsv11/data/locale/cs-CZ.ini
+ plugins/obs-qsv11/data/locale/da-DK.ini
+ plugins/obs-qsv11/data/locale/de-DE.ini
+ plugins/obs-qsv11/data/locale/el-GR.ini
+ plugins/obs-qsv11/data/locale/en-GB.ini
+ plugins/obs-qsv11/data/locale/en-US.ini
+ plugins/obs-qsv11/data/locale/es-ES.ini
+ plugins/obs-qsv11/data/locale/et-EE.ini
+ plugins/obs-qsv11/data/locale/eu-ES.ini
+ plugins/obs-qsv11/data/locale/fa-IR.ini
+ plugins/obs-qsv11/data/locale/fi-FI.ini
+ plugins/obs-qsv11/data/locale/fil-PH.ini
+ plugins/obs-qsv11/data/locale/fr-FR.ini
+ plugins/obs-qsv11/data/locale/gd-GB.ini
+ plugins/obs-qsv11/data/locale/gl-ES.ini
+ plugins/obs-qsv11/data/locale/he-IL.ini
+ plugins/obs-qsv11/data/locale/hi-IN.ini
+ plugins/obs-qsv11/data/locale/hr-HR.ini
+ plugins/obs-qsv11/data/locale/hu-HU.ini
+ plugins/obs-qsv11/data/locale/hy-AM.ini
+ plugins/obs-qsv11/data/locale/id-ID.ini
+ plugins/obs-qsv11/data/locale/is-IS.ini
+ plugins/obs-qsv11/data/locale/it-IT.ini
+ plugins/obs-qsv11/data/locale/ja-JP.ini
+ plugins/obs-qsv11/data/locale/ka-GE.ini
+ plugins/obs-qsv11/data/locale/kaa.ini
+ plugins/obs-qsv11/data/locale/kab-KAB.ini
+ plugins/obs-qsv11/data/locale/kmr-TR.ini
+ plugins/obs-qsv11/data/locale/ko-KR.ini
+ plugins/obs-qsv11/data/locale/lo-LA.ini
+ plugins/obs-qsv11/data/locale/ms-MY.ini
+ plugins/obs-qsv11/data/locale/nb-NO.ini
+ plugins/obs-qsv11/data/locale/nl-NL.ini
+ plugins/obs-qsv11/data/locale/nn-NO.ini
+ plugins/obs-qsv11/data/locale/oc-FR.ini
+ plugins/obs-qsv11/data/locale/pl-PL.ini
+ plugins/obs-qsv11/data/locale/pt-BR.ini
+ plugins/obs-qsv11/data/locale/pt-PT.ini
+ plugins/obs-qsv11/data/locale/ro-RO.ini
+ plugins/obs-qsv11/data/locale/ru-RU.ini
+ plugins/obs-qsv11/data/locale/si-LK.ini
+ plugins/obs-qsv11/data/locale/sk-SK.ini
+ plugins/obs-qsv11/data/locale/sl-SI.ini
+ plugins/obs-qsv11/data/locale/sr-CS.ini
+ plugins/obs-qsv11/data/locale/sr-SP.ini
+ plugins/obs-qsv11/data/locale/sv-SE.ini
+ plugins/obs-qsv11/data/locale/ta-IN.ini
+ plugins/obs-qsv11/data/locale/th-TH.ini
+ plugins/obs-qsv11/data/locale/tl-PH.ini
+ plugins/obs-qsv11/data/locale/tr-TR.ini
+ plugins/obs-qsv11/data/locale/tt-RU.ini
+ plugins/obs-qsv11/data/locale/ug-CN.ini
+ plugins/obs-qsv11/data/locale/uk-UA.ini
+ plugins/obs-qsv11/data/locale/vi-VN.ini
+ plugins/obs-qsv11/data/locale/zh-CN.ini
+ plugins/obs-qsv11/data/locale/zh-TW.ini
+ plugins/obs-qsv11/obs-qsv-test/CMakeLists.txt
+ plugins/obs-qsv11/obs-qsv-test/obs-qsv-test.cpp
  plugins/obs-text/CMakeLists.txt
- plugins/obs-text/cmake/legacy.cmake
  plugins/obs-text/cmake/windows/obs-module.rc.in
  plugins/obs-text/data/locale/af-ZA.ini
  plugins/obs-text/data/locale/ar-SA.ini
@@ -2316,6 +2481,7 @@ Files: AUTHORS
  plugins/obs-text/data/locale/si-LK.ini
  plugins/obs-text/data/locale/sk-SK.ini
  plugins/obs-text/data/locale/sl-SI.ini
+ plugins/obs-text/data/locale/sq-AL.ini
  plugins/obs-text/data/locale/sr-CS.ini
  plugins/obs-text/data/locale/sr-SP.ini
  plugins/obs-text/data/locale/sv-SE.ini
@@ -2330,13 +2496,14 @@ Files: AUTHORS
  plugins/obs-text/data/locale/zh-CN.ini
  plugins/obs-text/data/locale/zh-TW.ini
  plugins/obs-text/gdiplus/obs-text.cpp
+ plugins/obs-transitions/.clang-format
  plugins/obs-transitions/CMakeLists.txt
- plugins/obs-transitions/cmake/legacy.cmake
  plugins/obs-transitions/cmake/windows/obs-module.rc.in
  plugins/obs-transitions/data/fade_to_color_transition.effect
  plugins/obs-transitions/data/fade_transition.effect
  plugins/obs-transitions/data/locale/af-ZA.ini
  plugins/obs-transitions/data/locale/ar-SA.ini
+ plugins/obs-transitions/data/locale/az-AZ.ini
  plugins/obs-transitions/data/locale/ba-RU.ini
  plugins/obs-transitions/data/locale/be-BY.ini
  plugins/obs-transitions/data/locale/bg-BG.ini
@@ -2371,9 +2538,11 @@ Files: AUTHORS
  plugins/obs-transitions/data/locale/kab-KAB.ini
  plugins/obs-transitions/data/locale/kmr-TR.ini
  plugins/obs-transitions/data/locale/ko-KR.ini
+ plugins/obs-transitions/data/locale/lo-LA.ini
  plugins/obs-transitions/data/locale/ms-MY.ini
  plugins/obs-transitions/data/locale/nb-NO.ini
  plugins/obs-transitions/data/locale/nl-NL.ini
+ plugins/obs-transitions/data/locale/nn-NO.ini
  plugins/obs-transitions/data/locale/pl-PL.ini
  plugins/obs-transitions/data/locale/pt-BR.ini
  plugins/obs-transitions/data/locale/pt-PT.ini
@@ -2382,11 +2551,13 @@ Files: AUTHORS
  plugins/obs-transitions/data/locale/si-LK.ini
  plugins/obs-transitions/data/locale/sk-SK.ini
  plugins/obs-transitions/data/locale/sl-SI.ini
+ plugins/obs-transitions/data/locale/sq-AL.ini
  plugins/obs-transitions/data/locale/sr-CS.ini
  plugins/obs-transitions/data/locale/sr-SP.ini
  plugins/obs-transitions/data/locale/sv-SE.ini
  plugins/obs-transitions/data/locale/szl-PL.ini
  plugins/obs-transitions/data/locale/ta-IN.ini
+ plugins/obs-transitions/data/locale/th-TH.ini
  plugins/obs-transitions/data/locale/tl-PH.ini
  plugins/obs-transitions/data/locale/tr-TR.ini
  plugins/obs-transitions/data/locale/tt-RU.ini
@@ -2410,10 +2581,11 @@ Files: AUTHORS
  plugins/obs-transitions/transition-stinger.c
  plugins/obs-transitions/transition-swipe.c
  plugins/obs-vst/CMakeLists.txt
- plugins/obs-vst/cmake/legacy.cmake
+ plugins/obs-vst/cmake/windows/obs-module.rc.in
  plugins/obs-vst/data/locale/af-ZA.ini
  plugins/obs-vst/data/locale/an-ES.ini
  plugins/obs-vst/data/locale/ar-SA.ini
+ plugins/obs-vst/data/locale/az-AZ.ini
  plugins/obs-vst/data/locale/be-BY.ini
  plugins/obs-vst/data/locale/bg-BG.ini
  plugins/obs-vst/data/locale/bn-BD.ini
@@ -2435,6 +2607,7 @@ Files: AUTHORS
  plugins/obs-vst/data/locale/gl-ES.ini
  plugins/obs-vst/data/locale/he-IL.ini
  plugins/obs-vst/data/locale/hi-IN.ini
+ plugins/obs-vst/data/locale/hr-HR.ini
  plugins/obs-vst/data/locale/hu-HU.ini
  plugins/obs-vst/data/locale/hy-AM.ini
  plugins/obs-vst/data/locale/id-ID.ini
@@ -2445,6 +2618,7 @@ Files: AUTHORS
  plugins/obs-vst/data/locale/kab-KAB.ini
  plugins/obs-vst/data/locale/kmr-TR.ini
  plugins/obs-vst/data/locale/ko-KR.ini
+ plugins/obs-vst/data/locale/lo-LA.ini
  plugins/obs-vst/data/locale/ms-MY.ini
  plugins/obs-vst/data/locale/nb-NO.ini
  plugins/obs-vst/data/locale/nl-NL.ini
@@ -2460,19 +2634,22 @@ Files: AUTHORS
  plugins/obs-vst/data/locale/sr-SP.ini
  plugins/obs-vst/data/locale/sv-SE.ini
  plugins/obs-vst/data/locale/szl-PL.ini
+ plugins/obs-vst/data/locale/ta-IN.ini
+ plugins/obs-vst/data/locale/th-TH.ini
  plugins/obs-vst/data/locale/tl-PH.ini
  plugins/obs-vst/data/locale/tr-TR.ini
  plugins/obs-vst/data/locale/ug-CN.ini
  plugins/obs-vst/data/locale/uk-UA.ini
+ plugins/obs-vst/data/locale/ur-PK.ini
  plugins/obs-vst/data/locale/vi-VN.ini
  plugins/obs-vst/data/locale/zh-CN.ini
  plugins/obs-vst/data/locale/zh-TW.ini
  plugins/obs-vst/vst_header/.clang-format
  plugins/obs-webrtc/CMakeLists.txt
- plugins/obs-webrtc/cmake/legacy.cmake
  plugins/obs-webrtc/cmake/windows/obs-module.rc.in
  plugins/obs-webrtc/data/locale/af-ZA.ini
  plugins/obs-webrtc/data/locale/ar-SA.ini
+ plugins/obs-webrtc/data/locale/az-AZ.ini
  plugins/obs-webrtc/data/locale/be-BY.ini
  plugins/obs-webrtc/data/locale/bg-BG.ini
  plugins/obs-webrtc/data/locale/ca-ES.ini
@@ -2486,7 +2663,9 @@ Files: AUTHORS
  plugins/obs-webrtc/data/locale/et-EE.ini
  plugins/obs-webrtc/data/locale/fa-IR.ini
  plugins/obs-webrtc/data/locale/fi-FI.ini
+ plugins/obs-webrtc/data/locale/fil-PH.ini
  plugins/obs-webrtc/data/locale/fr-FR.ini
+ plugins/obs-webrtc/data/locale/gl-ES.ini
  plugins/obs-webrtc/data/locale/he-IL.ini
  plugins/obs-webrtc/data/locale/hi-IN.ini
  plugins/obs-webrtc/data/locale/hr-HR.ini
@@ -2497,18 +2676,24 @@ Files: AUTHORS
  plugins/obs-webrtc/data/locale/ja-JP.ini
  plugins/obs-webrtc/data/locale/ka-GE.ini
  plugins/obs-webrtc/data/locale/kaa.ini
+ plugins/obs-webrtc/data/locale/kab-KAB.ini
+ plugins/obs-webrtc/data/locale/kmr-TR.ini
  plugins/obs-webrtc/data/locale/ko-KR.ini
+ plugins/obs-webrtc/data/locale/lo-LA.ini
  plugins/obs-webrtc/data/locale/ms-MY.ini
  plugins/obs-webrtc/data/locale/nb-NO.ini
  plugins/obs-webrtc/data/locale/nl-NL.ini
  plugins/obs-webrtc/data/locale/pl-PL.ini
  plugins/obs-webrtc/data/locale/pt-BR.ini
  plugins/obs-webrtc/data/locale/pt-PT.ini
+ plugins/obs-webrtc/data/locale/ro-RO.ini
  plugins/obs-webrtc/data/locale/ru-RU.ini
  plugins/obs-webrtc/data/locale/si-LK.ini
  plugins/obs-webrtc/data/locale/sk-SK.ini
  plugins/obs-webrtc/data/locale/sl-SI.ini
+ plugins/obs-webrtc/data/locale/sr-SP.ini
  plugins/obs-webrtc/data/locale/sv-SE.ini
+ plugins/obs-webrtc/data/locale/th-TH.ini
  plugins/obs-webrtc/data/locale/tr-TR.ini
  plugins/obs-webrtc/data/locale/ug-CN.ini
  plugins/obs-webrtc/data/locale/uk-UA.ini
@@ -2529,12 +2714,12 @@ Files: AUTHORS
  plugins/obs-websocket/CI/generate-docs.sh
  plugins/obs-websocket/CMakeLists.txt
  plugins/obs-websocket/README.md
- plugins/obs-websocket/cmake/legacy.cmake
  plugins/obs-websocket/cmake/macos/Info.plist.in
  plugins/obs-websocket/cmake/obs-websocket-api.cmake
  plugins/obs-websocket/cmake/obs-websocket-apiConfig.cmake.in
  plugins/obs-websocket/data/locale/af-ZA.ini
  plugins/obs-websocket/data/locale/ar-SA.ini
+ plugins/obs-websocket/data/locale/az-AZ.ini
  plugins/obs-websocket/data/locale/be-BY.ini
  plugins/obs-websocket/data/locale/ca-ES.ini
  plugins/obs-websocket/data/locale/cs-CZ.ini
@@ -2560,11 +2745,15 @@ Files: AUTHORS
  plugins/obs-websocket/data/locale/it-IT.ini
  plugins/obs-websocket/data/locale/ja-JP.ini
  plugins/obs-websocket/data/locale/ka-GE.ini
+ plugins/obs-websocket/data/locale/kaa.ini
+ plugins/obs-websocket/data/locale/kab-KAB.ini
  plugins/obs-websocket/data/locale/kmr-TR.ini
  plugins/obs-websocket/data/locale/ko-KR.ini
+ plugins/obs-websocket/data/locale/lo-LA.ini
  plugins/obs-websocket/data/locale/ms-MY.ini
  plugins/obs-websocket/data/locale/nb-NO.ini
  plugins/obs-websocket/data/locale/nl-NL.ini
+ plugins/obs-websocket/data/locale/nn-NO.ini
  plugins/obs-websocket/data/locale/pl-PL.ini
  plugins/obs-websocket/data/locale/pt-BR.ini
  plugins/obs-websocket/data/locale/pt-PT.ini
@@ -2573,7 +2762,11 @@ Files: AUTHORS
  plugins/obs-websocket/data/locale/si-LK.ini
  plugins/obs-websocket/data/locale/sk-SK.ini
  plugins/obs-websocket/data/locale/sl-SI.ini
+ plugins/obs-websocket/data/locale/sq-AL.ini
+ plugins/obs-websocket/data/locale/sr-SP.ini
  plugins/obs-websocket/data/locale/sv-SE.ini
+ plugins/obs-websocket/data/locale/th-TH.ini
+ plugins/obs-websocket/data/locale/tl-PH.ini
  plugins/obs-websocket/data/locale/tr-TR.ini
  plugins/obs-websocket/data/locale/tt-RU.ini
  plugins/obs-websocket/data/locale/ug-CN.ini
@@ -2582,6 +2775,7 @@ Files: AUTHORS
  plugins/obs-websocket/data/locale/zh-CN.ini
  plugins/obs-websocket/data/locale/zh-TW.ini
  plugins/obs-websocket/docs/README.md
+ plugins/obs-websocket/docs/build_docs.sh
  plugins/obs-websocket/docs/comments/.npmrc
  plugins/obs-websocket/docs/comments/comments.js
  plugins/obs-websocket/docs/comments/config.json
@@ -2599,8 +2793,8 @@ Files: AUTHORS
  plugins/obs-websocket/src/forms/images/help.svg
  plugins/obs-websocket/src/forms/images/help_light.svg
  plugins/obs-websocket/src/forms/resources.qrc
+ plugins/obs-x264/.clang-format
  plugins/obs-x264/CMakeLists.txt
- plugins/obs-x264/cmake/legacy.cmake
  plugins/obs-x264/cmake/windows/obs-module.rc.in
  plugins/obs-x264/cmake/x264-test.cmake
  plugins/obs-x264/data/locale/af-ZA.ini
@@ -2639,6 +2833,7 @@ Files: AUTHORS
  plugins/obs-x264/data/locale/kab-KAB.ini
  plugins/obs-x264/data/locale/kmr-TR.ini
  plugins/obs-x264/data/locale/ko-KR.ini
+ plugins/obs-x264/data/locale/lo-LA.ini
  plugins/obs-x264/data/locale/lv-LV.ini
  plugins/obs-x264/data/locale/mn-MN.ini
  plugins/obs-x264/data/locale/ms-MY.ini
@@ -2654,6 +2849,7 @@ Files: AUTHORS
  plugins/obs-x264/data/locale/si-LK.ini
  plugins/obs-x264/data/locale/sk-SK.ini
  plugins/obs-x264/data/locale/sl-SI.ini
+ plugins/obs-x264/data/locale/sq-AL.ini
  plugins/obs-x264/data/locale/sr-CS.ini
  plugins/obs-x264/data/locale/sr-SP.ini
  plugins/obs-x264/data/locale/sv-SE.ini
@@ -2671,10 +2867,11 @@ Files: AUTHORS
  plugins/obs-x264/data/locale/zh-TW.ini
  plugins/obs-x264/obs-x264-plugin-main.c
  plugins/obs-x264/obs-x264-test.c
+ plugins/oss-audio/.clang-format
  plugins/oss-audio/CMakeLists.txt
- plugins/oss-audio/cmake/legacy.cmake
  plugins/oss-audio/data/locale/af-ZA.ini
  plugins/oss-audio/data/locale/ar-SA.ini
+ plugins/oss-audio/data/locale/az-AZ.ini
  plugins/oss-audio/data/locale/be-BY.ini
  plugins/oss-audio/data/locale/bg-BG.ini
  plugins/oss-audio/data/locale/bn-BD.ini
@@ -2696,6 +2893,7 @@ Files: AUTHORS
  plugins/oss-audio/data/locale/gl-ES.ini
  plugins/oss-audio/data/locale/he-IL.ini
  plugins/oss-audio/data/locale/hi-IN.ini
+ plugins/oss-audio/data/locale/hr-HR.ini
  plugins/oss-audio/data/locale/hu-HU.ini
  plugins/oss-audio/data/locale/hy-AM.ini
  plugins/oss-audio/data/locale/id-ID.ini
@@ -2706,6 +2904,7 @@ Files: AUTHORS
  plugins/oss-audio/data/locale/kab-KAB.ini
  plugins/oss-audio/data/locale/kmr-TR.ini
  plugins/oss-audio/data/locale/ko-KR.ini
+ plugins/oss-audio/data/locale/lo-LA.ini
  plugins/oss-audio/data/locale/ms-MY.ini
  plugins/oss-audio/data/locale/nb-NO.ini
  plugins/oss-audio/data/locale/nl-NL.ini
@@ -2718,9 +2917,14 @@ Files: AUTHORS
  plugins/oss-audio/data/locale/si-LK.ini
  plugins/oss-audio/data/locale/sk-SK.ini
  plugins/oss-audio/data/locale/sl-SI.ini
+ plugins/oss-audio/data/locale/sq-AL.ini
+ plugins/oss-audio/data/locale/sr-SP.ini
  plugins/oss-audio/data/locale/sv-SE.ini
  plugins/oss-audio/data/locale/ta-IN.ini
+ plugins/oss-audio/data/locale/th-TH.ini
+ plugins/oss-audio/data/locale/tl-PH.ini
  plugins/oss-audio/data/locale/tr-TR.ini
+ plugins/oss-audio/data/locale/tt-RU.ini
  plugins/oss-audio/data/locale/ug-CN.ini
  plugins/oss-audio/data/locale/uk-UA.ini
  plugins/oss-audio/data/locale/ur-PK.ini
@@ -2728,8 +2932,8 @@ Files: AUTHORS
  plugins/oss-audio/data/locale/zh-CN.ini
  plugins/oss-audio/data/locale/zh-TW.ini
  plugins/oss-audio/oss-platform.h.in
+ plugins/rtmp-services/.clang-format
  plugins/rtmp-services/CMakeLists.txt
- plugins/rtmp-services/cmake/legacy.cmake
  plugins/rtmp-services/cmake/windows/obs-module.rc.in
  plugins/rtmp-services/data/locale/af-ZA.ini
  plugins/rtmp-services/data/locale/ar-SA.ini
@@ -2767,6 +2971,7 @@ Files: AUTHORS
  plugins/rtmp-services/data/locale/kab-KAB.ini
  plugins/rtmp-services/data/locale/kmr-TR.ini
  plugins/rtmp-services/data/locale/ko-KR.ini
+ plugins/rtmp-services/data/locale/lo-LA.ini
  plugins/rtmp-services/data/locale/mn-MN.ini
  plugins/rtmp-services/data/locale/ms-MY.ini
  plugins/rtmp-services/data/locale/nb-NO.ini
@@ -2780,6 +2985,7 @@ Files: AUTHORS
  plugins/rtmp-services/data/locale/si-LK.ini
  plugins/rtmp-services/data/locale/sk-SK.ini
  plugins/rtmp-services/data/locale/sl-SI.ini
+ plugins/rtmp-services/data/locale/sq-AL.ini
  plugins/rtmp-services/data/locale/sr-CS.ini
  plugins/rtmp-services/data/locale/sr-SP.ini
  plugins/rtmp-services/data/locale/sv-SE.ini
@@ -2804,20 +3010,23 @@ Files: AUTHORS
  plugins/rtmp-services/rtmp-custom.c
  plugins/rtmp-services/rtmp-format-ver.h
  plugins/rtmp-services/rtmp-services-main.c
+ plugins/rtmp-services/service-specific/amazon-ivs.c
+ plugins/rtmp-services/service-specific/amazon-ivs.h
  plugins/rtmp-services/service-specific/dacast.c
  plugins/rtmp-services/service-specific/dacast.h
  plugins/rtmp-services/service-specific/nimotv.c
  plugins/rtmp-services/service-specific/nimotv.h
+ plugins/rtmp-services/service-specific/service-ingest.c
+ plugins/rtmp-services/service-specific/service-ingest.h
  plugins/rtmp-services/service-specific/showroom.c
  plugins/rtmp-services/service-specific/showroom.h
  plugins/rtmp-services/service-specific/twitch.c
  plugins/rtmp-services/service-specific/twitch.h
- plugins/rtmp-services/service-specific/younow.c
- plugins/rtmp-services/service-specific/younow.h
+ plugins/sndio/.clang-format
  plugins/sndio/CMakeLists.txt
- plugins/sndio/cmake/legacy.cmake
  plugins/sndio/data/locale/af-ZA.ini
  plugins/sndio/data/locale/ar-SA.ini
+ plugins/sndio/data/locale/az-AZ.ini
  plugins/sndio/data/locale/be-BY.ini
  plugins/sndio/data/locale/bn-BD.ini
  plugins/sndio/data/locale/ca-ES.ini
@@ -2838,6 +3047,7 @@ Files: AUTHORS
  plugins/sndio/data/locale/gl-ES.ini
  plugins/sndio/data/locale/he-IL.ini
  plugins/sndio/data/locale/hi-IN.ini
+ plugins/sndio/data/locale/hr-HR.ini
  plugins/sndio/data/locale/hu-HU.ini
  plugins/sndio/data/locale/hy-AM.ini
  plugins/sndio/data/locale/id-ID.ini
@@ -2848,6 +3058,7 @@ Files: AUTHORS
  plugins/sndio/data/locale/kab-KAB.ini
  plugins/sndio/data/locale/kmr-TR.ini
  plugins/sndio/data/locale/ko-KR.ini
+ plugins/sndio/data/locale/lo-LA.ini
  plugins/sndio/data/locale/ms-MY.ini
  plugins/sndio/data/locale/nb-NO.ini
  plugins/sndio/data/locale/nl-NL.ini
@@ -2860,6 +3071,8 @@ Files: AUTHORS
  plugins/sndio/data/locale/si-LK.ini
  plugins/sndio/data/locale/sk-SK.ini
  plugins/sndio/data/locale/sl-SI.ini
+ plugins/sndio/data/locale/sq-AL.ini
+ plugins/sndio/data/locale/sr-SP.ini
  plugins/sndio/data/locale/sv-SE.ini
  plugins/sndio/data/locale/szl-PL.ini
  plugins/sndio/data/locale/th-TH.ini
@@ -2867,15 +3080,17 @@ Files: AUTHORS
  plugins/sndio/data/locale/tt-RU.ini
  plugins/sndio/data/locale/ug-CN.ini
  plugins/sndio/data/locale/uk-UA.ini
+ plugins/sndio/data/locale/ur-PK.ini
  plugins/sndio/data/locale/vi-VN.ini
  plugins/sndio/data/locale/zh-CN.ini
  plugins/sndio/data/locale/zh-TW.ini
  plugins/sndio/sndio-input.h
+ plugins/text-freetype2/.clang-format
  plugins/text-freetype2/CMakeLists.txt
- plugins/text-freetype2/cmake/legacy.cmake
  plugins/text-freetype2/cmake/windows/obs-module.rc.in
  plugins/text-freetype2/data/locale/af-ZA.ini
  plugins/text-freetype2/data/locale/ar-SA.ini
+ plugins/text-freetype2/data/locale/az-AZ.ini
  plugins/text-freetype2/data/locale/ba-RU.ini
  plugins/text-freetype2/data/locale/be-BY.ini
  plugins/text-freetype2/data/locale/bg-BG.ini
@@ -2910,6 +3125,8 @@ Files: AUTHORS
  plugins/text-freetype2/data/locale/kab-KAB.ini
  plugins/text-freetype2/data/locale/kmr-TR.ini
  plugins/text-freetype2/data/locale/ko-KR.ini
+ plugins/text-freetype2/data/locale/lo-LA.ini
+ plugins/text-freetype2/data/locale/lv-LV.ini
  plugins/text-freetype2/data/locale/mn-MN.ini
  plugins/text-freetype2/data/locale/ms-MY.ini
  plugins/text-freetype2/data/locale/nb-NO.ini
@@ -2943,11 +3160,12 @@ Files: AUTHORS
  plugins/text-freetype2/find-font-windows.c
  plugins/text-freetype2/find-font.c
  plugins/text-freetype2/find-font.h
+ plugins/vlc-video/.clang-format
  plugins/vlc-video/CMakeLists.txt
- plugins/vlc-video/cmake/legacy.cmake
  plugins/vlc-video/cmake/windows/obs-module.rc.in
  plugins/vlc-video/data/locale/af-ZA.ini
  plugins/vlc-video/data/locale/ar-SA.ini
+ plugins/vlc-video/data/locale/az-AZ.ini
  plugins/vlc-video/data/locale/ba-RU.ini
  plugins/vlc-video/data/locale/be-BY.ini
  plugins/vlc-video/data/locale/bg-BG.ini
@@ -2981,12 +3199,12 @@ Files: AUTHORS
  plugins/vlc-video/data/locale/kab-KAB.ini
  plugins/vlc-video/data/locale/kmr-TR.ini
  plugins/vlc-video/data/locale/ko-KR.ini
+ plugins/vlc-video/data/locale/lo-LA.ini
  plugins/vlc-video/data/locale/lt-LT.ini
  plugins/vlc-video/data/locale/ms-MY.ini
  plugins/vlc-video/data/locale/nb-NO.ini
  plugins/vlc-video/data/locale/nl-NL.ini
  plugins/vlc-video/data/locale/nn-NO.ini
- plugins/vlc-video/data/locale/oc-FR.ini
  plugins/vlc-video/data/locale/pl-PL.ini
  plugins/vlc-video/data/locale/pt-BR.ini
  plugins/vlc-video/data/locale/pt-PT.ini
@@ -2995,11 +3213,13 @@ Files: AUTHORS
  plugins/vlc-video/data/locale/si-LK.ini
  plugins/vlc-video/data/locale/sk-SK.ini
  plugins/vlc-video/data/locale/sl-SI.ini
+ plugins/vlc-video/data/locale/sq-AL.ini
  plugins/vlc-video/data/locale/sr-CS.ini
  plugins/vlc-video/data/locale/sr-SP.ini
  plugins/vlc-video/data/locale/sv-SE.ini
  plugins/vlc-video/data/locale/szl-PL.ini
  plugins/vlc-video/data/locale/ta-IN.ini
+ plugins/vlc-video/data/locale/th-TH.ini
  plugins/vlc-video/data/locale/tl-PH.ini
  plugins/vlc-video/data/locale/tr-TR.ini
  plugins/vlc-video/data/locale/tt-RU.ini
@@ -3011,6 +3231,65 @@ Files: AUTHORS
  plugins/vlc-video/vlc-video-plugin.c
  plugins/vlc-video/vlc-video-plugin.h
  plugins/vlc-video/vlc-video-source.c
+ shared/.clang-format
+ shared/bpm/CMakeLists.txt
+ shared/bpm/bpm-internal.h
+ shared/bpm/bpm.c
+ shared/bpm/bpm.h
+ shared/file-updater/CMakeLists.txt
+ shared/file-updater/file-updater/file-updater.c
+ shared/file-updater/file-updater/file-updater.h
+ shared/happy-eyeballs/CMakeLists.txt
+ shared/ipc-util/CMakeLists.txt
+ shared/media-playback/CMakeLists.txt
+ shared/obs-hook-config/CMakeLists.txt
+ shared/obs-hook-config/graphics-hook-info.h
+ shared/obs-hook-config/graphics-hook-ver.h
+ shared/obs-hook-config/hook-helpers.h
+ shared/obs-inject-library/CMakeLists.txt
+ shared/obs-inject-library/inject-library.c
+ shared/obs-inject-library/inject-library.h
+ shared/obs-scripting/CMakeLists.txt
+ shared/obs-scripting/cmake/cstrcache.cmake
+ shared/obs-scripting/cmake/lua.cmake
+ shared/obs-scripting/cmake/python.cmake
+ shared/obs-scripting/cmake/windows/obs-module.rc.in
+ shared/obs-scripting/cstrcache.cpp
+ shared/obs-scripting/cstrcache.h
+ shared/obs-scripting/obs-scripting-config.h.in
+ shared/obs-scripting/obslua/CMakeLists.txt
+ shared/obs-scripting/obslua/obslua.i
+ shared/obs-scripting/obspython/CMakeLists.txt
+ shared/obs-scripting/obspython/obspython.i
+ shared/obs-shared-memory-queue/CMakeLists.txt
+ shared/obs-shared-memory-queue/shared-memory-queue.c
+ shared/obs-shared-memory-queue/shared-memory-queue.h
+ shared/obs-tiny-nv12-scale/CMakeLists.txt
+ shared/obs-tiny-nv12-scale/tiny-nv12-scale.c
+ shared/obs-tiny-nv12-scale/tiny-nv12-scale.h
+ shared/opts-parser/CMakeLists.txt
+ shared/opts-parser/opts-parser.c
+ shared/opts-parser/opts-parser.h
+ shared/properties-view/CMakeLists.txt
+ shared/properties-view/double-slider.cpp
+ shared/properties-view/double-slider.hpp
+ shared/properties-view/properties-view.cpp
+ shared/properties-view/properties-view.hpp
+ shared/properties-view/properties-view.moc.hpp
+ shared/properties-view/spinbox-ignorewheel.cpp
+ shared/properties-view/spinbox-ignorewheel.hpp
+ shared/qt/icon-label/CMakeLists.txt
+ shared/qt/idian/CMakeLists.txt
+ shared/qt/plain-text-edit/CMakeLists.txt
+ shared/qt/plain-text-edit/plain-text-edit.cpp
+ shared/qt/plain-text-edit/plain-text-edit.hpp
+ shared/qt/slider-ignorewheel/CMakeLists.txt
+ shared/qt/slider-ignorewheel/slider-ignorewheel.cpp
+ shared/qt/slider-ignorewheel/slider-ignorewheel.hpp
+ shared/qt/vertical-scroll-area/CMakeLists.txt
+ shared/qt/vertical-scroll-area/vertical-scroll-area.cpp
+ shared/qt/vertical-scroll-area/vertical-scroll-area.hpp
+ shared/qt/wrappers/CMakeLists.txt
  test/CMakeLists.txt
  test/cmocka/CMakeLists.txt
  test/cmocka/test_bitstream.c
@@ -3020,7 +3299,6 @@ Files: AUTHORS
  test/osx/CMakeLists.txt
  test/osx/test.mm
  test/test-input/CMakeLists.txt
- test/test-input/cmake/legacy.cmake
  test/test-input/data/draw.effect
  test/test-input/data/test.effect
  test/test-input/sync-async-source.c
@@ -3342,56 +3620,76 @@ Copyright: 1998, John E. Bossom
 License: LGPL-2+
  FIXME
 
-Files: UI/display-helpers.hpp
- UI/item-widget-helpers.cpp
- UI/item-widget-helpers.hpp
- UI/obs-app.cpp
- UI/obs-app.hpp
- UI/platform-osx.mm
- UI/platform-windows.cpp
- UI/platform.hpp
- UI/qt-wrappers.cpp
- UI/qt-wrappers.hpp
- UI/remote-text.cpp
- UI/remote-text.hpp
- UI/screenshot-obj.hpp
- UI/window-basic-filters.cpp
- UI/window-basic-filters.hpp
- UI/window-basic-interaction.cpp
- UI/window-basic-interaction.hpp
- UI/window-basic-main-browser.cpp
- UI/window-basic-main-profiles.cpp
- UI/window-basic-main-scene-collections.cpp
- UI/window-basic-main-screenshot.cpp
- UI/window-basic-main-transitions.cpp
- UI/window-basic-main.cpp
- UI/window-basic-main.hpp
- UI/window-basic-properties.cpp
- UI/window-basic-properties.hpp
- UI/window-basic-settings.cpp
- UI/window-basic-settings.hpp
- UI/window-basic-source-select.cpp
- UI/window-basic-source-select.hpp
- UI/window-log-reply.cpp
- UI/window-log-reply.hpp
- UI/window-namedialog.cpp
- UI/window-namedialog.hpp
- UI/window-permissions.cpp
- UI/window-permissions.hpp
- deps/obs-scripting/obs-scripting-callback.h
- deps/obs-scripting/obs-scripting-internal.h
- deps/obs-scripting/obs-scripting-logging.c
- deps/obs-scripting/obs-scripting-lua-frontend.c
- deps/obs-scripting/obs-scripting-lua-source.c
- deps/obs-scripting/obs-scripting-lua.c
- deps/obs-scripting/obs-scripting-lua.h
- deps/obs-scripting/obs-scripting-python-frontend.c
- deps/obs-scripting/obs-scripting-python-import.c
- deps/obs-scripting/obs-scripting-python-import.h
- deps/obs-scripting/obs-scripting.c
- deps/obs-scripting/obs-scripting.h
+Files: frontend/OBSApp.cpp
+ frontend/OBSApp.hpp
+ frontend/components/SilentUpdateCheckBox.hpp
+ frontend/components/SilentUpdateSpinBox.hpp
+ frontend/dialogs/LogUploadDialog.cpp
+ frontend/dialogs/LogUploadDialog.hpp
+ frontend/dialogs/NameDialog.cpp
+ frontend/dialogs/NameDialog.hpp
+ frontend/dialogs/OBSBasicFilters.cpp
+ frontend/dialogs/OBSBasicFilters.hpp
+ frontend/dialogs/OBSBasicInteraction.cpp
+ frontend/dialogs/OBSBasicInteraction.hpp
+ frontend/dialogs/OBSBasicProperties.cpp
+ frontend/dialogs/OBSBasicProperties.hpp
+ frontend/dialogs/OBSPermissions.cpp
+ frontend/dialogs/OBSPermissions.hpp
+ frontend/obs-main.cpp
+ frontend/settings/OBSBasicSettings.cpp
+ frontend/settings/OBSBasicSettings.hpp
+ frontend/utility/BaseLexer.hpp
+ frontend/utility/OBSEventFilter.hpp
+ frontend/utility/OBSTranslator.cpp
+ frontend/utility/OBSTranslator.hpp
+ frontend/utility/QuickTransition.cpp
+ frontend/utility/QuickTransition.hpp
+ frontend/utility/RemoteTextThread.cpp
+ frontend/utility/RemoteTextThread.hpp
+ frontend/utility/SceneRenameDelegate.cpp
+ frontend/utility/SceneRenameDelegate.hpp
+ frontend/utility/SettingsEventFilter.hpp
+ frontend/utility/display-helpers.hpp
+ frontend/utility/item-widget-helpers.cpp
+ frontend/utility/item-widget-helpers.hpp
+ frontend/utility/platform-osx.mm
+ frontend/utility/platform-windows.cpp
+ frontend/utility/platform.hpp
+ frontend/widgets/ColorSelect.cpp
+ frontend/widgets/ColorSelect.hpp
+ frontend/widgets/OBSBasic.cpp
+ frontend/widgets/OBSBasic.hpp
+ frontend/widgets/OBSBasic_Browser.cpp
+ frontend/widgets/OBSBasic_Clipboard.cpp
+ frontend/widgets/OBSBasic_ContextToolbar.cpp
+ frontend/widgets/OBSBasic_Docks.cpp
+ frontend/widgets/OBSBasic_Dropfiles.cpp
+ frontend/widgets/OBSBasic_Hotkeys.cpp
+ frontend/widgets/OBSBasic_Icons.cpp
+ frontend/widgets/OBSBasic_MainControls.cpp
+ frontend/widgets/OBSBasic_OutputHandler.cpp
+ frontend/widgets/OBSBasic_Preview.cpp
+ frontend/widgets/OBSBasic_Profiles.cpp
+ frontend/widgets/OBSBasic_Projectors.cpp
+ frontend/widgets/OBSBasic_Recording.cpp
+ frontend/widgets/OBSBasic_ReplayBuffer.cpp
+ frontend/widgets/OBSBasic_SceneCollections.cpp
+ frontend/widgets/OBSBasic_SceneItems.cpp
+ frontend/widgets/OBSBasic_Scenes.cpp
+ frontend/widgets/OBSBasic_Screenshots.cpp
+ frontend/widgets/OBSBasic_Service.cpp
+ frontend/widgets/OBSBasic_StatusBar.cpp
+ frontend/widgets/OBSBasic_Streaming.cpp
+ frontend/widgets/OBSBasic_StudioMode.cpp
+ frontend/widgets/OBSBasic_SysTray.cpp
+ frontend/widgets/OBSBasic_Transitions.cpp
+ frontend/widgets/OBSBasic_Updater.cpp
+ frontend/widgets/OBSBasic_VirtualCam.cpp
+ frontend/widgets/OBSBasic_YouTube.cpp
  libobs-d3d11/d3d11-duplicator.cpp
  libobs-d3d11/d3d11-indexbuffer.cpp
+ libobs-d3d11/d3d11-rebuild.cpp
  libobs-d3d11/d3d11-samplerstate.cpp
  libobs-d3d11/d3d11-shader.cpp
  libobs-d3d11/d3d11-shaderprocessor.cpp
@@ -3510,7 +3808,6 @@ Files: UI/display-helpers.hpp
  libobs/obs.hpp
  plugins/obs-browser/deps/wide-string.cpp
  plugins/obs-browser/deps/wide-string.hpp
- plugins/obs-browser/obs-browser-source-audio.cpp
  plugins/obs-ffmpeg/obs-ffmpeg-audio-encoders.c
  plugins/obs-ffmpeg/obs-ffmpeg-av1.c
  plugins/obs-ffmpeg/obs-ffmpeg-mpegts.c
@@ -3529,6 +3826,20 @@ Files: UI/display-helpers.hpp
  plugins/obs-outputs/rtmp-hevc.h
  plugins/obs-outputs/rtmp-stream.c
  plugins/obs-x264/obs-x264.c
+ shared/obs-scripting/obs-scripting-callback.h
+ shared/obs-scripting/obs-scripting-internal.h
+ shared/obs-scripting/obs-scripting-logging.c
+ shared/obs-scripting/obs-scripting-lua-frontend.c
+ shared/obs-scripting/obs-scripting-lua-source.c
+ shared/obs-scripting/obs-scripting-lua.c
+ shared/obs-scripting/obs-scripting-lua.h
+ shared/obs-scripting/obs-scripting-python-frontend.c
+ shared/obs-scripting/obs-scripting-python-import.c
+ shared/obs-scripting/obs-scripting-python-import.h
+ shared/obs-scripting/obs-scripting.c
+ shared/obs-scripting/obs-scripting.h
+ shared/qt/wrappers/qt-wrappers.cpp
+ shared/qt/wrappers/qt-wrappers.hpp
 Copyright: 2023, Lain Bailey <lain@obsproject.com>
 License: GPL-2+
  FIXME
@@ -3658,26 +3969,11 @@ Copyright: 2009, Blackmagic Design
 License: BSL-1.0
  FIXME
 
-Files: UI/win-update/updater/hash.cpp
- UI/win-update/updater/http.cpp
- UI/win-update/updater/patch.cpp
- UI/win-update/updater/updater.cpp
- UI/win-update/updater/updater.hpp
- deps/ipc-util/ipc-util/pipe-posix.c
- deps/ipc-util/ipc-util/pipe-posix.h
- deps/ipc-util/ipc-util/pipe-windows.c
- deps/ipc-util/ipc-util/pipe-windows.h
- deps/ipc-util/ipc-util/pipe.h
- deps/media-playback/LICENSE.media-playback
- deps/media-playback/media-playback/cache.c
- deps/media-playback/media-playback/cache.h
- deps/media-playback/media-playback/closest-format.h
- deps/media-playback/media-playback/decode.c
- deps/media-playback/media-playback/decode.h
- deps/media-playback/media-playback/media-playback.c
- deps/media-playback/media-playback/media-playback.h
- deps/media-playback/media-playback/media.c
- deps/media-playback/media-playback/media.h
+Files: frontend/updater/hash.cpp
+ frontend/updater/http.cpp
+ frontend/updater/patch.cpp
+ frontend/updater/updater.cpp
+ frontend/updater/updater.hpp
  libobs/callback/calldata.c
  libobs/callback/calldata.h
  libobs/callback/decl.c
@@ -3697,7 +3993,6 @@ Files: UI/win-update/updater/hash.cpp
  libobs/util/cf-lexer.h
  libobs/util/cf-parser.c
  libobs/util/cf-parser.h
- libobs/util/circlebuf.h
  libobs/util/config-file.c
  libobs/util/config-file.h
  libobs/util/crc32.h
@@ -3737,16 +4032,31 @@ Files: UI/win-update/updater/hash.cpp
  libobs/util/windows/win-version.h
  plugins/obs-ffmpeg/ffmpeg-mux/ffmpeg-mux.c
  plugins/obs-ffmpeg/ffmpeg-mux/ffmpeg-mux.h
+ shared/ipc-util/ipc-util/pipe-posix.c
+ shared/ipc-util/ipc-util/pipe-posix.h
+ shared/ipc-util/ipc-util/pipe-windows.c
+ shared/ipc-util/ipc-util/pipe-windows.h
+ shared/ipc-util/ipc-util/pipe.h
+ shared/media-playback/LICENSE.media-playback
+ shared/media-playback/media-playback/cache.c
+ shared/media-playback/media-playback/cache.h
+ shared/media-playback/media-playback/closest-format.h
+ shared/media-playback/media-playback/decode.c
+ shared/media-playback/media-playback/decode.h
+ shared/media-playback/media-playback/media-playback.c
+ shared/media-playback/media-playback/media-playback.h
+ shared/media-playback/media-playback/media.c
+ shared/media-playback/media-playback/media.h
 Copyright: 2023, Lain Bailey <lain@obsproject.com>
 License: ISC
  FIXME
 
-Files: plugins/obs-browser/deps/obs-websocket-api/obs-websocket-api.h
- plugins/obs-websocket/lib/obs-websocket-api.h
+Files: plugins/obs-websocket/lib/obs-websocket-api.h
  plugins/obs-websocket/src/Config.cpp
  plugins/obs-websocket/src/Config.h
  plugins/obs-websocket/src/eventhandler/EventHandler.cpp
  plugins/obs-websocket/src/eventhandler/EventHandler.h
+ plugins/obs-websocket/src/eventhandler/EventHandler_Canvases.cpp
  plugins/obs-websocket/src/eventhandler/EventHandler_Config.cpp
  plugins/obs-websocket/src/eventhandler/EventHandler_Filters.cpp
  plugins/obs-websocket/src/eventhandler/EventHandler_General.cpp
@@ -3767,6 +4077,7 @@ Files: plugins/obs-browser/deps/obs-websocket-api/obs-websocket-api.h
  plugins/obs-websocket/src/plugin-macros.h.in
  plugins/obs-websocket/src/requesthandler/RequestHandler.cpp
  plugins/obs-websocket/src/requesthandler/RequestHandler.h
+ plugins/obs-websocket/src/requesthandler/RequestHandler_Canvases.cpp
  plugins/obs-websocket/src/requesthandler/RequestHandler_Config.cpp
  plugins/obs-websocket/src/requesthandler/RequestHandler_Filters.cpp
  plugins/obs-websocket/src/requesthandler/RequestHandler_General.cpp
@@ -3811,6 +4122,169 @@ Files: plugins/obs-browser/deps/obs-websocket-api/obs-websocket-api.h
 Copyright: 2016-2021, Stephane Lepin <stephane.lepin@gmail.com>
   2020-2021, Kyle Manning <tt2468@gmail.com>
   2020-2022, Kyle Manning <tt2468@gmail.com>
+License: GPL-2+
+ FIXME
+
+Files: frontend/models/Rect.cpp
+ frontend/models/Rect.hpp
+ frontend/models/SceneCollection.cpp
+ frontend/models/SceneCollection.hpp
+ frontend/utility/CrashHandler.cpp
+ frontend/utility/CrashHandler.hpp
+ frontend/utility/CrashHandler_FreeBSD.cpp
+ frontend/utility/CrashHandler_Linux.cpp
+ frontend/utility/CrashHandler_MacOS.mm
+ frontend/utility/CrashHandler_Windows.cpp
+ libobs-metal/CVPixelFormat+Extensions.swift
+ libobs-metal/MTLCullMode+Extensions.swift
+ libobs-metal/MTLOrigin+Extensions.swift
+ libobs-metal/MTLPixelFormat+Extensions.swift
+ libobs-metal/MTLRegion+Extensions.swift
+ libobs-metal/MTLSize+Extensions.swift
+ libobs-metal/MTLTexture+Extensions.swift
+ libobs-metal/MTLTextureDescriptor+Extensions.swift
+ libobs-metal/MTLTextureType+Extensions.swift
+ libobs-metal/MTLViewport+Extensions.swift
+ libobs-metal/MetalBuffer.swift
+ libobs-metal/MetalDevice.swift
+ libobs-metal/MetalError.swift
+ libobs-metal/MetalRenderState.swift
+ libobs-metal/MetalShader+Extensions.swift
+ libobs-metal/MetalShader.swift
+ libobs-metal/MetalStageBuffer.swift
+ libobs-metal/MetalTexture.swift
+ libobs-metal/OBSShader.swift
+ libobs-metal/OBSSwapChain.swift
+ libobs-metal/Sequence+Hashable.swift
+ libobs-metal/libobs+Extensions.swift
+ libobs-metal/libobs+SignalHandlers.swift
+ libobs-metal/libobs-metal-Bridging-Header.h
+ libobs-metal/metal-indexbuffer.swift
+ libobs-metal/metal-samplerstate.swift
+ libobs-metal/metal-shader.swift
+ libobs-metal/metal-stagesurf.swift
+ libobs-metal/metal-subsystem.swift
+ libobs-metal/metal-swapchain.swift
+ libobs-metal/metal-texture2d.swift
+ libobs-metal/metal-texture3d.swift
+ libobs-metal/metal-unimplemented.swift
+ libobs-metal/metal-vertexbuffer.swift
+ libobs-metal/metal-zstencilbuffer.swift
+Copyright: 2024, Patrick Heyer <PatTheMav@users.noreply.github.com>
+  2025, Patrick Heyer <PatTheMav@users.noreply.github.com>
+License: GPL-2+
+ FIXME
+
+Files: frontend/components/AccessibleAlignmentCell.cpp
+ frontend/components/AccessibleAlignmentCell.hpp
+ frontend/components/AccessibleAlignmentSelector.cpp
+ frontend/components/AccessibleAlignmentSelector.hpp
+ frontend/components/AlignmentSelector.cpp
+ frontend/components/AlignmentSelector.hpp
+ frontend/components/FlowFrame.cpp
+ frontend/components/FlowFrame.hpp
+ frontend/components/MenuCheckBox.cpp
+ frontend/components/MenuCheckBox.hpp
+ frontend/components/OBSPreviewScalingComboBox.cpp
+ frontend/components/OBSPreviewScalingComboBox.hpp
+ frontend/components/OBSPreviewScalingLabel.cpp
+ frontend/components/OBSPreviewScalingLabel.hpp
+ frontend/components/SourceSelectButton.cpp
+ frontend/components/SourceSelectButton.hpp
+ frontend/components/VolumeName.cpp
+ frontend/components/VolumeName.hpp
+ frontend/utility/NativeEventFilter.cpp
+ frontend/utility/NativeEventFilter.hpp
+ frontend/utility/NativeEventFilter_Windows.cpp
+ frontend/utility/PreviewProgramSizeObserver.cpp
+ frontend/utility/PreviewProgramSizeObserver.hpp
+ frontend/utility/ResizeSignaler.hpp
+ frontend/utility/ThumbnailItem.cpp
+ frontend/utility/ThumbnailItem.hpp
+ frontend/utility/ThumbnailManager.cpp
+ frontend/utility/ThumbnailManager.hpp
+ frontend/utility/ThumbnailView.cpp
+ frontend/utility/ThumbnailView.hpp
+ frontend/widgets/AudioMixer.cpp
+ frontend/widgets/AudioMixer.hpp
+ shared/qt/idian/components/CheckBox.cpp
+ shared/qt/idian/components/ComboBox.cpp
+ shared/qt/idian/include/Idian/CheckBox.hpp
+ shared/qt/idian/include/Idian/ComboBox.hpp
+ shared/qt/idian/include/Idian/StateEventFilter.cpp
+ shared/qt/idian/include/Idian/StateEventFilter.hpp
+ shared/qt/idian/include/Idian/Utils.cpp
+ shared/qt/idian/include/Idian/Utils.hpp
+Copyright: 2024, Taylor Giampaolo <warchamp7@obsproject.com>
+  2025, Taylor Giampaolo <warchamp7@obsproject.com>
+License: GPL-2+
+ FIXME
+
+Files: frontend/OBSApp_Themes.cpp
+ frontend/dialogs/OBSIdianPlayground.cpp
+ frontend/dialogs/OBSIdianPlayground.hpp
+ frontend/utility/FFmpegCodec.cpp
+ frontend/utility/FFmpegCodec.hpp
+ frontend/utility/FFmpegFormat.cpp
+ frontend/utility/FFmpegFormat.hpp
+ frontend/utility/FFmpegShared.hpp
+ frontend/utility/OBSTheme.hpp
+ frontend/utility/OBSThemeVariable.hpp
+ libobs/util/source-profiler.c
+ libobs/util/source-profiler.h
+ libobs/util/uthash.h
+ plugins/obs-outputs/mp4-mux-internal.h
+ plugins/obs-outputs/mp4-mux.c
+ plugins/obs-outputs/mp4-mux.h
+ plugins/obs-outputs/mp4-output.c
+ shared/qt/idian/components/DoubleSpinBox.cpp
+ shared/qt/idian/components/SpinBox.cpp
+ shared/qt/idian/components/ToggleSwitch.cpp
+ shared/qt/idian/include/Idian/DoubleSpinBox.hpp
+ shared/qt/idian/include/Idian/Group.hpp
+ shared/qt/idian/include/Idian/Idian.hpp
+ shared/qt/idian/include/Idian/PropertiesList.hpp
+ shared/qt/idian/include/Idian/Row.hpp
+ shared/qt/idian/include/Idian/SpinBox.hpp
+ shared/qt/idian/include/Idian/ToggleSwitch.hpp
+ shared/qt/idian/widgets/Group.cpp
+ shared/qt/idian/widgets/PropertiesList.cpp
+ shared/qt/idian/widgets/Row.cpp
+Copyright: 2023, Dennis Sädtler <dennis@obsproject.com>
+  2024, Dennis Sädtler <dennis@obsproject.com>
+License: GPL-2+
+ FIXME
+
+Files: frontend/components/OBSSourceLabel.cpp
+ frontend/components/OBSSourceLabel.hpp
+ frontend/dialogs/OBSRemux.cpp
+ frontend/dialogs/OBSRemux.hpp
+ frontend/settings/OBSHotkeyEdit.cpp
+ frontend/settings/OBSHotkeyEdit.hpp
+ frontend/settings/OBSHotkeyLabel.cpp
+ frontend/settings/OBSHotkeyLabel.hpp
+ frontend/settings/OBSHotkeyWidget.cpp
+ frontend/settings/OBSHotkeyWidget.hpp
+ frontend/utility/RemuxEntryPathItemDelegate.cpp
+ frontend/utility/RemuxEntryPathItemDelegate.hpp
+ frontend/utility/RemuxQueueModel.cpp
+ frontend/utility/RemuxQueueModel.hpp
+ frontend/utility/RemuxWorker.cpp
+ frontend/utility/RemuxWorker.hpp
+ libobs-opengl/gl-cocoa.m
+ libobs/media-io/media-remux.c
+ libobs/media-io/media-remux.h
+ libobs/media-io/video-fourcc.c
+ libobs/media-io/video-matrices.c
+ libobs/obs-cocoa.m
+ libobs/obs-hotkey-name-map.c
+ libobs/obs-hotkey.c
+ libobs/obs-hotkey.h
+Copyright: 2013, Ruwen Hahn <palana@stunned.de>
+  2014, Ruwen Hahn <palana@stunned.de>
+  2014-2015, Ruwen Hahn <palana@stunned.de>
+  2015, Ruwen Hahn <palana@stunned.de>
+  2023, Ruwen Hahn <palana@stunned.de>
 License: GPL-2+
  FIXME
 
@@ -3869,6 +4343,31 @@ Copyright: 2016-2017, Twitch Interactive, Inc. or its affiliates.
 License: Expat
  FIXME
 
+Files: frontend/dialogs/OBSMissingFiles.cpp
+ frontend/dialogs/OBSMissingFiles.hpp
+ frontend/importer/ImporterEntryPathItemDelegate.cpp
+ frontend/importer/ImporterEntryPathItemDelegate.hpp
+ frontend/importer/ImporterModel.cpp
+ frontend/importer/ImporterModel.hpp
+ frontend/importer/OBSImporter.cpp
+ frontend/importer/OBSImporter.hpp
+ frontend/importers/classic.cpp
+ frontend/importers/importers.cpp
+ frontend/importers/importers.hpp
+ frontend/importers/sl.cpp
+ frontend/importers/studio.cpp
+ frontend/importers/xsplit.cpp
+ frontend/utility/MissingFilesModel.cpp
+ frontend/utility/MissingFilesModel.hpp
+ frontend/utility/MissingFilesPathItemDelegate.cpp
+ frontend/utility/MissingFilesPathItemDelegate.hpp
+ libobs/obs-missing-files.c
+ libobs/obs-missing-files.h
+Copyright: 2019, Dillon Pentz <dillon@vodbox.io>
+  2019-2020, Dillon Pentz <dillon@vodbox.io>
+License: GPL-2+
+ FIXME
+
 Files: libobs/obs-audio-controls.c
  libobs/obs-audio-controls.h
  plugins/linux-capture/linux-capture.c
@@ -3889,46 +4388,6 @@ Files: libobs/obs-audio-controls.c
  plugins/linux-v4l2/v4l2-udev.h
  plugins/text-freetype2/find-font-unix.c
 Copyright: 2014, Leonhard Oelke <leonhard@in-verted.de>
-License: GPL-2+
- FIXME
-
-Files: UI/hotkey-edit.cpp
- UI/hotkey-edit.hpp
- UI/source-label.cpp
- UI/source-label.hpp
- UI/window-remux.cpp
- UI/window-remux.hpp
- libobs-opengl/gl-cocoa.m
- libobs/media-io/media-remux.c
- libobs/media-io/media-remux.h
- libobs/media-io/video-fourcc.c
- libobs/media-io/video-matrices.c
- libobs/obs-cocoa.m
- libobs/obs-hotkey-name-map.c
- libobs/obs-hotkey.c
- libobs/obs-hotkey.h
-Copyright: 2013, Ruwen Hahn <palana@stunned.de>
-  2014, Ruwen Hahn <palana@stunned.de>
-  2014-2015, Ruwen Hahn <palana@stunned.de>
-  2015, Ruwen Hahn <palana@stunned.de>
-  2023, Ruwen Hahn <palana@stunned.de>
-License: GPL-2+
- FIXME
-
-Files: UI/importers/classic.cpp
- UI/importers/importers.cpp
- UI/importers/importers.hpp
- UI/importers/sl.cpp
- UI/importers/studio.cpp
- UI/importers/xsplit.cpp
- UI/window-importer.cpp
- UI/window-importer.hpp
- UI/window-missing-files.cpp
- UI/window-missing-files.hpp
- libobs/obs-missing-files.c
- libobs/obs-missing-files.h
-Copyright: 2019, Dillon Pentz <dillon@vodbox.io>
-  2019-2020, Dillon Pentz <dillon@vodbox.io>
 License: GPL-2+
  FIXME
 
@@ -3984,20 +4443,6 @@ Copyright: 2020-2021, Kyle Manning <tt2468@gmail.com>
 License: GPL-2+
  FIXME
 
-Files: plugins/obs-outputs/ftl-sdk/ftl_app/main.c
- plugins/obs-outputs/ftl-sdk/ftl_app/main.h
- plugins/obs-outputs/ftl-sdk/ftl_app/posix/ctrlc_handler.c
- plugins/obs-outputs/ftl-sdk/ftl_app/win32/ctrlc_handler.c
- plugins/obs-outputs/ftl-sdk/libftl/ftl.h
- plugins/obs-outputs/ftl-sdk/libftl/handshake.c
- plugins/obs-outputs/ftl-sdk/libftl/init.c
- plugins/obs-outputs/ftl-sdk/libftl/logging.c
- plugins/obs-outputs/ftl-sdk/libftl/posix/socket.c
- plugins/obs-outputs/ftl-sdk/libftl/win32/socket.c
-Copyright: 2015, Michael Casadevall
-License: Expat
- FIXME
-
 Files: libobs/data/deinterlace_base.effect
  libobs/data/deinterlace_blend.effect
  libobs/data/deinterlace_blend_2x.effect
@@ -4010,20 +4455,6 @@ Files: libobs/data/deinterlace_base.effect
  libobs/util/platform-cocoa.m
 Copyright: 2023, Ruwen Hahn <palana@stunned.de>
 License: ISC
- FIXME
-
-Files: UI/ffmpeg-utils.cpp
- UI/ffmpeg-utils.hpp
- UI/obs-app-theming.cpp
- UI/obs-app-theming.hpp
- libobs/util/uthash.h
- plugins/obs-outputs/mp4-mux-internal.h
- plugins/obs-outputs/mp4-mux.c
- plugins/obs-outputs/mp4-mux.h
- plugins/obs-outputs/mp4-output.c
-Copyright: 2023, Dennis Sädtler <dennis@obsproject.com>
-  2024, Dennis Sädtler <dennis@obsproject.com>
-License: GPL-2+
  FIXME
 
 Files: libobs-opengl/gl-nix.c
@@ -4052,9 +4483,21 @@ Copyright: 2016-2017, Colin Edwards.
 License: GPL-2+
  FIXME
 
-Files: UI/update/models/branches.hpp
- UI/update/models/whatsnew.hpp
- UI/win-update/updater/manifest.hpp
+Files: plugins/obs-qsv11/QSV_Encoder.cpp
+ plugins/obs-qsv11/QSV_Encoder.h
+ plugins/obs-qsv11/QSV_Encoder_Internal.cpp
+ plugins/obs-qsv11/QSV_Encoder_Internal.h
+ plugins/obs-qsv11/obs-qsv11-LICENSE.txt
+ plugins/obs-qsv11/obs-qsv11-plugin-main.c
+ plugins/obs-qsv11/obs-qsv11.c
+Copyright: <date> Intel Corporation.
+  Oct. 2015 Intel Corporation.
+License: BSD-3-clause and/or GPL-2
+ FIXME
+
+Files: frontend/updater/manifest.hpp
+ frontend/utility/models/branches.hpp
+ frontend/utility/models/whatsnew.hpp
  libobs/util/buffered-file-serializer.c
  libobs/util/buffered-file-serializer.h
  libobs/util/pipe.c
@@ -4094,14 +4537,6 @@ Copyright: 2005-2008, Team XBMC
 License: LGPL-2.1+
  FIXME
 
-Files: plugins/obs-outputs/ftl-sdk/libftl/posix/threads.c
- plugins/obs-outputs/ftl-sdk/libftl/posix/threads.h
- plugins/obs-outputs/ftl-sdk/libftl/win32/threads.c
- plugins/obs-outputs/ftl-sdk/libftl/win32/threads.h
-Copyright: 2015, Stefan Slivinski
-License: Expat
- FIXME
-
 Files: plugins/linux-alsa/alsa-input.c
  plugins/linux-alsa/linux-alsa.c
  plugins/oss-audio/oss-audio.c
@@ -4127,6 +4562,31 @@ Copyright: 2016-2017, Colin Edwards.
 License: GPL-2+
  FIXME
 
+Files: frontend/utility/OBSCanvas.cpp
+ frontend/utility/OBSCanvas.hpp
+ frontend/widgets/OBSBasic_Canvases.cpp
+ libobs/obs-canvas.c
+Copyright: 2025, Dennis Sädtler <saedtler@twitch.tv>
+License: GPL-2+
+ FIXME
+
+Files: frontend/plugin-manager/PluginManager.cpp
+ frontend/plugin-manager/PluginManager.hpp
+ frontend/plugin-manager/PluginManagerWindow.cpp
+ frontend/plugin-manager/PluginManagerWindow.hpp
+Copyright: 2025, FiniteSingularity <finitesingularityttv@gmail.com>
+License: GPL-2+
+ FIXME
+
+Files: frontend/dialogs/OBSBasicSourceSelect.cpp
+ frontend/dialogs/OBSBasicSourceSelect.hpp
+ frontend/utility/ScreenshotObj.cpp
+ frontend/utility/ScreenshotObj.hpp
+Copyright: 2023, Lain Bailey <lain@obsproject.com>
+  2025, Taylor Giampaolo <warchamp7@obsproject.com>
+License: GPL-2+
+ FIXME
+
 Files: plugins/obs-filters/rnnoise/src/celt_lpc.c
  plugins/obs-filters/rnnoise/src/celt_lpc.h
  plugins/obs-filters/rnnoise/src/opus_types.h
@@ -4142,11 +4602,18 @@ Copyright: 2013, Dropbox, Inc.
 License: Expat
  FIXME
 
-Files: UI/platform-x11.cpp
+Files: frontend/utility/platform-x11.cpp
  libobs-opengl/gl-subsystem.c
  libobs/obs-nix.c
 Copyright: 2014, Zachary Lund <admin@computerquip.com>
   2023, Lain Bailey <lain@obsproject.com>
+License: GPL-2+
+ FIXME
+
+Files: plugins/obs-browser/deps/ip-string-posix.cpp
+ plugins/obs-browser/deps/ip-string-windows.cpp
+ plugins/obs-browser/deps/ip-string.hpp
+Copyright: 2026, Warchamp7 <warchamp7@obsproject.com>
 License: GPL-2+
  FIXME
 
@@ -4188,12 +4655,6 @@ Copyright: 2003-2004, Mark Borgerding
 License: BSD-2-clause
  FIXME
 
-Files: plugins/aja/README.md
- plugins/obs-outputs/ftl-sdk/libftl/ftl_helpers.c
-Copyright: NONE
-License: Expat
- FIXME
-
 Files: libobs/graphics/libnsgif/LICENSE.libnsgif
  libobs/graphics/libnsgif/libnsgif.c
 Copyright: 2003, James Bursa <bursa@users.sourceforge.net>
@@ -4203,8 +4664,8 @@ Copyright: 2003, James Bursa <bursa@users.sourceforge.net>
 License: Expat
  FIXME
 
-Files: deps/happy-eyeballs/happy-eyeballs.c
- deps/happy-eyeballs/happy-eyeballs.h
+Files: shared/happy-eyeballs/happy-eyeballs.c
+ shared/happy-eyeballs/happy-eyeballs.h
 Copyright: 2023, Twitch Interactive, Inc.
 License: Expat
  FIXME
@@ -4221,8 +4682,8 @@ Copyright: 2022, tytan652 <tytan652@tytanium.xyz>
 License: GPL-2
  FIXME
 
-Files: deps/obs-scripting/obs-scripting-python.c
- deps/obs-scripting/obs-scripting-python.h
+Files: shared/obs-scripting/obs-scripting-python.c
+ shared/obs-scripting/obs-scripting-python.h
 Copyright: 2015, Andrew Skinner <obs@theandyroid.com>
   2023, Lain Bailey <lain@obsproject.com>
 License: GPL-2+
@@ -4267,6 +4728,18 @@ Copyright: 2020, Morten Bøgeskov <source@kosmisk.dk>
 License: GPL-2+
  FIXME
 
+Files: frontend/OBSStudioAPI.hpp
+ frontend/utility/OBSUpdateDelegate.h
+Copyright: 2024, Patrick Heyer <opensource@patrickheyer.com>
+License: GPL-2+
+ FIXME
+
+Files: shared/qt/icon-label/IconLabel.cpp
+ shared/qt/icon-label/IconLabel.hpp
+Copyright: 2024, Sebastian Beckmann
+License: GPL-2+
+ FIXME
+
 Files: plugins/sndio/sndio-input.c
  plugins/sndio/sndio.c
 Copyright: 2020, Vadim Zhukov <zhuk@openbsd.org>
@@ -4298,17 +4771,10 @@ Copyright: 2009-2010, Howard Chu
 License: LGPL-2.1+
  FIXME
 
-Files: plugins/obs-outputs/ftl-sdk/ftl_app/gettimeofday.c
- plugins/obs-outputs/ftl-sdk/libftl/gettimeofday/gettimeofday.c
-Copyright: 2003, SKC, Inc.
-  2003, SRA, Inc.
-License: PostgreSQL
- FIXME
-
-Files: plugins/obs-outputs/ftl-sdk/libftl/hmac/sha2.c
- plugins/obs-outputs/ftl-sdk/libftl/hmac/sha2.h
-Copyright: NONE
-License: Unlicense
+Files: frontend/components/FlowLayout.cpp
+ frontend/components/FlowLayout.hpp
+Copyright: 2016, The Qt Company Ltd.
+License: UNKNOWN
  FIXME
 
 Files: plugins/obs-outputs/librtmp/cencode.c
@@ -4360,11 +4826,6 @@ Copyright: 2008-2011, Octasic Inc.
 License: BSD-2-clause
  FIXME
 
-Files: cmake/Modules/FindJack.cmake
-Copyright: 2008, Andreas Schneider <mail@cynapses.org> Modified for other
-License: BSD-3-clause
- FIXME
-
 Files: plugins/obs-filters/rnnoise/COPYING
 Copyright: 2003-2004, Mark Borgerding
   2005-2017, Xiph.Org Foundation
@@ -4373,13 +4834,8 @@ Copyright: 2003-2004, Mark Borgerding
 License: BSD-3-clause
  FIXME
 
-Files: plugins/obs-outputs/ftl-sdk/libftl/ftl_private.h
-Copyright: 2015, Mixer Inc.
-License: Expat
- FIXME
-
-Files: plugins/obs-outputs/ftl-sdk/LICENSE
-Copyright: 2016, Mixer Interactive, Inc.
+Files: plugins/aja/README.md
+Copyright: NONE
 License: Expat
  FIXME
 
@@ -4405,7 +4861,7 @@ Copyright: 1989, 1991, Free Software Foundation, Inc.,
 License: GPL-2
  FIXME
 
-Files: UI/data/license/gplv2.txt
+Files: frontend/data/license/gplv2.txt
 Copyright: 1989, 1991, Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
 License: GPL-2
  FIXME
@@ -4438,18 +4894,23 @@ Copyright: 2006, Javier Serrano Polo <jasp00/at/users.sourceforge.net>
 License: GPL-2+
  FIXME
 
+Files: plugins/obs-ffmpeg/obs-ffmpeg-openh264.c
+Copyright: 2023, Neal Gompa <neal@gompa.dev>
+License: GPL-2+
+ FIXME
+
 Files: libobs/util/sse-intrin.h
 Copyright: 2019, Peter Geis <pgwipeout@gmail.com>
 License: GPL-2+
  FIXME
 
-Files: plugins/obs-outputs/ftl-stream.c
-Copyright: 2017, Quinn Damerell <qdamere@microsoft.com>
+Files: frontend/utility/win-dll-blocklist.c
+Copyright: 2023, Richard Stanway
 License: GPL-2+
  FIXME
 
-Files: UI/win-dll-blocklist.c
-Copyright: 2023, Richard Stanway
+Files: frontend/utility/WHIPSimulcastEncoders.hpp
+Copyright: 2025, Sean DuBois <sean@pion.ly>
 License: GPL-2+
  FIXME
 
@@ -4474,7 +4935,7 @@ Copyright: 2017, Ryan Foster <RytoEX@gmail.com>
 License: ISC
  FIXME
 
-Files: UI/models/multitrack-video.hpp
+Files: frontend/utility/models/multitrack-video.hpp
 Copyright: 2024, Ruwen Hahn <haruwenz@twitch.tv>
 License: ISC
  FIXME
@@ -4525,26 +4986,54 @@ Copyright: 2010, Antti Ajanki
 License: LGPL-2.1+
  FIXME
 
-Files: cmake/Modules/FindPipeWire.cmake
-Copyright: 2014, Alex Merry <alex.merry@kde.org> Copyright 2014 Martin Gräßlin
-  2018-2020, Jan Grulich <jgrulich@redhat.com>
-License: UNKNOWN
- FIXME
-
-Files: cmake/Modules/FindX11_XCB.cmake
-Copyright: 2007, Matthias Kretz, <kretz@kde.org>
-  2008, Helio Chissini de Castro, <helio@kde.org>
-  2011, Fredrik Höglund <fredrik@kde.org>
-License: UNKNOWN
- FIXME
-
-Files: cmake/Modules/FindXCB.cmake
-Copyright: 2011, Fredrik Höglund <fredrik@kde.org> Copyright (c) 2013 Martin
-License: UNKNOWN
- FIXME
-
-Files: cmake/Modules/FindWayland.cmake
-Copyright: 2013, Martin Gräßlin <mgraesslin@kde.org> 2020 Georges Basile
+Files: frontend/cmake/windows/obs-studio.ico
+Copyright: 
+    ÃxJ¿4ø
+   ãªW¯þfttôM@@¶	üã@à ²È){8ð <iÄjÁñ_ .!:¾(pÅ,E0CHVÎ¹ìK?·k.²ß«kç®°xñÜHÜÃ6éx ~¾J ªûÌ{ÂÊSÑÞ¡ 8iÇ ÜÂÝîÝ¿OWQjÒ¤1L2
+  vÂç³êÇÏ3Txï¥wØöåw5Å3ÒÓ4kÐá*Â'LÄ`ºq¨é±Ü¹sÓpá-ZÂ¤'-K6Õ q(û<±_yªýíÿr^Ïí¨âò¢tÜõE3 ²¿¨à&¬8Ï¹=ÚäçÆÈÍ{÷ïÁy³¡I& >øà6mÂa%d H5ª# r4 ÀÃzõê
+  ¬ùçhÓº
+  å/@£ÑäU»2ï´{ÐìØñ/¡4à=5WìÊk'&%ÂåÄx?o>téÚ>bü9ûÁmÛq1º©~ºI¼%JÐ$
+  êM´õ9¨]zo&m Ô?§þýëæAbTz¨2,$_cÀ×^ +V.àH
+  ¤5*_2oeP»r[ ¾7ßw{ÈtÄ×«ê!(pä=¢ýû½
+  /^¤ËW,§»%+@ÀüÓÁøñã§9ò3px´^EE^ }ýqîõ¤IÆêVÏáHMµRÄÆ4zôh1mÂÇï¯s~÷ÎÈCÔï÷þ@FpU_Ì'ª
+  À¢j×~.qI æyÚkÌë¤_ÇêõÊð¹»&Ï¢Si@ÜØg?çÞrmº]'¹?§|RÒS¸uûcsN>ýþýûw
+  Ñ0	:5eÊq¶SO$<üÓ@öíËÄï±k×®Ý
+  4ûó¡n¾KÃ x«ó"ÉýË©)©+W äËþ"§gÏ©a4¡ n'ÀÄ=hô:+»ÞÏµ÷ÉU(I$Ø ç
+  7Raõ¯«¡jÕªÀIþ®"SÀðá#fO8î°°_¶ï_:ÜE IÌK¤6D
+  7o@©¥èXZ´hÍ?Å+IW¨n béÇsDhõ1s&8p~
+  8Ôë;wì
+  <éÎ?wþÃ[´%êÖo¶¬ÿ¬4ð_ µ®ï·fÍÅ­Zµú ½o?þð|»û[8tèuÕ!§Ï#xz{)Ø:ZÔ<|¯W¬Ù âêU
+  BØÜve<±0µS>ÿ=%q	qÐ¤qSmdô0uÆT(¿)÷Eü7=7C~®´-Àp¤ÛÏªÎÊrÆ?¢Ù0=Ø+h¾F~
+  Bû<vÒèå*IÀ tÕ¬<Û®ã¦	-ÎÉaôÈÑÐ»wo8}ú´=LØª¨ÌiÐ¡o¿p` ]Ïñýß§×pn¿o®ÿÛî`  Â@ 0ªÚ} `Vöy8À`û}@÷LØw`]N­N­:t{43Sct´Õ¹~-ºtëBIÃ
+  HÁòññÉ3G9=½<³ûûù{¥åa=zðÀ½û(îºtéú­[·n^¾|ùIWñ÷þýû7HñÔ4¼Sfz) 2äîþþþ9/þRÙ²e_~õÕWË.]ºd(Rz¡BE¼½½=÷ÃczüøqÒõë×¯;wîÒùóçÏ?~üÔßÿNþNË±ï¬ûÞéÙ¤L xöÉpðN^²fÍ«T©R©bÅ¯Â/K¸ºïó~hW8qâ¯cÇýyäÈß<x¨Wý&)ãR& <¤;À¨øöÛo×$µj×®]pûÏûaM9§N:¹oß¾{÷î=ðÃ?HHH¸ÅùVøêBóÉÉ	 älÑ+W®r£Fê5nÜø½
+  Há@¢Ý½ûöÁ·»¾ý?ýwîß¡uÝ-îàG¤éÕ.D­WÀh ïW:ÆZ¸lìci~GñP«v-hØ°>Ô~ë-ðóó¥KÁá
+  RMOþý÷OOMAÞãõìÙ6mØÏ|i0gÚZT«%Ê¸ _Û¥Q
+  R¥^ûôÓO{¶iÓ¦U6÷>ä8111-Z´|Ú´iónÜ¸q¹	.¦L O2·Çd'üwß}·éÈ#V¯^½júÞÎJþ³üË:HEôz3Ò={¾;vìGýÉÖ sf2Nÿ®ñ1GøDÌï4jÔ¨ÁAAAÁéu#«¼%m]mÄ'$@l,<|ô'<Æ@%çOÀÓä§ðäÉHII!em/FîéFþÜ=ÜÁËÓPñõó¥¿Y²fìÙÁÏÏ|||ÀÍÍ--OG?¥Òt'O<5|øð	;wîËdg`Ê ã¤H^½zõê=zôèayòäÉe"pEF7nÂ­[·àÖÍ[póæMw/ú<|øââbÈHôIIôèS­6âOÕÜÁ	ÜÓÓ¼¼¼Àüá¯?!~ÿ È;7äÌ
+  Rï]»vý¯`Á¶¾T=lÜ¸ÉäÌ@tàb¦ NþÙ!H
+  ZªU¯
+  j5øíÁpäÈamä"DöÒ¥KÃî={ ím G ÄmÍsgÄ×ç2ß{nFÆ{ÄyþØ1Çç	¤è3!0©))ÔóµtÅR â¼ÔX
+  ot9?/lÙÑ°êÜq¦gäQE32ÀÀØà§0í)¶Xøe-¸ìºDÝº
+  rÿg
+  uí?nyú¿: Ç¨3Xüg8¯L¼cFÑcGÑX+³º¼è5÷L?__(>
+  aÛw«ôã¥IÿóT®/	<ì¦8éÃÝmdÏ6?ú Üæ!Ñ[ÑJ¡Âëð$ñ	PÃqn®+W.È/(Xº<óã :@<x@7yJÅþ¼Ô.@òC!59F ,¤×|è Nelì³Ú¿ªÔ-î á Ò¦G¹GñhNç]`Üq4Ü÷
+   Ü¤Ó$»¿?Õ¿óäÎM]oEL~,J,AÕæÚDË<êhqzöì(Þcu¶_Lt
+  kýµmý1
+  ¸ÌÒþhH+"¤û9ï¾³]WXôÍÀÈø,õeÞ5<[I´L!Ò@,ÍÅÉ3Ý{t§"éC¢o³:¾ü}Øþ#ë({yIrôÏÍ&®ËõÈ0Rñ)ôã`NµÍIP»¿Øs,ãEÚ.Yºøé 5dÞ¾{²ze£+@É«½í~Zæ×ñ
+  Ãál/ü#Çß,¾tðáìC}±_k0t1Â·1# ÔûÕç
+  ¨© ­¬­ °¯° ²±² ´³´ ¶´¶ »º» ¾¼¾ ÂÁÂ ÅÅÅ ÉÇÈ ÊÉÊ ÌËÌ ÍÍÍ ÑÏÐ ÑÑÑ ÔÓÓ ÕÕÕ ØØØ ÜÛÜ ÞÝÞ àßà ààà äãä ååå ëëë ìëì ííí ñññ õõõ ø÷ø øøø ©Ï  Âð  Ñÿ Øÿ1 ÞÿQ ãÿq éÿ ïÿ± öÿÑ ÿÿÿ     /&  PA  p[  t  °  Ï©  ðÃ  ÿÒ ÿØ1 ÿÝQ ÿäq ÿê ÿð± ÿöÑ ÿÿÿ     /  P"  p0  >  °M  Ï[  ði  ÿy ÿ1 ÿQ ÿ¯q ÿÁ ÿÒ± ÿåÑ ÿÿÿ     /  P  p  	  °
+  ®fäéèóÆÀ`ÓÅ hV×ÌÄ}m¥}j Àwnß¥ß C§öP±b%çÞË ;wî"
+  ²5%À(Èª¢!@vï¹b{êHÈµÉ$ä7ôaRÄ÷ø±ãÐªuKº
+  À§:Èdä×Ùpp_ËÖ-añÒÅêxH¾ÇÑ£?X=vìG]ÉaPE~µß-åþq¸
+  ÃÛÐàè¹Æ»Û©Ü-
+  ÄEû¤+Ip)ætëÒ~	)×¯Ãùóçéä3}o ò-[þ·Î»À/«WRÎ´¤§[Ï1ç6 }3'¶®éÑ%:çÈ/c;¹ü²ûAlt,y¿7à5¿À£>
+  Ï  Âð  Ñÿ Øÿ1 ÞÿQ ãÿq éÿ ïÿ± öÿÑ ÿÿÿ     /&  PA  p[  t  °  Ï©  ðÃ  ÿÒ ÿØ1 ÿÝQ ÿäq ÿê ÿð± ÿöÑ ÿÿÿ     /  P"  p0  >  °M  Ï[  ði  ÿy ÿ1 ÿQ ÿ¯q ÿÁ ÿÒ± ÿåÑ ÿÿÿ     /  P  p  	  °
+  Ó§PTã°Ez0"¶¨ÌLÌ×9D~¡UÞÓ^S&i' ±X¯vëÌp#õDGGÁüEè
+  ÔÐÍ§CìÊòA]Û£½FÀ1!!ÚTüýý¡~ÃÐµ[(_¾¼oÉO;vì¹téÒy¶SxUþu@ðo µÈïûÝwßm¯[·n±êÆ¤}//Z
+  ÚÕ«Wquâ,üÓ @Aüo¿ývý~øa·³°gê
+  ã.A¢ÿO:Û!ØíEECàìY³`à¨à!¶wl"@øâs'Rµd ¶â½ú¸Ôéþ`äV÷ÃÌ?+W¯T2ÿØ«þpøðáËüsãÆ
+  ðøñã1¢%X,À7©µrT$ª MZá¿Þ£®Ñ¤_ùÒõôÖêÿô9nÜ¼	7mG«I÷sÂýÑMX®9/ q£Æpíê5(R´!Äzc³½@[.æòrF@µ3n­ÙsyËz °øÑÞWÆn¿ç/@©2¥aãæ
+  òpÕêÕ«W«Zµj%òy¨Bù
+  ò´YV<¨Ç±_GÛÃUFP9¡ÛòR
 License: UNKNOWN
  FIXME
 
@@ -4553,7 +5042,7 @@ Copyright: 2004-2008, René Nyffenegger
 License: UNKNOWN
  FIXME
 
-Files: UI/win-update/updater/updater.rc
+Files: frontend/updater/updater.rc
 Copyright: 2013, Richard Stanway"
 License: UNKNOWN
  FIXME

@@ -1,0 +1,10 @@
+usr/share/icons
+usr/share/obs/obs-plugins/frontend-tools
+usr/share/obs/obs-plugins/image-source
+usr/share/obs/obs-plugins/linux-capture
+usr/share/obs/obs-plugins/linux-pulseaudio
+usr/share/obs/obs-plugins/linux-v4l2
+usr/share/obs/obs-plugins/obs-*
+usr/share/obs/obs-plugins/rtmp-services
+usr/share/obs/obs-plugins/text-freetype2
+usr/share/obs/obs-studio
