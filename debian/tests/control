@@ -1,5 +1,7 @@
 Test-Command: obs --version && obs --help
 Depends:
  obs-studio,
-Restrictions: superficial
-Features: test-name=version-and-help-output
+Restrictions:
+ superficial,
+Features:
+ test-name=version-and-help-output,

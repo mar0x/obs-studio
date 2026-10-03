@@ -1,14 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: obs-studio
 Source: https://obsproject.com
-Files-Excluded:
- cmake/bundle
- deps/blake2/*
- deps/w32-pthreads/need_errno.h
- libobs/util/simde/*
- plugins/mac-*
- plugins/obs-qsv11/*
- plugins/win-*
 
 Files: *
 Copyright: 2013-2023, Lain Bailey <lain@obsproject.com>
@@ -20,9 +12,7 @@ Copyright: 2013-2023, Lain Bailey <lain@obsproject.com>
            2013-2024, The OBS Developers (see AUTHORS for a full list)
 License: GPL-2+
 
-Files: deps/ipc-util/ipc-util/*
-       deps/media-playback/media-playback/*
-       libobs/callback/*
+Files: libobs/callback/*
        libobs/data/deinterlace_base.effect
        libobs/data/deinterlace_blend.effect
        libobs/data/deinterlace_blend_2x.effect
@@ -59,12 +49,7 @@ Copyright: 2016-2021, Stephane Lepin <stephane.lepin@gmail.com>
   2020-2023, Kyle Manning <tt2468@gmail.com>
 License: GPL-2+
 
-Files: UI/win-dll-blocklist.c
-Copyright: 2023, Richard Stanway
-License: GPL-2+
-
 Files: libobs/util/uthash.h
- UI/ffmpeg-utils.?pp
  plugins/obs-outputs/mp4-*
 Copyright: 2023, Dennis Sädtler <dennis@obsproject.com>
 License: GPL-2+
@@ -76,20 +61,7 @@ Copyright: 2003, James Bursa <bursa@users.sourceforge.net>
   2008, Sean Fox <dyntryx@gmail.com>
 License: Expat
 
-Files: UI/update/models/branches.hpp
- UI/update/models/whatsnew.hpp
- UI/win-update/updater/manifest.hpp
-Copyright: 2023, Dennis Sädtler <dennis@obsproject.com>
-License: ISC
-
-Files: UI/models/multitrack-video.hpp
-Copyright: 2024, Ruwen Hahn <haruwenz@twitch.tv>
-License: ISC
-
-Files: cmake/Modules/FindJack.cmake
-       cmake/Modules/FindX11_XCB.cmake
-       cmake/Modules/FindXCB.cmake
-       libobs/util/profiler.c
+Files: libobs/util/profiler.c
        libobs/util/profiler.h
        libobs/util/profiler.hpp
 Copyright: 2006, Alexander Chemeris
@@ -133,10 +105,6 @@ Files: plugins/decklink/linux/decklink-sdk/*
 Copyright: 2009-2021, Blackmagic Design
 License: BSL
 
-Files: deps/happy-eyeballs/*
-Copyright: 2023, Twitch Interactive, Inc.
-License: Expat
-
 Files: plugins/obs-ffmpeg/vaapi-utils.*
 Copyright: 2022, tytan652 <tytan652@tytanium.xyz>
 License: GPL-2+
@@ -164,11 +132,6 @@ License: public-domain
  modification, are permitted.
  .
  There's ABSOLUTELY NO WARRANTY, express or implied.
-
-Files: plugins/obs-outputs/ftl-sdk/*
-Copyright: 2016, Mixer Interactive
-	   2015, Michael Casadevall
-License: Expat
 
 Files: debian/*
 Copyright: 2015, Carl Fürstenberg <azatoth@gmail.com>

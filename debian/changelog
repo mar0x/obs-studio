@@ -40,6 +40,85 @@ obs-studio (32.0.2+dfsg-1) noble; urgency=high
 
  -- Julian Andres Klode <juliank@ubuntu.com>  Mon, 08 Apr 2025 16:46:38 +0200
 
+obs-studio (32.1.0-0ubuntu3) resolute; urgency=medium
+
+  * Fix FTBFS on non-amd64 architectures: obs-nvenc-test is only built on
+    amd64 (x86_64) per upstream CMake config, so install it conditionally.
+    (LP: #2139679)
+
+ -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Mon, 20 Apr 2026 11:15:49 -0700
+
+obs-studio (32.1.0-0ubuntu2) resolute; urgency=medium
+
+  * Package obs-nvenc-test to support NVENC. (LP: #2139679)
+
+ -- Charles <charles05@canonical.com>  Fri, 17 Apr 2026 19:17:21 +0100
+
+obs-studio (32.1.0-0ubuntu1) resolute; urgency=medium
+
+  * New upstream release (non-rc)
+
+ -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Wed, 11 Mar 2026 16:30:26 -0700
+
+obs-studio (32.1.0~rc2-0ubuntu1) resolute; urgency=medium
+
+  * New upstream release.
+
+ -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Sat, 28 Feb 2026 11:51:46 -0800
+
+obs-studio (32.1.0~rc1-0ubuntu1) resolute; urgency=medium
+
+  * New upstream release.
+  * d/rules: Fix armhf build
+  * Update 32-bit archs patch
+
+ -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Sun, 08 Feb 2026 14:45:30 -0800
+
+obs-studio (32.0.4-0ubuntu1) resolute; urgency=medium
+
+  * New upstream release.
+
+ -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Sat, 13 Dec 2025 14:59:26 -0800
+
+obs-studio (32.0.3-0ubuntu2) resolute; urgency=medium
+
+  * Rebuild with amd64v3 support
+
+ -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Fri, 05 Dec 2025 17:13:19 -0800
+
+obs-studio (32.0.3-0ubuntu1) resolute; urgency=medium
+
+  * New upstream release.
+  * d/control: Only build for supported architectures
+
+ -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Fri, 05 Dec 2025 17:02:38 -0800
+
+obs-studio (32.0.2-0ubuntu1) resolute; urgency=medium
+
+  * New upstream release
+  * Completely redo all relevant patches, removing old ones
+  * Disable tests until we can figure out where they moved to
+
+ -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Wed, 12 Nov 2025 08:49:32 -0800
+
+obs-studio (30.2.3+dfsg-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Backport upstream fix for FTBFS with GCC 15. (Closes: #1097496)
+
+ -- Adrian Bunk <bunk@debian.org>  Sun, 05 Oct 2025 20:35:32 +0300
+
+obs-studio (30.2.3+dfsg-3) unstable; urgency=medium
+
+  * Backport stephematician's patch for v4l2loopback-0.14 compat.
+    Thanks to Joao Eriberto Mota Filho <eriberto@debian.org>
+    (Closes: #1101728, #1101351)
+  * Make debian/latest the default packaging branch
+  * Apply 'wrap-and-sort -ast'
+  * Bump standards version to 4.7.2
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Fri, 25 Apr 2025 20:49:45 +0200
+
 obs-studio (30.2.3+dfsg-2build2) plucky; urgency=medium
 
   * No-change rebuild for Python 3.13 as the default.
