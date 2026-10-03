@@ -1,4 +1,5 @@
-# with all the  multi-upstream-tarballs, some files don't get properly excluded
-# luckily, the .github and .gitignore files are *only* annoying
-source-ships-excluded-file websocket/*.git*
+# this looks like a genuinely handcrafted HTML page
+# that includes an SVG-image
+source-is-missing [plugins/obs-browser/data/error.html]
+
 

@@ -37,10 +37,6 @@ BUILDDIR=$(CURDIR)/obj-$(DEB_HOST_GNU_TYPE)
 %:
 	dh $@ --builddirectory=$(BUILDDIR)
 
-execute_before_dh_auto_configure:
-	mkdir -p plugins/obs-websocket/deps
-	cp -r debian/extra/qr plugins/obs-websocket/deps/
-	-find plugins/obs-websocket/ -name ".git*" -exec rm -rf {} +
 override_dh_auto_configure:
 	dh_auto_configure -- $(confflags)
 

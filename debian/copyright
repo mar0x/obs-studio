@@ -2,19 +2,13 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: obs-studio
 Source: https://obsproject.com
 Files-Excluded:
- CI/scripts/macos/app/*
  cmake/bundle
  deps/blake2/*
- deps/jansson/*
- deps/lzma/*
  deps/w32-pthreads/need_errno.h
  libobs/util/simde/*
  plugins/mac-*
- plugins/obs-ffmpeg/external
  plugins/obs-qsv11/*
  plugins/win-*
- .git*
- */.git*
 
 Files: *
 Copyright: 2013-2023, Lain Bailey <lain@obsproject.com>
@@ -23,7 +17,7 @@ Copyright: 2013-2023, Lain Bailey <lain@obsproject.com>
            2014, Leonhard Oelke <leonhard@in-verted.de>
            2017, Fabio Madia <admshao@gmail.com>
            2017, Quinn Damerell <qdamere@microsoft.com>
-           2013-2023, The OBS Developers (see AUTHORS for a full list)
+           2013-2024, The OBS Developers (see AUTHORS for a full list)
 License: GPL-2+
 
 Files: deps/ipc-util/ipc-util/*
@@ -59,15 +53,11 @@ Files: plugins/decklink/decklink-device-instance.hpp
 Copyright: 2010-2011, Dmitry Vyukov.
 License: BSD-2-Clause-Views
 
-Files: websocket/*
+Files: plugins/obs-websocket/*
 Copyright: 2016-2021, Stephane Lepin <stephane.lepin@gmail.com>
   2014, Leonhard Oelke <leonhard@in-verted.de>
   2020-2023, Kyle Manning <tt2468@gmail.com>
 License: GPL-2+
-
-Files: deps/uthash/uthash/*
-Copyright: 2003-2021, Troy D. Hanson
-License: BSD-1-Clause
 
 Files: UI/win-dll-blocklist.c
 Copyright: 2023, Richard Stanway
@@ -75,6 +65,7 @@ License: GPL-2+
 
 Files: libobs/util/uthash.h
  UI/ffmpeg-utils.?pp
+ plugins/obs-outputs/mp4-*
 Copyright: 2023, Dennis Sädtler <dennis@obsproject.com>
 License: GPL-2+
 
@@ -91,6 +82,10 @@ Files: UI/update/models/branches.hpp
 Copyright: 2023, Dennis Sädtler <dennis@obsproject.com>
 License: ISC
 
+Files: UI/models/multitrack-video.hpp
+Copyright: 2024, Ruwen Hahn <haruwenz@twitch.tv>
+License: ISC
+
 Files: cmake/Modules/FindJack.cmake
        cmake/Modules/FindX11_XCB.cmake
        cmake/Modules/FindXCB.cmake
@@ -105,16 +100,6 @@ Copyright: 2006, Alexander Chemeris
            2013, Martin Gräßlin <mgraesslin@kde.org>
            2007, Matthias Kretz <kretz@kde.org>
 License: BSD-3-clause
-
-Files: debian/*
-Copyright: 2015, Carl Fürstenberg <azatoth@gmail.com>
-           2016-2022, Sebastian Ramacher <sramacher@debian.org>
-           2022-2023, IOhannes m zmölnig <umlaeute@debian.org>
-License: GPL-2+
-
-Files: debian/extra/qr/*
-Copyright: 2020, Project Nayuki.
-License: Expat
 
 Files: deps/glad/include/KHR/*
 Copyright: 2008-2009, The Khronos Group Inc
@@ -145,7 +130,7 @@ License: LGPL-2.1+
 Files: plugins/decklink/linux/decklink-sdk/*
        plugins/decklink/mac/decklink-sdk/*
        plugins/decklink/win/decklink-sdk/*
-Copyright: 2009-2016, Blackmagic Design
+Copyright: 2009-2021, Blackmagic Design
 License: BSL
 
 Files: deps/happy-eyeballs/*
@@ -179,6 +164,24 @@ License: public-domain
  modification, are permitted.
  .
  There's ABSOLUTELY NO WARRANTY, express or implied.
+
+Files: plugins/obs-outputs/ftl-sdk/*
+Copyright: 2016, Mixer Interactive
+	   2015, Michael Casadevall
+License: Expat
+
+Files: debian/*
+Copyright: 2015, Carl Fürstenberg <azatoth@gmail.com>
+           2016-2022, Sebastian Ramacher <sramacher@debian.org>
+           2022-2024, IOhannes m zmölnig <umlaeute@debian.org>
+License: GPL-2+
+
+Files: debian/extra/qr/*
+Copyright: 2020, Project Nayuki.
+License: Expat
+
+
+
 
 License: BSD-1-Clause
  Redistribution and use in source and binary forms, with or without

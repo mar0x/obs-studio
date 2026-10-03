@@ -40,6 +40,72 @@ obs-studio (32.0.2+dfsg-1) noble; urgency=high
 
  -- Julian Andres Klode <juliank@ubuntu.com>  Mon, 08 Apr 2025 16:46:38 +0200
 
+obs-studio (30.2.3+dfsg-2build2) plucky; urgency=medium
+
+  * No-change rebuild for Python 3.13 as the default.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 04 Jan 2025 05:24:36 +0100
+
+obs-studio (30.2.3+dfsg-2build1) plucky; urgency=medium
+
+  * Rebuild against latest mbedtls
+
+ -- Jeremy Bícha <jbicha@ubuntu.com>  Thu, 21 Nov 2024 14:59:45 -0500
+
+obs-studio (30.2.3+dfsg-2) unstable; urgency=medium
+
+  * Team upload.
+  * Revert "Drop patches obsoleted by upstream"
+  * Fix obs-ffmpeg-mux patch (Closes: #1079732)
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Thu, 29 Aug 2024 07:56:20 +0200
+
+obs-studio (30.2.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 30.2.3+dfsg
+    (Closes: #1072439, #1075327)
+
+  [ Sebastian Ramacher ]
+  * Remove myself from Uploaders
+
+  [ IOhannes m zmölnig (Debian/GNU) ]
+  * Update patches
+    + Drop patches obsoleted by upstream
+    + Refresh patches
+    + Update patches
+  * Install obs-websocket CMake snippets
+  * Explicitly disable obs-browser for now (missing CEF)
+  * Do not treat warnings as errors
+  * Add uthash-dev and pkgconf as B-D
+  * Update libobs0t64.symbols
+  * Update d/watch to use upstream's handmade source package
+    + Drop extra 'websocket' component
+    + Drop 'websocket' component magic in d/rules and d/clean
+  * Update copyright information
+    + Update d/copyright
+    + Remove obsolete Files-Excluded stanzas
+    + Re-generate d/copyright_hints
+  * Update lintian-overrides
+  * Drop copyright for excluded uthash
+  * fix more spelling errors:
+  * Forward spelling error patch
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Tue, 20 Aug 2024 16:17:53 +0200
+
+obs-studio (30.1.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 30.1.2+dfsg
+    + Refresh patches
+  * Fix unsigned char comparison patch (Closes: #1051418)
+  * Update d/libobs0t64.symbols
+  * Add missing entries to d/changelog for 30.0.2+dfsg-3 
+  * Update d/copyright
+    + Bump d/copyright dates
+    + Re-generate d/copyright_hints
+  * Bump standards version to 4.7.0
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Thu, 02 May 2024 00:24:12 +0200
+
 obs-studio (30.0.2+dfsg-3build1) noble; urgency=high
 
   * No change rebuild against libqt6core6t64, libqt6gui6t64,
@@ -50,11 +116,17 @@ obs-studio (30.0.2+dfsg-3build1) noble; urgency=high
 obs-studio (30.0.2+dfsg-3) unstable; urgency=medium
 
   * Team upload.
+
+  [ Benjamin Drung ]
   * Fix build on 32bit time64_t archs. Thanks to Gianfranco Costamagna.
     (Closes: #1067494)
   * linux-v4l2: Save device by ID or path to make webcam ordering persistent
     (to support having multiple in the system). Fixes upstream bug 3003.
   * Add simple autopkgtest that just calls obs --help and --version
+
+  [ IOhannes m zmölnig (Debian/GNU) ]
+  * Drop debian/.gitignore (as it hides leftover files)
+  * Apply 'wrap-and-sort -ast'
 
  -- Benjamin Drung <bdrung@debian.org>  Sun, 31 Mar 2024 15:13:19 +0200
 
