@@ -21,6 +21,7 @@ Build-Depends:
  libavutil-dev,
  libcmocka-dev,
  libcurl4-gnutls-dev | libcurl-dev,
+ libdatachannel-dev,
  libdbus-1-dev,
  libdrm-dev,
  libegl-dev,

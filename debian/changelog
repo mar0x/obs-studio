@@ -1,3 +1,9 @@
+obs-studio (32.2.2+ds-1build1+git20261009~resolute) resolute; urgency=medium
+
+  * Enable WebRTC
+
+ -- Max <rk-obs@yandex.ru>  Fri, 09 Oct 2026 18:40:52 +0300
+
 obs-studio (32.2.2+ds-1build1+git20261005~resolute) resolute; urgency=medium
 
   * Package for resolute

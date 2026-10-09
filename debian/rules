@@ -28,7 +28,7 @@ confflags += -DENABLE_JACK=TRUE
 confflags += -DENABLE_PIPEWIRE=TRUE
 confflags += -DENABLE_SNDIO=FALSE
 confflags += -DENABLE_VST=TRUE
-confflags += -DENABLE_WEBRTC=FALSE
+confflags += -DENABLE_WEBRTC=TRUE
 
 ifeq ($(DEB_HOST_ARCH_CPU), i386)
 deb_cflags+=-Wno-error=psabi
